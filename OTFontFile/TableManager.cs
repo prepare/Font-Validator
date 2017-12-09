@@ -61,11 +61,11 @@ namespace OTFontFile
             if (tag == null) return "";
 
             string sName = tag;
-            if (sName == "bloc")
+            if (sName == "bloc" || sName == "CBLC" )
             {
                 sName = "EBLC";
             }
-            else if (sName == "bdat")
+            else if (sName == "bdat" || sName == "CBDT" )
             {
                 sName = "EBDT";
             }
@@ -78,8 +78,12 @@ namespace OTFontFile
             string [] sTables =
                 {
                     "BASE",
+                    "CBDT",
+                    "CBLC",
                     "CFF ",
                     "cmap",
+                    "COLR",
+                    "CPAL",
                     "cvt ",
                     "DSIG",
                     "EBDT",
@@ -99,12 +103,14 @@ namespace OTFontFile
                     "kern",
                     "loca",
                     "LTSH",
+                    "MATH",
                     "maxp",
                     "name",
                     "OS/2",
                     "PCLT",
                     "post",
                     "prep",
+                    "SVG ",
                     "VDMX",
                     "vhea",
                     "vmtx",
@@ -162,11 +168,13 @@ namespace OTFontFile
                 case "loca": table = new Table_loca(tag, buf); break;
                 case "LTSH": table = new Table_LTSH(tag, buf); break;
                 case "maxp": table = new Table_maxp(tag, buf); break;
+                case "meta": table = new Table_meta(tag, buf); break;
                 case "name": table = new Table_name(tag, buf); break;
                 case "OS/2": table = new Table_OS2(tag, buf); break;
                 case "PCLT": table = new Table_PCLT(tag, buf); break;
                 case "post": table = new Table_post(tag, buf); break;
                 case "prep": table = new Table_prep(tag, buf); break;
+                case "SVG ": table = new Table_SVG(tag, buf); break;
                 case "VDMX": table = new Table_VDMX(tag, buf); break;
                 case "vhea": table = new Table_vhea(tag, buf); break;
                 case "vmtx": table = new Table_vmtx(tag, buf); break;
