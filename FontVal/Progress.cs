@@ -255,7 +255,7 @@ namespace FontVal
             // 
             // Progress
             // 
-            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            if ( Type.GetType("Mono.Runtime") == null ) this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(384, 214);
             this.ControlBox = false;
             this.Controls.Add(this.labelTestProgress);
@@ -341,42 +341,6 @@ namespace FontVal
             }
         }
 
-
-        static public void CopyXslFile(string sReportFile)
-        {
-            // Note that this will not work in development because it depends 
-            // upon the xsl file existing in the same location as the 
-            // executing assembly, which is only true of the deployment package.
-            //
-            // During development, though, the file FontVal/fval.xsl can be 
-            // copied as needed to 
-            //     FontVal/bin/Debug or
-            //     FontVal/bin/Release
-            // and then the source file is found.
-            // build the src filename
-            string sAssemblyLocation = 
-                System.Reflection.Assembly.GetExecutingAssembly().Location;
-            FileInfo fi = new FileInfo(sAssemblyLocation);
-            string sSrcDir  = fi.DirectoryName;
-            string sSrcFile = sSrcDir + Path.DirectorySeparatorChar + "fval.xsl";
-
-            // build the dest filename
-            fi = new FileInfo(sReportFile);
-            string sDestDir  = fi.DirectoryName;
-            string sDestFile = sDestDir + Path.DirectorySeparatorChar + "fval.xsl";
-
-            // copy the file
-            try
-            {
-                File.Copy(sSrcFile, sDestFile, true);
-                fi = new FileInfo(sDestFile);
-                fi.Attributes = fi.Attributes & ~FileAttributes.ReadOnly;
-            }
-            catch (Exception)
-            {
-            }
-        }
-
         // ================================================================
         // Callbacks for Driver.DriverCallbacks interface
         // ================================================================
@@ -387,9 +351,19 @@ namespace FontVal
             string sReportFile = null;
             switch ( m_ReportFileDestination )
             {
+                case ReportFileDestination.UserDesktop:
+                    sReportFile = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
+                        Path.DirectorySeparatorChar +
+                        Path.GetFileName(sFontFile) + ".report.xml";
+                    break;
                 case ReportFileDestination.TempFiles:
                     string sTemp = Path.GetTempFileName();
                     sReportFile = sTemp + ".report.xml";
+                    while ( File.Exists( sReportFile ) )
+                    {
+                        sTemp = Path.GetTempFileName();
+                        sReportFile = sTemp + ".report.xml";
+                    }
                     File.Move(sTemp, sReportFile);
                     break;
                 case ReportFileDestination.FixedDir:
@@ -427,7 +401,7 @@ namespace FontVal
             // This has to be done for each file because the if we are
             // putting the report on the font's directory, there may
             // be a different directory for each font.
-            CopyXslFile( sReportFile );
+            Driver.CopyXslFile( sReportFile );
         }
 
 

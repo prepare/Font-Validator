@@ -575,7 +575,6 @@ namespace FontVal
 			this.menuItem3.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
 																					  this.menuItemOpenProj,
 																					  this.menuItemOpenReport});
-			this.menuItem3.Shortcut = System.Windows.Forms.Shortcut.CtrlO;
 			this.menuItem3.Text = "Open";
 			// 
 			// menuItemOpenProj
@@ -924,7 +923,7 @@ namespace FontVal
 			// Form1
 			// 
 			this.AllowDrop = true;
-			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			if ( Type.GetType("Mono.Runtime") == null ) this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
 			this.ClientSize = new System.Drawing.Size(632, 529);
 			this.Controls.Add(this.splitter1);
 			this.Controls.Add(this.panel1);
@@ -1413,7 +1412,7 @@ namespace FontVal
                 if(dlg.ShowDialog() == DialogResult.OK)
                 {
                     rf.SaveReportAs(dlg.FileName);
-                    Progress.CopyXslFile(dlg.FileName);
+                    Driver.CopyXslFile(dlg.FileName);
                     AddMRUReport(dlg.FileName);
                 }
             }
@@ -1492,7 +1491,7 @@ namespace FontVal
 
         private void menuItemHelpHelp_Click(object sender, System.EventArgs e)
         {
-            Help.ShowHelp(this, "fontvalidatorhelp.chm");
+            Help.ShowHelp(this, "FontValidatorHelp.chm");
         }
 
         private void menuItemHelpAbout_Click(object sender, System.EventArgs e)
@@ -1615,7 +1614,7 @@ namespace FontVal
             // show help if this is the first time the program is being run
             if (m_PersistedData.m_bFirstTime)
             {
-                Help.ShowHelp(this, "fontvalidatorhelp.chm", HelpNavigator.Topic, "usingvalidator.htm");
+                Help.ShowHelp(this, "FontValidatorHelp.chm", HelpNavigator.Topic, "usingvalidator.htm");
                 m_PersistedData.m_bFirstTime = false;
             }
         }
@@ -1937,6 +1936,11 @@ namespace FontVal
             m_sMRUReports  = new String[4];
             m_ReportFileDestination = ReportFileDestination.TempFiles;
             m_bOpenReportFile = true;
+            if ( Type.GetType("Mono.Runtime") != null )
+            {
+                m_ReportFileDestination = ReportFileDestination.UserDesktop;
+                m_bOpenReportFile = false;
+            }
             m_sReportFixedDir = "";
             m_bFirstTime = true;
         }
