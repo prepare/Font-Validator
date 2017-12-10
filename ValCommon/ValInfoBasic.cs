@@ -3,8 +3,8 @@ using System.Diagnostics;
 
 using OTFontFile;
 
-using Assembly=System.Reflection.Assembly;
-using ResourceManager=System.Resources.ResourceManager;
+using Assembly = System.Reflection.Assembly;
+using ResourceManager = System.Resources.ResourceManager;
 
 
 namespace NS_ValCommon
@@ -20,7 +20,7 @@ namespace NS_ValCommon
             Pass,
             Info
         }
-        
+
 
         // members
         protected ValInfoType m_Type;
@@ -37,30 +37,30 @@ namespace NS_ValCommon
         // constructors
         public ValInfoBasic()
         {
-            this.m_Type=ValInfoType.Info;
-            this.m_StringName=null;
-            this.m_StringValueName=null;
-            this.m_StringValueUser=null;
-            this.m_NameFileErrs=null;
-            this.m_NameAsmFileErrs=null;
-            this.m_OTTagPrincipal=null;
-            this.m_StringTestName=null;
+            this.m_Type = ValInfoType.Info;
+            this.m_StringName = null;
+            this.m_StringValueName = null;
+            this.m_StringValueUser = null;
+            this.m_NameFileErrs = null;
+            this.m_NameAsmFileErrs = null;
+            this.m_OTTagPrincipal = null;
+            this.m_StringTestName = null;
             //this.m_OTTagRelated=null;
         }
-        public ValInfoBasic(ValInfoBasic viBasic) 
+        public ValInfoBasic(ValInfoBasic viBasic)
         {
-            Debug.Assert(viBasic!=null);
-            this.m_Type=viBasic.TypeBasic;
-            this.m_StringName=viBasic.Name;
-            this.m_StringValueName=null;
-            this.m_StringValueUser=viBasic.ValueUser;
-            this.m_NameFileErrs=viBasic.NameFileErrs;
-            this.m_NameAsmFileErrs=viBasic.NameAsmFileErrs;
-            this.m_OTTagPrincipal=viBasic.TagPrincipal;
-            this.m_StringTestName=viBasic.m_StringTestName;
+            Debug.Assert(viBasic != null);
+            this.m_Type = viBasic.TypeBasic;
+            this.m_StringName = viBasic.Name;
+            this.m_StringValueName = null;
+            this.m_StringValueUser = viBasic.ValueUser;
+            this.m_NameFileErrs = viBasic.NameFileErrs;
+            this.m_NameAsmFileErrs = viBasic.NameAsmFileErrs;
+            this.m_OTTagPrincipal = viBasic.TagPrincipal;
+            this.m_StringTestName = viBasic.m_StringTestName;
             //this.m_OTTagRelated=viBasic.TagRelated;
         }
-        public ValInfoBasic(ValInfoType type, 
+        public ValInfoBasic(ValInfoType type,
             string stringName,
             string stringValueUser,
             string nameFileErrs,
@@ -68,14 +68,14 @@ namespace NS_ValCommon
             OTTag tagPrincipal,
             string stringTestName)
         {
-            this.m_Type=type;
-            this.m_StringName=stringName;
-            this.m_StringValueName=null;
-            this.m_StringValueUser=stringValueUser;
-            this.m_NameFileErrs=nameFileErrs;
-            this.m_NameAsmFileErrs=nameAsmFileErrs;
-            this.m_OTTagPrincipal=tagPrincipal;
-            this.m_StringTestName=stringTestName;
+            this.m_Type = type;
+            this.m_StringName = stringName;
+            this.m_StringValueName = null;
+            this.m_StringValueUser = stringValueUser;
+            this.m_NameFileErrs = nameFileErrs;
+            this.m_NameAsmFileErrs = nameAsmFileErrs;
+            this.m_OTTagPrincipal = tagPrincipal;
+            this.m_StringTestName = stringTestName;
             //this.m_OTTagRelated=tagRelated;
         }
 
@@ -83,37 +83,37 @@ namespace NS_ValCommon
         public ValInfoType TypeBasic
         {
             get { return this.m_Type; }
-            set { this.m_Type=value; }
+            set { this.m_Type = value; }
         }
         public string Name
         {
             get { return this.m_StringName; }
-            set { this.m_StringName=value; }
+            set { this.m_StringName = value; }
         }
         virtual public string ValueUser
         {
             get { return this.m_StringValueUser; }
-            set { this.m_StringValueUser=value; }
+            set { this.m_StringValueUser = value; }
         }
         public string NameFileErrs
         {
             get { return this.m_NameFileErrs; }
-            set { this.m_NameFileErrs=value; }
+            set { this.m_NameFileErrs = value; }
         }
         public string NameAsmFileErrs
         {
             get { return this.m_NameAsmFileErrs; }
-            set { this.m_NameAsmFileErrs=value; }
+            set { this.m_NameAsmFileErrs = value; }
         }
         public OTTag TagPrincipal
         {
             get { return this.m_OTTagPrincipal; }
-            set { this.m_OTTagPrincipal=value; }
+            set { this.m_OTTagPrincipal = value; }
         }
         public string TestName
         {
             get { return this.m_StringTestName; }
-            set { this.m_StringTestName=value; }
+            set { this.m_StringTestName = value; }
         }
         /*
         public OTTag TagRelated
@@ -124,19 +124,19 @@ namespace NS_ValCommon
         */
         virtual public string ValueName
         {
-            get 
+            get
             {
-                if (this.m_StringValueName!=null)
+                if (this.m_StringValueName != null)
                 {
                     return this.m_StringValueName;
                 }
-                if (((object)this.Name==null)||
-                    ((object)this.NameAsmFileErrs==null)||
-                    ((object)this.NameFileErrs==null))
+                if (((object)this.Name == null) ||
+                    ((object)this.NameAsmFileErrs == null) ||
+                    ((object)this.NameFileErrs == null))
                 {
                     return null;
                 }
-                
+
                 /* 
                 // WORKS !!!
                 // NOTE: uses directly absolute name of the resourse file
@@ -156,7 +156,7 @@ namespace NS_ValCommon
                 System.Resources.ResourceManager rm = new ResourceManager("NS_Glyph.GErrStrings", asm);
                 string nameValue = rm.GetString(this.Name);
                 */
-                try 
+                try
                 {
                     /* DO NOT REMOVE - interesting ...
                     Assembly asm;
@@ -170,22 +170,22 @@ namespace NS_ValCommon
                     asm=Assembly.GetEntryAssembly();
                     strNameRes=asm.GetManifestResourceNames();
                     System.Reflection.AssemblyName[] strNameAsmRef=asm.GetReferencedAssemblies();
-                    */            
-        
+                    */
+
                     // WORKS VERSION_1- begin
                     /*
                     Assembly asm=Assembly.Load("OTFontFile");
                     ResourceManager rm = new ResourceManager("OTFontFile.ValStrings", asm);
                     */
                     // WORKS VERSION_1- end
-                
+
                     // WORKS VERSION_2 - begin
                     /*
                     ResourceManager rm = ResourceManager.CreateFileBasedResourceManager("OTFontFile.ValStrings","C:\\VAL_SHARP_NEW\\OTFontFile\\obj\\Debug",null);
                     */
                     // WORKS VERSION_2 - end
-                
-                    ResourceManager rm=new ResourceManager(this.NameFileErrs,Assembly.Load(this.NameAsmFileErrs));        
+
+                    ResourceManager rm = new ResourceManager(this.NameFileErrs, Assembly.Load(this.NameAsmFileErrs));
                     string sErrorAndMessage = rm.GetString(m_StringName);
                     if (sErrorAndMessage.Length > 6 && sErrorAndMessage[5] == ':' && sErrorAndMessage[6] == ' ')
                     {
@@ -202,7 +202,7 @@ namespace NS_ValCommon
                 }
 
                 return this.m_StringValueName;
-            
+
 
                 //Assembly asm=Assembly.GetAssembly(this.GetType());        
                 //ResourceManager rm=new ResourceManager(this.FileErrs,asm);                
@@ -221,12 +221,21 @@ namespace NS_ValCommon
                     {
                         try
                         {
-                            ResourceManager rm=new ResourceManager(this.NameFileErrs,Assembly.Load(this.NameAsmFileErrs));        
-                            string sErrorAndMessage = rm.GetString(m_StringName);
-                            if (sErrorAndMessage.Length > 6 && sErrorAndMessage[5] == ':' && sErrorAndMessage[6] == ' ')
+                            if (NameAsmFileErrs == "Glyph")
                             {
-                                m_StringErrorID = sErrorAndMessage.Substring(0,5);
+
+                                ResourceManager rm = OTFontFileVal.GlyphX.NS_Glyph_GErrStrings.ResourceManager;//new ResourceManager(this.NameFileErrs, Assembly.Load(this.NameAsmFileErrs));
+                                string sErrorAndMessage = rm.GetString(m_StringName);
+                                if (sErrorAndMessage.Length > 6 && sErrorAndMessage[5] == ':' && sErrorAndMessage[6] == ' ')
+                                {
+                                    m_StringErrorID = sErrorAndMessage.Substring(0, 5);
+                                }
                             }
+                            else
+                            {
+
+                            }
+
                         }
                         catch (Exception e)
                         {
@@ -241,24 +250,24 @@ namespace NS_ValCommon
 
 
         // methods
-        virtual public bool IsSame(object obj)                        
-        {        
-            ValInfoBasic info=obj as ValInfoBasic;
-            if (info==null)
+        virtual public bool IsSame(object obj)
+        {
+            ValInfoBasic info = obj as ValInfoBasic;
+            if (info == null)
                 return false;
-            if (this.m_Type!=info.TypeBasic)
+            if (this.m_Type != info.TypeBasic)
                 return false;
-            if (this.m_OTTagPrincipal!=info.TagPrincipal)
+            if (this.m_OTTagPrincipal != info.TagPrincipal)
                 return false;
             /*
             if (this.m_OTTagRelated!=info.TagRelated)
                 return false;
                 */
-            if (String.Compare(this.m_StringName,info.Name)!=0)
+            if (String.Compare(this.m_StringName, info.Name) != 0)
                 return false;
-            if (String.Compare(this.m_NameFileErrs,info.NameFileErrs)!=0)
+            if (String.Compare(this.m_NameFileErrs, info.NameFileErrs) != 0)
                 return false;
-            if (String.Compare(this.m_NameAsmFileErrs,info.NameAsmFileErrs)!=0)
+            if (String.Compare(this.m_NameAsmFileErrs, info.NameAsmFileErrs) != 0)
                 return false;
             return true;
         }

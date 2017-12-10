@@ -84,8 +84,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <PropertyGroup>
-    <PostBuildEvent>GenerateFValData.exe
-</PostBuildEvent>
-  </PropertyGroup>
+ 
 </Project>

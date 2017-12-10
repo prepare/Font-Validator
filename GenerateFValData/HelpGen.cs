@@ -457,23 +457,23 @@ namespace helpgen {
                 return 1;
             }
 
-            string helpProjectTemp = ps.tmpDir + "help-proj.txt";
-            WriteHelpProject( items, ps.inputDir, helpProjectTemp );
-            CopyIfDifferent( helpProjectTemp, 
-                             ps.helpDir + "FontValidatorHelp.hhp",
-                             verbose );
+            //string helpProjectTemp = ps.tmpDir + "help-proj.txt";
+            //WriteHelpProject( items, ps.inputDir, helpProjectTemp );
+            //CopyIfDifferent( helpProjectTemp, 
+            //                 ps.helpDir + "FontValidatorHelp.hhp",
+            //                 verbose );
 
-            string helpTOCTemp = ps.tmpDir + "help-toc.txt";
-            WriteHelpTableOfContents( items, 
-                                      ps.contentsTemplatePath, 
-                                      ps.inputDir, 
-                                      helpTOCTemp );
-            CopyIfDifferent( helpTOCTemp, 
-                             ps.helpDir+"Table of Contents.hhc",
-                             verbose );
+            //string helpTOCTemp = ps.tmpDir + "help-toc.txt";
+            //WriteHelpTableOfContents( items, 
+            //                          ps.contentsTemplatePath, 
+            //                          ps.inputDir, 
+            //                          helpTOCTemp );
+            //CopyIfDifferent( helpTOCTemp, 
+            //                 ps.helpDir+"Table of Contents.hhc",
+            //                 verbose );
 
-            CopyConstantHelpFiles( ps.inputDir, ps.helpDir, verbose );
-            WriteHelpFiles( items, ps.templatePath, ps.tmpDir, ps.helpDir );
+            //CopyConstantHelpFiles( ps.inputDir, ps.helpDir, verbose );
+            //WriteHelpFiles( items, ps.templatePath, ps.tmpDir, ps.helpDir );
 
             string valstringsTemp = ps.tmpDir + "OTFontFileVal.ValStrings.noresx";
             WriteValStrings( items, ps.inputDir, valstringsTemp );
