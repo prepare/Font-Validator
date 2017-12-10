@@ -40,14 +40,173 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\CFFInfo\CFFInfo.cs">
+      <Link>CCF\CFFInfo.cs</Link>
+    </Compile>
     <Compile Include="..\Compat\Compat.cs">
       <Link>Compat\Compat.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp10000.cs">
+      <Link>Compat_CodePages\cp10000.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp10001.cs">
+      <Link>Compat_CodePages\cp10001.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp10002.cs">
+      <Link>Compat_CodePages\cp10002.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp10003.cs">
+      <Link>Compat_CodePages\cp10003.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp10004.cs">
+      <Link>Compat_CodePages\cp10004.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp10005.cs">
+      <Link>Compat_CodePages\cp10005.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp10006.cs">
+      <Link>Compat_CodePages\cp10006.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp10007.cs">
+      <Link>Compat_CodePages\cp10007.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp10008.cs">
+      <Link>Compat_CodePages\cp10008.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp1250.cs">
+      <Link>Compat_CodePages\cp1250.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp1251.cs">
+      <Link>Compat_CodePages\cp1251.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp1252.cs">
+      <Link>Compat_CodePages\cp1252.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp1253.cs">
+      <Link>Compat_CodePages\cp1253.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp1254.cs">
+      <Link>Compat_CodePages\cp1254.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp1255.cs">
+      <Link>Compat_CodePages\cp1255.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp1256.cs">
+      <Link>Compat_CodePages\cp1256.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp1257.cs">
+      <Link>Compat_CodePages\cp1257.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp1258.cs">
+      <Link>Compat_CodePages\cp1258.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp1361.cs">
+      <Link>Compat_CodePages\cp1361.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp437.cs">
+      <Link>Compat_CodePages\cp437.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp708.cs">
+      <Link>Compat_CodePages\cp708.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp737.cs">
+      <Link>Compat_CodePages\cp737.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp775.cs">
+      <Link>Compat_CodePages\cp775.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp850.cs">
+      <Link>Compat_CodePages\cp850.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp852.cs">
+      <Link>Compat_CodePages\cp852.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp855.cs">
+      <Link>Compat_CodePages\cp855.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp857.cs">
+      <Link>Compat_CodePages\cp857.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp860.cs">
+      <Link>Compat_CodePages\cp860.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp861.cs">
+      <Link>Compat_CodePages\cp861.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp862.cs">
+      <Link>Compat_CodePages\cp862.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp863.cs">
+      <Link>Compat_CodePages\cp863.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp864.cs">
+      <Link>Compat_CodePages\cp864.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp865.cs">
+      <Link>Compat_CodePages\cp865.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp866.cs">
+      <Link>Compat_CodePages\cp866.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp869.cs">
+      <Link>Compat_CodePages\cp869.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp874.cs">
+      <Link>Compat_CodePages\cp874.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp932.cs">
+      <Link>Compat_CodePages\cp932.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp936.cs">
+      <Link>Compat_CodePages\cp936.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp949.cs">
+      <Link>Compat_CodePages\cp949.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\cp950.cs">
+      <Link>Compat_CodePages\cp950.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\CPInfo.cs">
+      <Link>Compat\CPInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\dbcs10001.cs">
+      <Link>Compat_CodePages\dbcs10001.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\dbcs10002.cs">
+      <Link>Compat_CodePages\dbcs10002.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\dbcs10003.cs">
+      <Link>Compat_CodePages\dbcs10003.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\dbcs10008.cs">
+      <Link>Compat_CodePages\dbcs10008.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\dbcs1361.cs">
+      <Link>Compat_CodePages\dbcs1361.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\dbcs932.cs">
+      <Link>Compat_CodePages\dbcs932.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\dbcs936.cs">
+      <Link>Compat_CodePages\dbcs936.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\dbcs949.cs">
+      <Link>Compat_CodePages\dbcs949.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\dbcs950.cs">
+      <Link>Compat_CodePages\dbcs950.cs</Link>
     </Compile>
     <Compile Include="..\Compat\Win32APIs.cs">
       <Link>Compat\Win32APIs.cs</Link>
     </Compile>
     <Compile Include="..\Compat\WinVerifyTrustAPI.cs">
       <Link>Compat\WinVerifyTrustAPI.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\Xsl.cs">
+      <Link>Compat\Xsl.cs</Link>
+    </Compile>
+    <Compile Include="..\DSIGInfo\DSIGInfo.cs">
+      <Link>DSigInfo\DSIGInfo.cs</Link>
     </Compile>
     <Compile Include="..\Glyph\DefsGC.cs">
       <Link>Glyph\DefsGC.cs</Link>
@@ -340,6 +499,9 @@
     <Compile Include="..\OTFontFileVal\val_prep.cs">
       <Link>OTFontFileVal\val_prep.cs</Link>
     </Compile>
+    <Compile Include="..\OTFontFileVal\val_SVG.cs">
+      <Link>OTFontFileVal\val_SVG.cs</Link>
+    </Compile>
     <Compile Include="..\OTFontFileVal\val_VDMX.cs">
       <Link>OTFontFileVal\val_VDMX.cs</Link>
     </Compile>
@@ -354,6 +516,9 @@
     </Compile>
     <Compile Include="..\OTFontFileVal\val__Unknown.cs">
       <Link>OTFontFileVal\val__Unknown.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\CFFStdStrings.cs">
+      <Link>OTFontFile\CFFStdStrings.cs</Link>
     </Compile>
     <Compile Include="..\OTFontFile\MBOBuffer.cs">
       <Link>OTFontFile\MBOBuffer.cs</Link>
@@ -445,6 +610,9 @@
     <Compile Include="..\OTFontFile\Table_maxp.cs">
       <Link>OTFontFile\Table_maxp.cs</Link>
     </Compile>
+    <Compile Include="..\OTFontFile\Table_meta.cs">
+      <Link>OTFontFile\Table_meta.cs</Link>
+    </Compile>
     <Compile Include="..\OTFontFile\Table_name.cs">
       <Link>OTFontFile\Table_name.cs</Link>
     </Compile>
@@ -459,6 +627,9 @@
     </Compile>
     <Compile Include="..\OTFontFile\Table_prep.cs">
       <Link>OTFontFile\Table_prep.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_SVG.cs">
+      <Link>OTFontFile\Table_SVG.cs</Link>
     </Compile>
     <Compile Include="..\OTFontFile\Table_VDMX.cs">
       <Link>OTFontFile\Table_VDMX.cs</Link>

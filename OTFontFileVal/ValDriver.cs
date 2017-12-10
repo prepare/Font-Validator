@@ -74,6 +74,7 @@ namespace OTFontFileVal {
                 }
                 catch ( FileNotFoundException )
                 {
+                    //
                     if ( !File.Exists( sDestFile ) )
                         File.WriteAllBytes(sDestFile, Compat.Xsl.fval);
                 }
