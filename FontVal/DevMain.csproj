@@ -595,6 +595,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>FontValRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OTFontFileVal.ValStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>OTFontFileVal.ValStrings.Designer.cs</LastGenOutput>
@@ -622,12 +625,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />
-    <Content Include="Btn1.ico" />
-    <Content Include="Btn2.ico" />
-    <Content Include="Btn3.ico" />
-    <Content Include="Btn4.ico" />
-    <Content Include="Btn5.ico" />
-    <Content Include="Btn6.ico" />
     <Content Include="fval.xsl" />
   </ItemGroup>
   <ItemGroup />

@@ -1,0 +1,2613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="OS_2_A_CodePageNotInstalled" xml:space="preserve">
+    <value>A2100: A range in the ulCodePageRange field cannot be validated because a code page is not installed</value>
+  </data>
+  <data name="_rast_A_ExceptionUnhandled" xml:space="preserve">
+    <value>A6000: An exception occurred during rasterization testing</value>
+  </data>
+  <data name="_GEN_E_EOFError" xml:space="preserve">
+    <value>E0001: Unexpected End of File</value>
+  </data>
+  <data name="_GEN_E_InvalidFontFile" xml:space="preserve">
+    <value>E0003: The file was not recognized as a valid OpenType font file</value>
+  </data>
+  <data name="_GEN_E_OffsetExceedsTableLength" xml:space="preserve">
+    <value>E0004: Read error: offset exceeds length of the table</value>
+  </data>
+  <data name="_GEN_E_ReadError" xml:space="preserve">
+    <value>E0005: Error reading file</value>
+  </data>
+  <data name="_GEN_E_UserCanceled" xml:space="preserve">
+    <value>E0006: Font Validation was canceled by the user</value>
+  </data>
+  <data name="_OFFSET_E_entrySelector" xml:space="preserve">
+    <value>E0010: The entrySelector field is invalid</value>
+  </data>
+  <data name="_OFFSET_E_InvalidSFNT" xml:space="preserve">
+    <value>E0011: The sfnt field is invalid</value>
+  </data>
+  <data name="_OFFSET_E_numTables" xml:space="preserve">
+    <value>E0012: The numTables field is zero</value>
+  </data>
+  <data name="_OFFSET_E_rangeShift" xml:space="preserve">
+    <value>E0013: The rangeShift field is invalid</value>
+  </data>
+  <data name="_OFFSET_E_searchRange" xml:space="preserve">
+    <value>E0014: The searchRange field is invalid</value>
+  </data>
+  <data name="_FONT_E_MissingRequiredTable" xml:space="preserve">
+    <value>E0020: Required table is missing</value>
+  </data>
+  <data name="_DE_E_ChecksumError" xml:space="preserve">
+    <value>E0030: Directory Entry checksum error</value>
+  </data>
+  <data name="_DE_E_DuplicateTag" xml:space="preserve">
+    <value>E0031: Directory Entry contains a duplicate tag</value>
+  </data>
+  <data name="_DE_E_LengthZero" xml:space="preserve">
+    <value>E0032: Directory Entry length is 0</value>
+  </data>
+  <data name="_DE_E_OffsetPastEOF" xml:space="preserve">
+    <value>E0033: Directory Entry offset points past EOF</value>
+  </data>
+  <data name="_DE_E_OffsetZero" xml:space="preserve">
+    <value>E0034: Directory Entry offset is 0</value>
+  </data>
+  <data name="_DE_E_OverlappingTable" xml:space="preserve">
+    <value>E0035: Directory Entry overlaps another table</value>
+  </data>
+  <data name="_DE_E_TableEndPastEOF" xml:space="preserve">
+    <value>E0036: Directory Entry offset plus length past EOF</value>
+  </data>
+  <data name="_DE_E_TagName" xml:space="preserve">
+    <value>E0037: The directory entry tag name is invalid</value>
+  </data>
+  <data name="_DE_E_TagsAscending" xml:space="preserve">
+    <value>E0038: The directory entry tags are not in ascending order</value>
+  </data>
+  <data name="_DE_E_TagZero" xml:space="preserve">
+    <value>E0039: Directory Entry tag is 0</value>
+  </data>
+  <data name="_Table_E_DataOverlap" xml:space="preserve">
+    <value>E0040: The data overlaps existing data</value>
+  </data>
+  <data name="_Table_E_Exception" xml:space="preserve">
+    <value>E0041: An exception occurred preventing completion of table validation</value>
+  </data>
+  <data name="_Table_E_Invalid" xml:space="preserve">
+    <value>E0042: The table is invalid</value>
+  </data>
+  <data name="_TEST_E_TableMissing" xml:space="preserve">
+    <value>E0051: Cannot perform test, a needed table is missing!</value>
+  </data>
+  <data name="cmap_E_DuplicateSubtables" xml:space="preserve">
+    <value>E0300: A duplicate subtable was found</value>
+  </data>
+  <data name="cmap_E_f0_length" xml:space="preserve">
+    <value>E0301: The subtable is fmt 0, but the length is not 262</value>
+  </data>
+  <data name="cmap_E_f12_SortOrder" xml:space="preserve">
+    <value>E0302: The groups are not sorted by ascending startCharCode</value>
+  </data>
+  <data name="cmap_E_f12_StartCode_GT_EndCode" xml:space="preserve">
+    <value>E0303: The startCharCode is greater than the endCharCode</value>
+  </data>
+  <data name="cmap_E_f4_EndCodeOrder" xml:space="preserve">
+    <value>E0304: The endCode array is not in ascending order</value>
+  </data>
+  <data name="cmap_E_f4_entrySelector" xml:space="preserve">
+    <value>E0305: The entrySelector field does not equal the calculated value</value>
+  </data>
+  <data name="cmap_E_f4_FinalEndCode" xml:space="preserve">
+    <value>E0306: The final value in the endCode array is not 0xffff</value>
+  </data>
+  <data name="cmap_E_f4_idDeltaNeg" xml:space="preserve">
+    <value>E0307: The idRangeOffset is 0 and idDelta + startCode is negative</value>
+  </data>
+  <data name="cmap_E_f4_idRangeOffset" xml:space="preserve">
+    <value>E0308: The idRangeOffset indexes past the end of the subtable</value>
+  </data>
+  <data name="cmap_E_f4_rangeShift" xml:space="preserve">
+    <value>E0309: The rangeShift field does not equal the calculated value</value>
+  </data>
+  <data name="cmap_E_f4_reservedPad" xml:space="preserve">
+    <value>E0310: The reservedPad field is not 0</value>
+  </data>
+  <data name="cmap_E_f4_searchRange" xml:space="preserve">
+    <value>E0311: The searchRange field does not equal the calculated value</value>
+  </data>
+  <data name="cmap_E_f4_segCountX2" xml:space="preserve">
+    <value>E0312: The segCountX2 field is not even</value>
+  </data>
+  <data name="cmap_E_f4_StartCode_GT_EndCode" xml:space="preserve">
+    <value>E0313: The startCode is greater than the endCode</value>
+  </data>
+  <data name="cmap_E_Mapping" xml:space="preserve">
+    <value>E0314: A character maps to an invalid glyphID</value>
+  </data>
+  <data name="cmap_E_SubtableLength_eot" xml:space="preserve">
+    <value>E0315: The subtable length points past the end of the table</value>
+  </data>
+  <data name="cmap_E_SubtableLength_zero" xml:space="preserve">
+    <value>E0316: The subtable length is zero</value>
+  </data>
+  <data name="cmap_E_SubtableOffset_eot" xml:space="preserve">
+    <value>E0317: The subtable offset points past the end of the table</value>
+  </data>
+  <data name="cmap_E_SubtableOffset_zero" xml:space="preserve">
+    <value>E0318: The subtable offset is zero</value>
+  </data>
+  <data name="cmap_E_SubtableOverlap" xml:space="preserve">
+    <value>E0319: Overlapping subtables were found</value>
+  </data>
+  <data name="cmap_E_SubtableSortOrder" xml:space="preserve">
+    <value>E0320: The subtables are not in the correct order</value>
+  </data>
+  <data name="cmap_E_SubtableValidFormat" xml:space="preserve">
+    <value>E0321: The subtable&#39;s format number is invalid</value>
+  </data>
+  <data name="cmap_E_version" xml:space="preserve">
+    <value>E0322: The table version number is not 0</value>
+  </data>
+  <data name="cmap_E_NonMacSubtableLanguage" xml:space="preserve">
+    <value>E0323: A non-mac subtable has a non-zero language value</value>
+  </data>
+  <data name="cmap_E_f12_EndCode_GT_10FFFF" xml:space="preserve">
+    <value>E0324: The last endCharCode is greater than 0x10ffff</value>
+  </data>
+  <data name="cmap_E_f14_VarSelector" xml:space="preserve">
+    <value>E0330: Illegal variation selector</value>
+  </data>
+  <data name="cmap_E_f14_VarSelector_Order" xml:space="preserve">
+    <value>E0331: Variation Selectors not in ascendering order</value>
+  </data>
+  <data name="cmap_E_f14_VarSelector_Duplicate" xml:space="preserve">
+    <value>E0332: More than one record for a given variation selector</value>
+  </data>
+  <data name="cmap_E_f14_CodePoint" xml:space="preserve">
+    <value>E0333: Illegal Unicode code point value</value>
+  </data>
+  <data name="cmap_E_f14_DefaultUVS_Sort" xml:space="preserve">
+    <value>E0334: Default UVS table value ranges overlap or out of order</value>
+  </data>
+  <data name="cmap_E_f14_LastCode_GT_FFFFFF" xml:space="preserve">
+    <value>E0335: Default UVS table startUnicodeValue + additionalCount greater than 0xFFFFFF</value>
+  </data>
+  <data name="cmap_E_f14_NonDefaultUVS_Sort" xml:space="preserve">
+    <value>E0336: Non-Default UVS table value ranges overlap or out of order</value>
+  </data>
+  <data name="cmap_E_f14_GlyphID_Range" xml:space="preserve">
+    <value>E0337: GlyphID in Non-Default UVS table greater than number of glyphs in the font</value>
+  </data>
+  <data name="cmap_E_f14_DefaultUVS_EOT" xml:space="preserve">
+    <value>E0338: Default UVS table offset out of range of table</value>
+  </data>
+  <data name="cmap_E_f14_NonDefaultUVS_EOT" xml:space="preserve">
+    <value>E0339: Non-Default UVS table offset out of range of table</value>
+  </data>
+  <data name="name_E_NoFormat14" xml:space="preserve">
+    <value>E0340: A name record specifies using the Unicode Variation Sequences cmap subtable (Format 14)</value>
+  </data>
+  <data name="cmap_E_f14_NonDefaultUVS_TooSmall" xml:space="preserve">
+    <value>E0341: Non-Default UVS table offset out of range of offset tables</value>
+  </data>
+  <data name="cmap_E_f14_DefaultUVS_TooSmall" xml:space="preserve">
+    <value>E0342: Default UVS table offset out of range of offset tables</value>
+  </data>
+  <data name="cmap_E_f14_OverlappingMaps" xml:space="preserve">
+    <value>E0343: Overlapping of Format 14 tables</value>
+  </data>
+  <data name="cvt_E_length_odd" xml:space="preserve">
+    <value>E0400: The length of the cvt table is not an even number of bytes</value>
+  </data>
+  <data name="DSIG_E_Formats" xml:space="preserve">
+    <value>E0500: A signature block is not in format 1</value>
+  </data>
+  <data name="DSIG_E_Reserved" xml:space="preserve">
+    <value>E0501: A signature block contains a reserved value that is not zero</value>
+  </data>
+  <data name="DSIG_E_VerifySignature" xml:space="preserve">
+    <value>E0502: The digital signature of the file did not verify</value>
+  </data>
+  <data name="EBDT_E_version" xml:space="preserve">
+    <value>E0600: The version is not 0x00020000</value>
+  </data>
+  <data name="EBDT_E_TableDependency" xml:space="preserve">
+    <value>E0601: The EBLC table is not present</value>
+  </data>
+  <data name="EBDT_E_GlyphImageData" xml:space="preserve">
+    <value>E0602: The glyph image data is invalid</value>
+  </data>
+  <data name="EBLC_E_bitDepth" xml:space="preserve">
+    <value>E0700: the bitDepth field is not a valid value</value>
+  </data>
+  <data name="EBLC_E_indexSubTableArrayOffset" xml:space="preserve">
+    <value>E0701: The indexSubTableArrayOffset field is not in a valid range</value>
+  </data>
+  <data name="EBLC_E_version" xml:space="preserve">
+    <value>E0702: The version is not 0x00020000</value>
+  </data>
+  <data name="EBLC_E_TableDependency" xml:space="preserve">
+    <value>E0703: The EBDT table is not present</value>
+  </data>
+  <data name="EBLC_E_BitmapSizeTableIndexOrder" xml:space="preserve">
+    <value>E0704: Bitmap size table start index is larger than the end index value</value>
+  </data>
+  <data name="EBLC_E_indexSubTables" xml:space="preserve">
+    <value>E0705: The index subtable is not valid</value>
+  </data>
+  <data name="EBLC_E_numSizes" xml:space="preserve">
+    <value>E0706: The number of sizes requires more space than available in the EBLC table.</value>
+  </data>
+  <data name="EBSC_E_TableLength" xml:space="preserve">
+    <value>E0800: The table length does not equal the calculated value</value>
+  </data>
+  <data name="EBSC_E_version" xml:space="preserve">
+    <value>E0801: The version is not 0x00020000</value>
+  </data>
+  <data name="EBSC_E_TableDependency" xml:space="preserve">
+    <value>E0802: Other required bitmap tables are not present</value>
+  </data>
+  <data name="EBSC_E_StrikeSizeNoEBLC" xml:space="preserve">
+    <value>E0803: Could not verify substitute bitmap strikes because EBLC is not present</value>
+  </data>
+  <data name="EBSC_E_StrikeSize" xml:space="preserve">
+    <value>E0804: Substitute bitmap strike is not in font</value>
+  </data>
+  <data name="gasp_E_rangeGaspBehavior" xml:space="preserve">
+    <value>E1000: Some rangeGaspBehavior fields contain invalid flags</value>
+  </data>
+  <data name="gasp_E_Sentinel" xml:space="preserve">
+    <value>E1001: The gaspRange array does not have a 0xFFFF sentinel</value>
+  </data>
+  <data name="gasp_E_SortOrder" xml:space="preserve">
+    <value>E1002: The gaspRange array is not in sorted order</value>
+  </data>
+  <data name="gasp_E_Version" xml:space="preserve">
+    <value>E1003: The version number is not valid</value>
+  </data>
+  <data name="glyf_E_CompositeAmbigousTransform" xml:space="preserve">
+    <value>E1100: Component&#39;s transform is ambigously defined</value>
+  </data>
+  <data name="glyf_E_ExceptionUnhandeled" xml:space="preserve">
+    <value>E1101: An exception occurred during glyph validation or loading of one of its components</value>
+  </data>
+  <data name="glyf_E_UnableToStartValidation" xml:space="preserve">
+    <value>E1102: Unable  to start validation of &#39;glyf&#39; table</value>
+  </data>
+  <data name="hdmx_E_DeviceRecordPadBytes_nonzero" xml:space="preserve">
+    <value>E1200: The DeviceRecord padding bytes are not 0</value>
+  </data>
+  <data name="hdmx_E_DuplicateDeviceRecords" xml:space="preserve">
+    <value>E1201: There are duplicate DeviceRecords</value>
+  </data>
+  <data name="hdmx_E_Rasterizer" xml:space="preserve">
+    <value>E1202: The hdmx widths can&#39;t be validated due to an error while rasterizing the glyphs, likely a hinting instruction error</value>
+  </data>
+  <data name="hdmx_E_SizeofDeviceRecord_alignment" xml:space="preserve">
+    <value>E1203: The SizeofDeviceRecord is not long aligned</value>
+  </data>
+  <data name="hdmx_E_SizeofDeviceRecord_numGlyphs" xml:space="preserve">
+    <value>E1204: The SizeofDeviceRecord doesn&#39;t match the calculated value</value>
+  </data>
+  <data name="hdmx_E_SortedOrder" xml:space="preserve">
+    <value>E1205: The DeviceRecords are not sorted in ascending order</value>
+  </data>
+  <data name="hdmx_E_Version" xml:space="preserve">
+    <value>E1206: The version number is not 0</value>
+  </data>
+  <data name="hdmx_E_Widths" xml:space="preserve">
+    <value>E1207: The hdmx width doesn&#39;t match the calculated width</value>
+  </data>
+  <data name="hdmx_E_TableLength" xml:space="preserve">
+    <value>E1208: The table length is incorrect</value>
+  </data>
+  <data name="hdmx_E_NumDeviceRecords_neg" xml:space="preserve">
+    <value>E1209: The number of device records is negative</value>
+  </data>
+  <data name="head_E_created_invalid" xml:space="preserve">
+    <value>E1300: The created time is not valid</value>
+  </data>
+  <data name="head_E_flags_bit14" xml:space="preserve">
+    <value>E1301: Reserved bit 14 of the flags field is set</value>
+  </data>
+  <data name="head_E_flags_bit15" xml:space="preserve">
+    <value>E1302: Reserved bit 15 of the flags field is set</value>
+  </data>
+  <data name="head_E_flags_bit4_0_hdmx" xml:space="preserve">
+    <value>E1303: Non-linear scaling flag (bit 4) is clear, but hdmx table is present</value>
+  </data>
+  <data name="head_E_flags_bit4_0_LTSH" xml:space="preserve">
+    <value>E1304: Non-linear scaling flag (bit 4) is clear, but LTSH table is present</value>
+  </data>
+  <data name="head_E_FontChecksum" xml:space="preserve">
+    <value>E1305: Font checksum is incorrect</value>
+  </data>
+  <data name="head_E_fontDirectionHint" xml:space="preserve">
+    <value>E1306: The fontDirectionHint is not in the range -2..2</value>
+  </data>
+  <data name="head_E_glyphDataFormat" xml:space="preserve">
+    <value>E1307: The glyphDataFormat value is not 0</value>
+  </data>
+  <data name="head_E_indexToLocFormat_match" xml:space="preserve">
+    <value>E1308: The indexToLocFormat value does not match the loca table</value>
+  </data>
+  <data name="head_E_indexToLocFormat_range" xml:space="preserve">
+    <value>E1309: The indexToLocFormat value is not 0 or 1</value>
+  </data>
+  <data name="head_E_lowestRecPPEM_zero" xml:space="preserve">
+    <value>E1310: The lowestRecPPEM value is zero</value>
+  </data>
+  <data name="head_E_macStyleBold_subfamily" xml:space="preserve">
+    <value>E1311: The macStyle bold bit doesn&#39;t match the name table&#39;s font subfamily string</value>
+  </data>
+  <data name="head_E_macStyleBold0_OS2" xml:space="preserve">
+    <value>E1312: The macStyle bold bit is clear, but the OS/2 fsSelection bold bit is set</value>
+  </data>
+  <data name="head_E_macStyleBold1_OS2" xml:space="preserve">
+    <value>E1313: The macStyle bold bit is set, but the OS/2 fsSelection bold bit is clear</value>
+  </data>
+  <data name="head_E_macStyleItal_subfamily" xml:space="preserve">
+    <value>E1314: The macStyle italic bit doesn&#39;t match the name table&#39;s font subfamily string</value>
+  </data>
+  <data name="head_E_macStyleItal0_OS2" xml:space="preserve">
+    <value>E1315: The macStyle italic bit is clear, but the OS/2 fsSelection italic bit is set</value>
+  </data>
+  <data name="head_E_macStyleItal0_post" xml:space="preserve">
+    <value>E1316: The macStyle italic bit is clear, but the post table italic angle is nonzero</value>
+  </data>
+  <data name="head_E_macStyleItal1_OS2" xml:space="preserve">
+    <value>E1317: The macStyle italic bit is set, but the OS/2 fsSelection italic bit is clear</value>
+  </data>
+  <data name="head_E_macStyleItal1_post" xml:space="preserve">
+    <value>E1318: The macStyle italic bit is set, but the post table italic angle is zero</value>
+  </data>
+  <data name="head_E_MagicNumber" xml:space="preserve">
+    <value>E1319: The magic number is not 0x5f0f3cf5</value>
+  </data>
+  <data name="head_E_modified_invalid" xml:space="preserve">
+    <value>E1320: The modified time is not valid</value>
+  </data>
+  <data name="head_E_TableLength" xml:space="preserve">
+    <value>E1321: Table length is not 54 bytes</value>
+  </data>
+  <data name="head_E_TableVersion" xml:space="preserve">
+    <value>E1322: The table version number is not 0x00010000</value>
+  </data>
+  <data name="head_E_unitsPerEM_GT16384" xml:space="preserve">
+    <value>E1323: The unitsPerEm is greater than 16384</value>
+  </data>
+  <data name="head_E_unitsPerEm_LT16" xml:space="preserve">
+    <value>E1324: The unitsPerEm is less than 16</value>
+  </data>
+  <data name="head_E_xMax_glyf" xml:space="preserve">
+    <value>E1325: The xMax value does not match the maximum glyph xMax</value>
+  </data>
+  <data name="head_E_xMin_glyf" xml:space="preserve">
+    <value>E1326: The xMin value does not match the minimum glyph xMin</value>
+  </data>
+  <data name="head_E_xMin_GT_xMax" xml:space="preserve">
+    <value>E1327: xMin is greater than xMax</value>
+  </data>
+  <data name="head_E_yMax_glyf" xml:space="preserve">
+    <value>E1328: The yMax value does not match the maximum glyph yMax</value>
+  </data>
+  <data name="head_E_yMin_glyf" xml:space="preserve">
+    <value>E1329: The yMin value does not match the minimum glyph yMin</value>
+  </data>
+  <data name="head_E_yMin_GT_yMax" xml:space="preserve">
+    <value>E1330: yMin is greater than yMax</value>
+  </data>
+  <data name="hhea_E_advanceWidthMax" xml:space="preserve">
+    <value>E1400: The advanceWidthMax field does not equal the calculated value</value>
+  </data>
+  <data name="hhea_E_metricDataFormat" xml:space="preserve">
+    <value>E1401: The metricDataFormat field is not set to zero</value>
+  </data>
+  <data name="hhea_E_minLeftSideBearing" xml:space="preserve">
+    <value>E1402: The minLeftSideBearing field does not equal the calculated value</value>
+  </data>
+  <data name="hhea_E_minRightSideBearing" xml:space="preserve">
+    <value>E1403: The minRightSideBearing field does not equal the calculated value</value>
+  </data>
+  <data name="hhea_E_numberOfHMetrics" xml:space="preserve">
+    <value>E1404: The numberOfHMetrics value is not consistent with the length of the hmtx table</value>
+  </data>
+  <data name="hhea_E_reserved1" xml:space="preserve">
+    <value>E1405: Reserved field # 1 is non-zero</value>
+  </data>
+  <data name="hhea_E_reserved2" xml:space="preserve">
+    <value>E1406: Reserved field # 2 is non-zero</value>
+  </data>
+  <data name="hhea_E_reserved3" xml:space="preserve">
+    <value>E1407: Reserved field # 3 is non-zero</value>
+  </data>
+  <data name="hhea_E_reserved4" xml:space="preserve">
+    <value>E1408: Reserved field # 4 is non-zero</value>
+  </data>
+  <data name="hhea_E_version" xml:space="preserve">
+    <value>E1409: The table version number is not 0x00010000</value>
+  </data>
+  <data name="hhea_E_xMaxExtent" xml:space="preserve">
+    <value>E1410: The xMaxExtent field does not equal the calculated value</value>
+  </data>
+  <data name="hhea_E_caretSlopeAngle_italicAngle" xml:space="preserve">
+    <value>E1411: The caretSlopeRise/caretSlopeRun angle does not match the post.italicAngle</value>
+  </data>
+  <data name="hhea_E_caretSlopeRunNonZero_italicAngle" xml:space="preserve">
+    <value>E1412: The caretSlopeRun is nonzero, but the post.italicAngle is zero</value>
+  </data>
+  <data name="hhea_E_caretSlopeRunZero_italicAngle" xml:space="preserve">
+    <value>E1413: The caretSlopeRun is zero, but the post.italicAngle is nonzero</value>
+  </data>
+  <data name="hhea_E_AscenderPositive" xml:space="preserve">
+    <value>E1414: The Ascender value must be greater than zero</value>
+  </data>
+  <data name="hhea_E_DescenderNegative" xml:space="preserve">
+    <value>E1415: The Descender value must be less than zero</value>
+  </data>
+  <data name="hmtx_E_TableSize" xml:space="preserve">
+    <value>E1500: The size of the table does not match the calculated size</value>
+  </data>
+  <data name="kern_E_Format0_entrySelector" xml:space="preserve">
+    <value>E1600: The subtable&#39;s entrySelector value does not match the calculated value</value>
+  </data>
+  <data name="kern_E_Format0_rangeShift" xml:space="preserve">
+    <value>E1601: The subtable&#39;s rangeShift value does not match the calculated value</value>
+  </data>
+  <data name="kern_E_Format0_searchRange" xml:space="preserve">
+    <value>E1602: The subtable&#39;s searchRange value does not match the calculated value</value>
+  </data>
+  <data name="kern_E_NumSubTables" xml:space="preserve">
+    <value>E1603: The number of subtables is 0</value>
+  </data>
+  <data name="kern_E_ReservedCoverageBits" xml:space="preserve">
+    <value>E1604: A subtable has reserved coverage bits that are set</value>
+  </data>
+  <data name="kern_E_SubtableFormats" xml:space="preserve">
+    <value>E1605: A subtable was found which was not 0 or 2</value>
+  </data>
+  <data name="kern_E_SubtableLength" xml:space="preserve">
+    <value>E1606: The subtable&#39;s length did not match the calculated length</value>
+  </data>
+  <data name="kern_E_TableVersion" xml:space="preserve">
+    <value>E1607: The table version was not 0</value>
+  </data>
+  <data name="kern_E_SubTableExtendsPastEOT" xml:space="preserve">
+    <value>E1608: The subtable extends past the end of the table</value>
+  </data>
+  <data name="kern_E_Format0_GlyphIDs" xml:space="preserve">
+    <value>E1609: A glyph id is invalid</value>
+  </data>
+  <data name="kern_E_Format0_Values" xml:space="preserve">
+    <value>E1610: The kerning value is invalid </value>
+  </data>
+  <data name="kern_E_Format0_GlyphIdInCmap" xml:space="preserve">
+    <value>E1611: A kern pair has a glyph ID that is not mapped in the cmap table</value>
+  </data>
+  <data name="loca_E_Format" xml:space="preserve">
+    <value>E1700: Incorrect format of loca</value>
+  </data>
+  <data name="loca_E_NumEntries" xml:space="preserve">
+    <value>E1701: The number of entries is not equal (maxp.numGlyphs + 1)</value>
+  </data>
+  <data name="loca_E_OffsetsIncreasing" xml:space="preserve">
+    <value>E1702: The entries are not sorted in ascending order</value>
+  </data>
+  <data name="loca_E_OffsetWithinGlyfRange" xml:space="preserve">
+    <value>E1703: Loca entry points outside the glyf range</value>
+  </data>
+  <data name="LTSH_E_numGlyphs" xml:space="preserve">
+    <value>E1800: The numGlyphs field does not equal maxp.numGlyphs</value>
+  </data>
+  <data name="LTSH_E_Rasterizer" xml:space="preserve">
+    <value>E1801: The LTSH yPel values can&#39;t be validated due to an error while rasterizing the glyphs, likely a hinting instruction error</value>
+  </data>
+  <data name="LTSH_E_TableLength" xml:space="preserve">
+    <value>E1802: The calculated table length does not match the actual table length</value>
+  </data>
+  <data name="LTSH_E_version" xml:space="preserve">
+    <value>E1803: The version number is not 0</value>
+  </data>
+  <data name="LTSH_E_yPels" xml:space="preserve">
+    <value>E1804: The LTSH yPel value doesn&#39;t match the calculated value</value>
+  </data>
+  <data name="maxp_E_Calculation" xml:space="preserve">
+    <value>E1900: The value doesn&#39;t match the calculated value</value>
+  </data>
+  <data name="maxp_E_LENGTH_0_5" xml:space="preserve">
+    <value>E1901: Table version is 0x00005000 but the table is not 6 bytes long</value>
+  </data>
+  <data name="maxp_E_LENGTH_1_0" xml:space="preserve">
+    <value>E1902: Table version is 1.0 but the table is not 32 bytes long</value>
+  </data>
+  <data name="maxp_E_NumGlyphsMatchLoca" xml:space="preserve">
+    <value>E1903: The numGlyphs value doesn&#39;t match the number of entries in the loca array</value>
+  </data>
+  <data name="maxp_E_VERSION_0_5_glyf" xml:space="preserve">
+    <value>E1904: Table version is 0x00005000 but font contains a glyf table</value>
+  </data>
+  <data name="maxp_E_VERSION_0_5_NOCFF" xml:space="preserve">
+    <value>E1905: Table version is 0x00005000 but font does not contain the required CFF table</value>
+  </data>
+  <data name="maxp_E_VERSION_1_0_CFF" xml:space="preserve">
+    <value>E1906: Table version is 1.0 but font contains a CFF table</value>
+  </data>
+  <data name="maxp_E_VERSION_1_0_NOglyf" xml:space="preserve">
+    <value>E1907: Table version is 1.0 but font does not contain the required glyf table</value>
+  </data>
+  <data name="maxp_E_VERSION_INVALID" xml:space="preserve">
+    <value>E1908: Table version must be either 0x00005000 or 0x00010000</value>
+  </data>
+  <data name="name_E_FormatSelector" xml:space="preserve">
+    <value>E2000: The format selector field is not 0</value>
+  </data>
+  <data name="name_E_MSLanguageID" xml:space="preserve">
+    <value>E2001: The Language ID is not valid</value>
+  </data>
+  <data name="name_E_NameRecordsSorted" xml:space="preserve">
+    <value>E2002: The NameRecords array is not in sorted order</value>
+  </data>
+  <data name="name_E_NoMacPlatform" xml:space="preserve">
+    <value>E2003: The table doesn&#39;t contain strings for Mac platform</value>
+  </data>
+  <data name="name_E_NoMSPlatform" xml:space="preserve">
+    <value>E2004: The table doesn&#39;t contain strings for Microsoft platform</value>
+  </data>
+  <data name="name_E_PlatformSpecificEncoding" xml:space="preserve">
+    <value>E2005: The Platform Specific Encoding ID is out of range</value>
+  </data>
+  <data name="name_E_Postscript_chars" xml:space="preserve">
+    <value>E2006: The PostScript string contains an illegal character</value>
+  </data>
+  <data name="name_E_Postscript_length" xml:space="preserve">
+    <value>E2007: The PostScript string is longer than 63 characters</value>
+  </data>
+  <data name="name_E_Postscript_missing" xml:space="preserve">
+    <value>E2008: The PostScript string is not present for both required platforms</value>
+  </data>
+  <data name="name_E_Postscript_unequal" xml:space="preserve">
+    <value>E2009: The Mac PostScript string does not match the Microsoft PostScript string</value>
+  </data>
+  <data name="name_E_ReservedNameID" xml:space="preserve">
+    <value>E2010: A name record is using a reserved Name ID</value>
+  </data>
+  <data name="name_E_StringsWithinTable" xml:space="preserve">
+    <value>E2011: A string extends past the end of the table</value>
+  </data>
+  <data name="name_E_UnicodeLength" xml:space="preserve">
+    <value>E2012: The length of the unicode string is not an even # of bytes</value>
+  </data>
+  <data name="name_E_VersionStringFormat" xml:space="preserve">
+    <value>E2013: The version string is not formatted correctly</value>
+  </data>
+  <data name="name_E_VersionStringNotFound" xml:space="preserve">
+    <value>E2014: No Microsoft unicode version strings were found</value>
+  </data>
+  <data name="name_E_sample" xml:space="preserve">
+    <value>E2015: The sample string contains a character that is not mapped in the font</value>
+  </data>
+  <data name="OS_2_E_fsSelection_subfamily" xml:space="preserve">
+    <value>E2100: A bit in the fsSelection field doesn&#39;t match the name table&#39;s font subfamily string</value>
+  </data>
+  <data name="OS_2_E_fsSelection_undefbits" xml:space="preserve">
+    <value>E2101: There are undefined bits set in fsSelection field</value>
+  </data>
+  <data name="OS_2_E_fsTypeReserved" xml:space="preserve">
+    <value>E2102: The fsType field contains reserved bits that are not zero</value>
+  </data>
+  <data name="OS_2_E_Panose_bArmStyle" xml:space="preserve">
+    <value>E2103: PANOSE(tm) byte 7, ArmStyle &gt; 11</value>
+  </data>
+  <data name="OS_2_E_Panose_bContrast" xml:space="preserve">
+    <value>E2104: PANOSE(tm) byte 5, Contrast &gt; 9</value>
+  </data>
+  <data name="OS_2_E_Panose_bFamilyType" xml:space="preserve">
+    <value>E2105: PANOSE(tm) byte 1, FamilyType &gt; 5</value>
+  </data>
+  <data name="OS_2_E_Panose_bLetterform" xml:space="preserve">
+    <value>E2106: PANOSE(tm) byte 8, Letterform &gt; 15</value>
+  </data>
+  <data name="OS_2_E_Panose_bMidline" xml:space="preserve">
+    <value>E2107: PANOSE(tm) byte 9, Midline &gt; 13</value>
+  </data>
+  <data name="OS_2_E_Panose_bProportion" xml:space="preserve">
+    <value>E2108: PANOSE(tm) byte 4, Proportion &gt; 9</value>
+  </data>
+  <data name="OS_2_E_Panose_bSerifStyle" xml:space="preserve">
+    <value>E2109: PANOSE(tm) byte 2, SerifStyle &gt; 15</value>
+  </data>
+  <data name="OS_2_E_Panose_bStrokeVariation" xml:space="preserve">
+    <value>E2110: PANOSE(tm) byte 6, StrokeVariation &gt; 10</value>
+  </data>
+  <data name="OS_2_E_Panose_bWeight" xml:space="preserve">
+    <value>E2111: PANOSE(tm) byte 3, Weight &gt; 11</value>
+  </data>
+  <data name="OS_2_E_Panose_bXHeight" xml:space="preserve">
+    <value>E2112: PANOSE(tm) byte 10, XHeight &gt; 7</value>
+  </data>
+  <data name="OS_2_E_RangeBitSet" xml:space="preserve">
+    <value>E2113: A unicode range was indicated in ulUnicodeRange, but the font has no characters in that range</value>
+  </data>
+  <data name="OS_2_E_reg_bold" xml:space="preserve">
+    <value>E2114: The fsSelection field has both the Regular and Bold bits set</value>
+  </data>
+  <data name="OS_2_E_reg_ital" xml:space="preserve">
+    <value>E2115: The fsSelection field has both the Regular and Italic bits set</value>
+  </data>
+  <data name="OS_2_E_ReservedBitSet_CodePage" xml:space="preserve">
+    <value>E2116: A reserved bit is set in a ulCodePageRange field</value>
+  </data>
+  <data name="OS_2_E_ReservedBitSet_Unicode" xml:space="preserve">
+    <value>E2117: A reserved bit is set in a ulUnicodeRange field</value>
+  </data>
+  <data name="OS_2_E_sCapHeight" xml:space="preserve">
+    <value>E2118: The sCapHeight field is zero, but the U+0048 character is mapped to a glyf</value>
+  </data>
+  <data name="OS_2_E_sFamilyClass_classID_reserved" xml:space="preserve">
+    <value>E2119: sFamilyClass class ID is reserved</value>
+  </data>
+  <data name="OS_2_E_sFamilyClass_ClassID_undefined" xml:space="preserve">
+    <value>E2120: sFamilyClass class ID is undefined</value>
+  </data>
+  <data name="OS_2_E_sFamilyClass_subclassID_undefined" xml:space="preserve">
+    <value>E2121: sFamilyClass subclass ID is undefined</value>
+  </data>
+  <data name="OS_2_E_SurrogatesBitClear" xml:space="preserve">
+    <value>E2122: The surrogates bit (bit #57) is clear in the ulUnicodeRange, but the cmap contains a surrogates encoding</value>
+  </data>
+  <data name="OS_2_E_SurrogatesBitSet" xml:space="preserve">
+    <value>E2123: The surrogates bit (bit #57) is set in the ulUnicodeRange, but the cmap doesn&#39;t contain a surrogates encoding</value>
+  </data>
+  <data name="OS_2_E_sxHeight" xml:space="preserve">
+    <value>E2124: The sxHeight field is zero, but the U+0078 character is mapped to a glyf</value>
+  </data>
+  <data name="OS_2_E_SymbolBitClear" xml:space="preserve">
+    <value>E2125: The font contains a 3,0 cmap, but the CodePageRange bit #31 (symbol character set) is clear</value>
+  </data>
+  <data name="OS_2_E_SymbolBitSet" xml:space="preserve">
+    <value>E2126: The font doesn&#39;t contain a 3,0 cmap and doesn&#39;t contain characters mapped to the 0xf000-0xf0ff range, but the CodePageRange bit #31 (symbol character set) is set</value>
+  </data>
+  <data name="OS_2_E_TableLength" xml:space="preserve">
+    <value>E2127: The table length does not match the expected length for this version</value>
+  </data>
+  <data name="OS_2_E_usBreakChar_notmapped" xml:space="preserve">
+    <value>E2128: The usBreakChar is not mapped to a glyf</value>
+  </data>
+  <data name="OS_2_E_usDefaultChar_notmapped" xml:space="preserve">
+    <value>E2129: The usDefaultChar field is nonzero, but the character is not mapped to a glyf</value>
+  </data>
+  <data name="OS_2_E_usFirstCharIndex" xml:space="preserve">
+    <value>E2130: The usFirstCharIndex is not valid</value>
+  </data>
+  <data name="OS_2_E_usLastCharIndex" xml:space="preserve">
+    <value>E2131: The usLastCharIndex is not valid</value>
+  </data>
+  <data name="OS_2_E_Version" xml:space="preserve">
+    <value>E2132: The version number is invalid</value>
+  </data>
+  <data name="OS_2_E_WeightClass" xml:space="preserve">
+    <value>E2133: The usWeightClass is not a valid value</value>
+  </data>
+  <data name="OS_2_E_WidthClass" xml:space="preserve">
+    <value>E2134: The width class is not a valid value</value>
+  </data>
+  <data name="OS_2_E_xAvgCharWidth" xml:space="preserve">
+    <value>E2135: The xAvgCharWidth field does not equal the calculated value</value>
+  </data>
+  <data name="OS_2_E_Panose_FamilyTypeNotSymbol" xml:space="preserve">
+    <value>E2139: Font is a symbol font, but PANOSE(tm) byte 1, FamilyType, is not set to Latin Symbol</value>
+  </data>
+  <data name="OS_2_E_Panose_FamilyTypeSymbol" xml:space="preserve">
+    <value>E2140: Font is a not a symbol font, but PANOSE(tm) byte 1, FamilyType, is set to Latin Symbol</value>
+  </data>
+  <data name="OS_2_E_Panose_SymbolAspectRatio" xml:space="preserve">
+    <value>E2141: PANOSE family kind is Latin Symbol, but byte 5, Aspect Ratio and Contrast, does not equal 1</value>
+  </data>
+  <data name="OS_2_E_Panose_SymbolWeight" xml:space="preserve">
+    <value>E2142: PANOSE family kind is Latin Symbol, but byte 3, Weight, does not equal 1</value>
+  </data>
+  <data name="OS_2_E_fsSelection_macStyle_bold" xml:space="preserve">
+    <value>E2143: The fsSelection bold bit is inconsistent with the macStyle bold bit</value>
+  </data>
+  <data name="OS_2_E_fsSelection_macStyle_italic" xml:space="preserve">
+    <value>E2144: The fsSelection italic bit is inconsistent with the macStyle italic bit</value>
+  </data>
+  <data name="OS_2_E_sTypoAscender_notpositive" xml:space="preserve">
+    <value>E2145: The sTypoAscender value is less than or equal to zero</value>
+  </data>
+  <data name="OS_2_E_sTypoDescender_positive" xml:space="preserve">
+    <value>E2146: The sTypoDescender value is greater than zero</value>
+  </data>
+  <data name="OS_2_E_fsTypeExclusiveBits" xml:space="preserve">
+    <value>E2147: The fsType field has mutually exclusive bits set</value>
+  </data>
+  <data name="OS_2_E_usMaxContext" xml:space="preserve">
+    <value>E2148: The usMaxContext field doesn&#39;t match the calculated value</value>
+  </data>
+  <data name="PCLT_E_Bottom6" xml:space="preserve">
+    <value>E2200: The SerifStyle bottom 6 bit value is invalid</value>
+  </data>
+  <data name="PCLT_E_Pitch" xml:space="preserve">
+    <value>E2201: The Pitch field does not equal the width of the space character</value>
+  </data>
+  <data name="PCLT_E_Reserved" xml:space="preserve">
+    <value>E2202: The Reserved field is not zero</value>
+  </data>
+  <data name="PCLT_E_StrokeWeight" xml:space="preserve">
+    <value>E2203: The StrokeWeight value was not in the range of -7 to 7</value>
+  </data>
+  <data name="PCLT_E_Style_Posture" xml:space="preserve">
+    <value>E2204: The Style Posture bits have a reserved value of 3</value>
+  </data>
+  <data name="PCLT_E_Style_Reserved" xml:space="preserve">
+    <value>E2205: The Style field has non zero bits in the most significant 6 bits</value>
+  </data>
+  <data name="PCLT_E_Style_Structure" xml:space="preserve">
+    <value>E2206: The Style Structure bits are in the reserved range of 18 to 31</value>
+  </data>
+  <data name="PCLT_E_Style_Width" xml:space="preserve">
+    <value>E2207: The Style Width bits have a reserved value of 5</value>
+  </data>
+  <data name="PCLT_E_TableLength" xml:space="preserve">
+    <value>E2208: The table length is not 54 bytes</value>
+  </data>
+  <data name="PCLT_E_Top2" xml:space="preserve">
+    <value>E2209: The SerifStyle top 2 bit value is invalid</value>
+  </data>
+  <data name="PCLT_E_Version" xml:space="preserve">
+    <value>E2210: The version is not 0x00010000</value>
+  </data>
+  <data name="PCLT_E_WidthType" xml:space="preserve">
+    <value>E2211: The WidthType value was not in the range of -5 to 5</value>
+  </data>
+  <data name="post_E_glyphNameIndex_range" xml:space="preserve">
+    <value>E2300: An entry in the glyphNameIndex - 258 is greater than the number of names</value>
+  </data>
+  <data name="post_E_InvalidTableLen" xml:space="preserve">
+    <value>E2301: The table length is invalid</value>
+  </data>
+  <data name="post_E_isFixedPitchNonzero_hmtx" xml:space="preserve">
+    <value>E2302: The isFixedPitch field is nonzero, but hmtx shows the font as proportional</value>
+  </data>
+  <data name="post_E_isFixedPitchNonzero_OS_2" xml:space="preserve">
+    <value>E2303: The isFixedPitch field != 0, but the OS/2 panose bProportion is not monospace</value>
+  </data>
+  <data name="post_E_isFixedPitchZero_hmtx" xml:space="preserve">
+    <value>E2304: The isFixedPitch field is zero, but hmtx shows the font as fixed pitch</value>
+  </data>
+  <data name="post_E_isFixedPitchZero_OS_2" xml:space="preserve">
+    <value>E2305: The isFixedPitch field is zero, but the OS/2 panose bProportion is monospace</value>
+  </data>
+  <data name="post_E_italicAngleNonzero_caretSlopeRun" xml:space="preserve">
+    <value>E2306: The italicAngle is nonzero, but the hhea.caretSlopeRun is zero</value>
+  </data>
+  <data name="post_E_italicAngleNonzero_hheaAngle" xml:space="preserve">
+    <value>E2307: The italicAngle does not match the hhea.caretSlopeRise/hhea.caretSlopeRun angle</value>
+  </data>
+  <data name="post_E_italicAngleNonzero_macStyle" xml:space="preserve">
+    <value>E2308: The italicAngle is nonzero, but the head.macStyle italic bit is not set</value>
+  </data>
+  <data name="post_E_italicAngleZero_caretSlopeRun" xml:space="preserve">
+    <value>E2309: The italicAngle is zero, but the hhea.caretSlopeRun is not zero</value>
+  </data>
+  <data name="post_E_italicAngleZero_macStyle" xml:space="preserve">
+    <value>E2310: The italicAngle is zero, but the head.macStyle italic bit is set</value>
+  </data>
+  <data name="post_E_TableLenNot32" xml:space="preserve">
+    <value>E2311: The table length is not 32 bytes long</value>
+  </data>
+  <data name="post_E_v2_NameLengthInvalid" xml:space="preserve">
+    <value>E2312: The post name extends past the end of the table</value>
+  </data>
+  <data name="post_E_v2_NameOffsetInvalid" xml:space="preserve">
+    <value>E2313: The offset to the post name is invalid</value>
+  </data>
+  <data name="post_E_v2_numberOfGlyphs" xml:space="preserve">
+    <value>E2314: The numberOfGlyphs field does not equal maxp.numGlyphs</value>
+  </data>
+  <data name="post_E_Version" xml:space="preserve">
+    <value>E2315: The version number is invalid</value>
+  </data>
+  <data name="VDMX_E_CalcData" xml:space="preserve">
+    <value>E2500: The VDMX data doesn&#39;t match the data calculated by the rasterizer</value>
+  </data>
+  <data name="VDMX_E_GroupsInTable" xml:space="preserve">
+    <value>E2501: A VDMX group isn&#39;t within the table</value>
+  </data>
+  <data name="VDMX_E_InvalidOffset" xml:space="preserve">
+    <value>E2502: An offset to a VDMX group is invalid</value>
+  </data>
+  <data name="VDMX_E_Version" xml:space="preserve">
+    <value>E2504: The version number is not 0 or 1</value>
+  </data>
+  <data name="VDMX_E_yPelHeight_illegal" xml:space="preserve">
+    <value>E2505: The yPelHeight value is greater than 255</value>
+  </data>
+  <data name="vhea_E_metricDataFormat" xml:space="preserve">
+    <value>E2600: The metricDataFormat field is not set to zero</value>
+  </data>
+  <data name="vhea_E_ReservedFields" xml:space="preserve">
+    <value>E2601: The reserved fields are not all set to zero</value>
+  </data>
+  <data name="vhea_E_version" xml:space="preserve">
+    <value>E2602: The version is not valid</value>
+  </data>
+  <data name="vmtx_E_TableLength" xml:space="preserve">
+    <value>E2700: The table length is incorrect</value>
+  </data>
+  <data name="VORG_E_CFF_Font" xml:space="preserve">
+    <value>E2800: The font is not a CFF font, and so it should not contain a VORG table</value>
+  </data>
+  <data name="VORG_E_Version" xml:space="preserve">
+    <value>E2801: The major.minor version is not 1.0</value>
+  </data>
+  <data name="GDEF_E_AttachListTable_AttachPointArray_PastEOT" xml:space="preserve">
+    <value>E4000: The AttachPoint array extends past the end of the GDEF table</value>
+  </data>
+  <data name="GDEF_E_AttachListTable_AttachPointOffset" xml:space="preserve">
+    <value>E4001: The AttachPoint offset points outside of the GDEF table</value>
+  </data>
+  <data name="GDEF_E_AttachListTable_CoverageOffset_0" xml:space="preserve">
+    <value>E4002: The Coverage offset is zero</value>
+  </data>
+  <data name="GDEF_E_AttachListTable_CoverageOffset_invalid" xml:space="preserve">
+    <value>E4003: The Coverage offset points past the end of the GDEF table</value>
+  </data>
+  <data name="GDEF_E_CaretValueTable_Format" xml:space="preserve">
+    <value>E4004: The CaretValueFormat is invalid</value>
+  </data>
+  <data name="GDEF_E_LigCaretListTable_CoverageOffset_0" xml:space="preserve">
+    <value>E4006: The Coverage offset is zero</value>
+  </data>
+  <data name="GDEF_E_LigCaretListTable_CoverageOffset_invalid" xml:space="preserve">
+    <value>E4007: The Coverage offset points past the end of the GDEF table</value>
+  </data>
+  <data name="GDEF_E_LigCaretListTable_LigGlyphArray_PastEOT" xml:space="preserve">
+    <value>E4008: The LigGlyph array extends past the end of the GDEF table</value>
+  </data>
+  <data name="GDEF_E_LigCaretListTable_LigGlyphOffset" xml:space="preserve">
+    <value>E4009: The LigGlyph offset points outside of the GDEF table</value>
+  </data>
+  <data name="GDEF_E_LigGlyphTable_CaretValueArray_PastEOT" xml:space="preserve">
+    <value>E4010: The CaretValue array extends past the end of the GDEF table</value>
+  </data>
+  <data name="GDEF_E_LigGlyphTable_CaretValueOffset" xml:space="preserve">
+    <value>E4011: The CaretValue offset points outside of the GDEF table</value>
+  </data>
+  <data name="GDEF_E_Version" xml:space="preserve">
+    <value>E4012: The version number is not 0x00010000</value>
+  </data>
+  <data name="GPOS_E_AnchorTable_format" xml:space="preserve">
+    <value>E4100: The AnchorFormat field is invalid</value>
+  </data>
+  <data name="GPOS_E_Array_pastEOT" xml:space="preserve">
+    <value>E4102: The array extends past the end of the GPOS table</value>
+  </data>
+  <data name="GPOS_E_ExtensionLookupType" xml:space="preserve">
+    <value>E4103: The extension lookup type is invalid</value>
+  </data>
+  <data name="GPOS_E_HeaderOffset" xml:space="preserve">
+    <value>E4104: A header offset doesn&#39;t point within the table</value>
+  </data>
+  <data name="GDEF_E_HeaderOffset" xml:space="preserve">
+    <value>E4005: A header offset doesn&#39;t point within the table</value>
+  </data>
+  <data name="GPOS_E_Array_order" xml:space="preserve">
+    <value>E4101: The array order is incorrect</value>
+  </data>
+  <data name="GPOS_E_HeaderOffset_0" xml:space="preserve">
+    <value>E4105: A header offset has a value of 0</value>
+  </data>
+  <data name="GPOS_E_Offset_PastEOT" xml:space="preserve">
+    <value>E4106: An offset points past the end of the GPOS table</value>
+  </data>
+  <data name="GPOS_E_PosLookupRecord_SequenceIndex" xml:space="preserve">
+    <value>E4107: The PosLookupRecord SequenceIndex is greater than the Input sequence size</value>
+  </data>
+  <data name="GPOS_E_SubtableFormat" xml:space="preserve">
+    <value>E4108: The subtable format value is invalid</value>
+  </data>
+  <data name="GPOS_E_ValueArray_pastEOT" xml:space="preserve">
+    <value>E4109: The Value array extends past the end of the GPOS table</value>
+  </data>
+  <data name="GPOS_E_ValueFormatReservedBits" xml:space="preserve">
+    <value>E4110: The ValueFormat reserved bits are not all zero</value>
+  </data>
+  <data name="GPOS_E_Version" xml:space="preserve">
+    <value>E4111: The version number is not 0x00010000</value>
+  </data>
+  <data name="GSUB_E_Array_pastEOT" xml:space="preserve">
+    <value>E4201: The array extends past the end of the GSUB table</value>
+  </data>
+  <data name="GSUB_E_ExtensionLookupType" xml:space="preserve">
+    <value>E4202: The extension lookup type is invalid</value>
+  </data>
+  <data name="GSUB_E_HeaderOffset" xml:space="preserve">
+    <value>E4203: A header offset doesn&#39;t point within the table</value>
+  </data>
+  <data name="GSUB_E_HeaderOffset_0" xml:space="preserve">
+    <value>E4204: A header offset has a value of 0</value>
+  </data>
+  <data name="GSUB_E_Offset_PastEOT" xml:space="preserve">
+    <value>E4205: An offset points past the end of the GSUB table</value>
+  </data>
+  <data name="GSUB_E_SubstLookupRecord_SequenceIndex" xml:space="preserve">
+    <value>E4206: The SubstLookupRecord SequenceIndex is greater than the Input sequence size</value>
+  </data>
+  <data name="GSUB_E_SubtableFormat" xml:space="preserve">
+    <value>E4207: The subtable format value is invalid</value>
+  </data>
+  <data name="GSUB_E_Version" xml:space="preserve">
+    <value>E4208: The version number is not 0x00010000</value>
+  </data>
+  <data name="BASE_P_BaseValuesOffset" xml:space="preserve">
+    <value>P4310: The BaseValues offset in the BaseScript table is in a valid range</value>
+  </data>
+  <data name="BASE_E_AxisTable_BaseScriptListOffset" xml:space="preserve">
+    <value>E4300: The Axis Table&#39;s BaseScriptListOffset is outside the BASE table</value>
+  </data>
+  <data name="BASE_E_AxisTable_BaseScriptListOffset_null" xml:space="preserve">
+    <value>E4301: The Axis Table&#39;s BaseScriptListOffset is null</value>
+  </data>
+  <data name="BASE_E_AxisTable_BaseTagListOffset" xml:space="preserve">
+    <value>E4302: The Axis Table&#39;s BaseTagListOffset is outside the BASE table</value>
+  </data>
+  <data name="BASE_E_BaseCoordTable_format" xml:space="preserve">
+    <value>E4303: The format of the BaseCoord table is not a valid value</value>
+  </data>
+  <data name="BASE_E_BaseLangSysRecord_offset" xml:space="preserve">
+    <value>E4304: The BaseLangSysRecord&#39;s MinMax offset points outside the BASE table</value>
+  </data>
+  <data name="BASE_E_BaseLangSysRecord_offset0" xml:space="preserve">
+    <value>E4305: The BaseLangSysRecord&#39;s MinMax offset is zero</value>
+  </data>
+  <data name="BASE_E_BaseLangSysRecord_order" xml:space="preserve">
+    <value>E4306: The BaseScript Table&#39;s BaseLangSysRecord array isn&#39;t in alphabetical order</value>
+  </data>
+  <data name="BASE_E_BaseScriptList_Offset" xml:space="preserve">
+    <value>E4307: A BaseScript offset is outside the BASE table</value>
+  </data>
+  <data name="BASE_E_BaseScriptList_Order" xml:space="preserve">
+    <value>E4308: The BaseScriptList table&#39;s BaseScriptRecords are not in alphabetical order</value>
+  </data>
+  <data name="BASE_E_BaseTagList_TagOrder" xml:space="preserve">
+    <value>E4309: The tags in the BaseTagList table are not in alphabetical order</value>
+  </data>
+  <data name="BASE_E_BaseTagList_TagValid" xml:space="preserve">
+    <value>E4310: The BaseTagList table contains an invalid tag</value>
+  </data>
+  <data name="BASE_E_BaseValuesOffset" xml:space="preserve">
+    <value>E4311: The BaseValues offset in the BaseScript table points outside the BASE table</value>
+  </data>
+  <data name="BASE_E_BaseValuesTable_BCO_0" xml:space="preserve">
+    <value>E4312: A BaseCoord offset in the BaseValues table is zero</value>
+  </data>
+  <data name="BASE_E_BaseValuesTable_BCO_invalid" xml:space="preserve">
+    <value>E4313: A BaseCoord offset in the BaseValues table points outside the BASE table</value>
+  </data>
+  <data name="BASE_E_DefaultMinMaxOffset" xml:space="preserve">
+    <value>E4314: The BaseScript table&#39;s DefaultMinMax offset points outside the BASE table</value>
+  </data>
+  <data name="BASE_E_FeatMinMaxRecords_MaxCO_offset" xml:space="preserve">
+    <value>E4315: The FeatMinMaxRecord MaxCoord offset points outside the BASE table</value>
+  </data>
+  <data name="BASE_E_FeatMinMaxRecords_MinCO_offset" xml:space="preserve">
+    <value>E4316: The FeatMinMaxRecord MinCoord offset points outside the BASE table</value>
+  </data>
+  <data name="BASE_E_HorizAxisOffset_OutsideTable" xml:space="preserve">
+    <value>E4317: The HorizAxisOffset value is outside of the BASE table</value>
+  </data>
+  <data name="BASE_E_MinMaxTable_MaxCO" xml:space="preserve">
+    <value>E4318: The MaxCoord offset of the MinMax table points outside the BASE table</value>
+  </data>
+  <data name="BASE_E_MinMaxTable_MinCO" xml:space="preserve">
+    <value>E4319: The MinCoord offset of the MinMax table points outside the BASE table</value>
+  </data>
+  <data name="BASE_E_Version" xml:space="preserve">
+    <value>E4320: The version number is not 0x00010000</value>
+  </data>
+  <data name="BASE_E_VertAxisOffset_OutsideTable" xml:space="preserve">
+    <value>E4321: The VertAxisOffset value is outside the BASE table</value>
+  </data>
+  <data name="JSTF_E_Array_order" xml:space="preserve">
+    <value>E4400: The array order is incorrect</value>
+  </data>
+  <data name="JSTF_E_Array_pastEOT" xml:space="preserve">
+    <value>E4401: The array extends past the end of the JSTF table</value>
+  </data>
+  <data name="JSTF_E_Offset_PastEOT" xml:space="preserve">
+    <value>E4402: An offset points past the end of the JSTF table</value>
+  </data>
+  <data name="JSTF_E_tag" xml:space="preserve">
+    <value>E4403: The tag is invalid</value>
+  </data>
+  <data name="JSTF_E_Version" xml:space="preserve">
+    <value>E4404: The version number is not 0x00010000</value>
+  </data>
+  <data name="_OTL_ClassDefinitionTable_E_Format" xml:space="preserve">
+    <value>E5000: The Format field is invalid</value>
+  </data>
+  <data name="_OTL_ClassDefinitionTable_E_GlyphArrayPastEOT" xml:space="preserve">
+    <value>E5001: The GlyphArray extends past the end of the table</value>
+  </data>
+  <data name="_OTL_ClassDefinitionTable_E_RangeRecordArray_order" xml:space="preserve">
+    <value>E5002: The RangeRecord array is not in sorted order</value>
+  </data>
+  <data name="_OTL_ClassDefinitionTable_E_RangeRecordArrayPastEOT" xml:space="preserve">
+    <value>E5003: The RangeRecord array extends past the end of the table</value>
+  </data>
+  <data name="_OTL_CoverageTable_E_Format" xml:space="preserve">
+    <value>E5100: The Format field is invalid</value>
+  </data>
+  <data name="_OTL_CoverageTable_E_GlyphArrayPastEOT" xml:space="preserve">
+    <value>E5101: The GlyphArray extends past the end of the table</value>
+  </data>
+  <data name="_OTL_CoverageTable_E_RangeRecordArrayPastEOT" xml:space="preserve">
+    <value>E5102: The RangeRecord array extends past the end of the table</value>
+  </data>
+  <data name="_OTL_DeviceTable_E_DeltaFormat" xml:space="preserve">
+    <value>E5200: The device table&#39;s DeltaFormat value is invalid</value>
+  </data>
+  <data name="_OTL_DeviceTable_E_DeltaValueArray_pastEOT" xml:space="preserve">
+    <value>E5201: The device table&#39;s DeltaValue array extends past the end of the table</value>
+  </data>
+  <data name="_OTL_DeviceTable_E_sizes" xml:space="preserve">
+    <value>E5202: The device table StartSize is greater than the end size</value>
+  </data>
+  <data name="_OTL_FeatureListTable_E_FeatureRecord_offset" xml:space="preserve">
+    <value>E5300: The FeatureRecord Feature table offset points past the end of the table</value>
+  </data>
+  <data name="_OTL_FeatureListTable_E_FeatureRecord_tag" xml:space="preserve">
+    <value>E5301: The FeatureRecord tag is invalid</value>
+  </data>
+  <data name="_OTL_FeatureListTable_E_FeatureRecordArray_order" xml:space="preserve">
+    <value>E5302: The FeatureRecord array is not in alphabetical order</value>
+  </data>
+  <data name="_OTL_FeatureListTable_E_FeatureRecordArray_pastEOT" xml:space="preserve">
+    <value>E5303: The FeatureRecord array extends past the end of the table</value>
+  </data>
+  <data name="_OTL_FeatureTable_E_FeatureParams_nonnull" xml:space="preserve">
+    <value>E5400: The FeatureParams field is not null</value>
+  </data>
+  <data name="_OTL_FeatureTable_E_LookupListIndexArray_pastEOT" xml:space="preserve">
+    <value>E5401: The LookupListIndexArray extends past the end of the table</value>
+  </data>
+  <data name="_OTL_LangSysTable_E_FeatureIndexArray_pastEOT" xml:space="preserve">
+    <value>E5500: The FeatureIndex array extends past the end of the table</value>
+  </data>
+  <data name="_OTL_LangSysTable_E_LookupOrder" xml:space="preserve">
+    <value>E5501: The LookupOrder offset is not null</value>
+  </data>
+  <data name="_OTL_LookupListTable_E_Lookup_offset" xml:space="preserve">
+    <value>E5600: The Lookup table offset points past the end of the table</value>
+  </data>
+  <data name="_OTL_LookupListTable_E_LookupArray_pastEOT" xml:space="preserve">
+    <value>E5601: The Lookup array extends past the end of the table</value>
+  </data>
+  <data name="_OTL_LookupTable_E_LookupFlag_reserved" xml:space="preserve">
+    <value>E5700: The LookupFlag reserved bits are not all set to zero</value>
+  </data>
+  <data name="_OTL_LookupTable_E_LookupType" xml:space="preserve">
+    <value>E5701: The LookupType value is invalid</value>
+  </data>
+  <data name="_OTL_LookupTable_E_SubtableArray_offset" xml:space="preserve">
+    <value>E5702: The Subtable array offset value points past the end of the table</value>
+  </data>
+  <data name="_OTL_LookupTable_E_SubtableArray_pastEOT" xml:space="preserve">
+    <value>E5703: The Subtable offset array extends past the end of the table</value>
+  </data>
+  <data name="_OTL_ScriptListTable_E_ScriptRecord_offset" xml:space="preserve">
+    <value>E5800: The ScriptRecord offset to ScriptTable points past the end of the table</value>
+  </data>
+  <data name="_OTL_ScriptListTable_E_ScriptRecord_tag" xml:space="preserve">
+    <value>E5801: The ScriptRecord tag is invalid</value>
+  </data>
+  <data name="_OTL_ScriptListTable_E_ScriptRecordArray_order" xml:space="preserve">
+    <value>E5802: The ScriptRecord array is not in alphabetical order</value>
+  </data>
+  <data name="_OTL_ScriptListTable_E_ScriptRecordArray_pastEOT" xml:space="preserve">
+    <value>E5803: The ScriptRecord array extends past the end of the table</value>
+  </data>
+  <data name="_OTL_ScriptTable_E_DefaultLangSysOffset" xml:space="preserve">
+    <value>E5900: The DefaultLangSys offset points past the end of the table</value>
+  </data>
+  <data name="_OTL_ScriptTable_E_LangSysRecord_offset" xml:space="preserve">
+    <value>E5901: The LangSysRecord&#39;s LangSys offset points past the end of the table</value>
+  </data>
+  <data name="_OTL_ScriptTable_E_LangSysRecord_tag" xml:space="preserve">
+    <value>E5902: The LangSysRecord tag is not valid</value>
+  </data>
+  <data name="_OTL_ScriptTable_E_LangSysRecordArray_order" xml:space="preserve">
+    <value>E5903: The LangSysRecord array is not in alphabetical order</value>
+  </data>
+  <data name="_OTL_ScriptTable_E_LangSysRecordArray_pastEOT" xml:space="preserve">
+    <value>E5904: The LangSysRecord array extends past the end of the table</value>
+  </data>
+  <data name="_rast_E_3_USED_FOR_PERIOD" xml:space="preserve">
+    <value>E6000: Reserved value of 3 used for period</value>
+  </data>
+  <data name="_rast_E_BITS_10_AND_13_SET" xml:space="preserve">
+    <value>E6001: Bits 10 and 13 are set, they are mutually exclusive</value>
+  </data>
+  <data name="_rast_E_BITS_8_AND_11_SET" xml:space="preserve">
+    <value>E6002: Bits 8 and 11 are set, they are mutually exclusive</value>
+  </data>
+  <data name="_rast_E_BITS_9_AND_12_SET" xml:space="preserve">
+    <value>E6003: Bits 9 and 12 are set, they are mutually exclusive</value>
+  </data>
+  <data name="_rast_E_CONTOUR_OUT_OF_RANGE" xml:space="preserve">
+    <value>E6004: Contour out of range</value>
+  </data>
+  <data name="_rast_E_CVT_OUT_OF_RANGE" xml:space="preserve">
+    <value>E6005: CVT Out of range</value>
+  </data>
+  <data name="_rast_E_DIVIDE_BY_ZERO" xml:space="preserve">
+    <value>E6006: Divide by zero</value>
+  </data>
+  <data name="_rast_E_EIF_WITHOUT_IF" xml:space="preserve">
+    <value>E6007: EIF found without IF</value>
+  </data>
+  <data name="_rast_E_ELSE_WITHOUT_EIF" xml:space="preserve">
+    <value>E6008: ELSE found without EIF</value>
+  </data>
+  <data name="_rast_E_ELSE_WITHOUT_IF" xml:space="preserve">
+    <value>E6009: ELSE found without IF</value>
+  </data>
+  <data name="_rast_E_ENDF_BEYOND_64K_OF_FDEF" xml:space="preserve">
+    <value>E6010: ENDF beyond 64K of FDEF</value>
+  </data>
+  <data name="_rast_E_ENDF_BEYOND_64K_OF_IDEF" xml:space="preserve">
+    <value>E6011: ENDF beyond 64K of IDEF</value>
+  </data>
+  <data name="_rast_E_ENDF_EXECUTED" xml:space="preserve">
+    <value>E6012: ENDF found without FDEF or IDEF</value>
+  </data>
+  <data name="_rast_E_EXCEEDS_INSTR_DEFS_IN_MAXP" xml:space="preserve">
+    <value>E6013: IDEF exceeds max instruction defs in maxp</value>
+  </data>
+  <data name="_rast_E_FDEF_FOUND_IN_FDEF" xml:space="preserve">
+    <value>E6014: FDEF found within FDEF - ENDF pair</value>
+  </data>
+  <data name="_rast_E_FDEF_FOUND_IN_IDEF" xml:space="preserve">
+    <value>E6015: FDEF found within IDEF - ENDF pair</value>
+  </data>
+  <data name="_rast_E_FDEF_OUT_OF_RANGE" xml:space="preserve">
+    <value>E6016: FDEF out of range</value>
+  </data>
+  <data name="_rast_E_FDEF_SPACE_NOT_DEFINED" xml:space="preserve">
+    <value>E6017: Function definition space not defined</value>
+  </data>
+  <data name="_rast_E_FDEF_WITHOUT_ENDF" xml:space="preserve">
+    <value>E6018: FDEF found without ENDF</value>
+  </data>
+  <data name="_rast_E_FUCOORDINATE_OUT_OF_RANGE" xml:space="preserve">
+    <value>E6019: Funit coordinate out of range must be -16384 .. 16383</value>
+  </data>
+  <data name="_rast_E_FUNCTION_NOT_DEFINED" xml:space="preserve">
+    <value>E6020: Function not defined</value>
+  </data>
+  <data name="_rast_E_IDEF_FOUND_IN_FDEF" xml:space="preserve">
+    <value>E6021: IDEF found within FDEF - ENDF pair</value>
+  </data>
+  <data name="_rast_E_IDEF_FOUND_IN_IDEF" xml:space="preserve">
+    <value>E6022: IDEF found within IDEF - ENDF pair</value>
+  </data>
+  <data name="_rast_E_IDEF_WITHOUT_ENDF" xml:space="preserve">
+    <value>E6023: IDEF found without ENDF</value>
+  </data>
+  <data name="_rast_E_IF_WITHOUT_EIF" xml:space="preserve">
+    <value>E6024: IF found without corresponding EIF</value>
+  </data>
+  <data name="_rast_E_INST_OPCODE_TO_LARGE" xml:space="preserve">
+    <value>E6025: Instruction OpCode is to large. Must be between 0 and 255</value>
+  </data>
+  <data name="_rast_E_INSTR_DEFD_BY_FS" xml:space="preserve">
+    <value>E6026: Instruction already defined by rasterizer</value>
+  </data>
+  <data name="_rast_E_INVALID_FLAG" xml:space="preserve">
+    <value>E6027: Invalid Instruction flag</value>
+  </data>
+  <data name="_rast_E_INVALID_INSTRUCTION" xml:space="preserve">
+    <value>E6028: Invalid Instruction</value>
+  </data>
+  <data name="_rast_E_INVALID_MAXZONES_IN_MAXP" xml:space="preserve">
+    <value>E6029: Invalid maxZones in maxp table</value>
+  </data>
+  <data name="_rast_E_INVALID_STACK_ACCESS" xml:space="preserve">
+    <value>E6030: Attempt to access stack element out of range</value>
+  </data>
+  <data name="_rast_E_INVALID_ZONE" xml:space="preserve">
+    <value>E6031: Invalid zone</value>
+  </data>
+  <data name="_rast_E_INVALID_ZONE_IN_IUP" xml:space="preserve">
+    <value>E6032: ZP2 in IUP does not point to zone 1</value>
+  </data>
+  <data name="_rast_E_INVALID_ZONE_NO_TWI" xml:space="preserve">
+    <value>E6033: No twilight zone defined. Invalid zone</value>
+  </data>
+  <data name="_rast_E_JMP_BEFORE_BEGINNING" xml:space="preserve">
+    <value>E6034: Jump before beginning of program or function</value>
+  </data>
+  <data name="_rast_E_JMP_BEYOND_2MORE_THAN_END" xml:space="preserve">
+    <value>E6035: Jump beyond 2 bytes past end of function or program</value>
+  </data>
+  <data name="_rast_E_MATH_OVERFLOW" xml:space="preserve">
+    <value>E6036: Math overflow</value>
+  </data>
+  <data name="_rast_E_NOT_CALLED_FROM_PREPROGRAM" xml:space="preserve">
+    <value>E6037: Not called from pre-program</value>
+  </data>
+  <data name="_rast_E_OVERFLOW_INST_PTR" xml:space="preserve">
+    <value>E6038: Overflow Instruction Stream</value>
+  </data>
+  <data name="_rast_E_POINT_OUT_OF_RANGE" xml:space="preserve">
+    <value>E6039: Point out of range</value>
+  </data>
+  <data name="_rast_E_PREPROGAM_ZONE_NOT_TWI" xml:space="preserve">
+    <value>E6040: Zone referenced in pre-program is not the twilight zone</value>
+  </data>
+  <data name="_rast_E_REFPOINT_USED_BUT_NOT_SET" xml:space="preserve">
+    <value>E6041: Reference point used but not set</value>
+  </data>
+  <data name="_rast_E_RESERVED_BIT_SET" xml:space="preserve">
+    <value>E6042: At least one reserved bit is set</value>
+  </data>
+  <data name="_rast_E_RP1_RP2_SAME_POS_ON_PROJ" xml:space="preserve">
+    <value>E6043: RP1 and RP2 have the same position on the projection vector</value>
+  </data>
+  <data name="_rast_E_SELECTOR_INVALID" xml:space="preserve">
+    <value>E6044: Selector invalid</value>
+  </data>
+  <data name="_rast_E_STACK_OVERFLOW" xml:space="preserve">
+    <value>E6045: Stack Overflow</value>
+  </data>
+  <data name="_rast_E_STACK_UNDERFLOW" xml:space="preserve">
+    <value>E6046: Stack Underflow</value>
+  </data>
+  <data name="_rast_E_STORAGE_OUT_OF_RANGE" xml:space="preserve">
+    <value>E6047: Storage index out of range</value>
+  </data>
+  <data name="_rast_E_STORE_INDEX_NOT_WRITTEN_TO" xml:space="preserve">
+    <value>E6048: Storage location not written to</value>
+  </data>
+  <data name="_rast_E_TWILIGHT_ZONE_PT_NOT_SET" xml:space="preserve">
+    <value>E6049: Twilight zone point not set</value>
+  </data>
+  <data name="_rast_E_VALUE_INVALID_0_OR_1" xml:space="preserve">
+    <value>E6050: Value invalid should be 0 or 1</value>
+  </data>
+  <data name="_rast_E_VALUE_INVALID_0_OR_2" xml:space="preserve">
+    <value>E6051: Value invalid should be 0 or 2</value>
+  </data>
+  <data name="_rast_E_VALUE_OUT_OF_RANGE" xml:space="preserve">
+    <value>E6052: Value out of range</value>
+  </data>
+  <data name="_rast_E_VALUE_TO_LARGE_FOR_INT16" xml:space="preserve">
+    <value>E6053: Value exceeds capacity of 2 byte number</value>
+  </data>
+  <data name="_rast_E_VALUE_TO_LARGE_FOR_INT8" xml:space="preserve">
+    <value>E6054: Value exceeds capacity of 1 byte number</value>
+  </data>
+  <data name="_rast_E_VALUE_TO_SMALL" xml:space="preserve">
+    <value>E6055: Value too small</value>
+  </data>
+  <data name="_rast_E_VECTOR_XY_INVALID" xml:space="preserve">
+    <value>E6056: X and Y components of vector are invalid. X^2 + Y^2 != 0x4000^2</value>
+  </data>
+  <data name="_rast_E_VECTOR_XY_ZERO" xml:space="preserve">
+    <value>E6057: X and Y components of vector are 0</value>
+  </data>
+  <data name="_rast_E_ZONE_NOT_0_NOR_1" xml:space="preserve">
+    <value>E6058: Zone not 0 nor 1</value>
+  </data>
+  <data name="_rast_E_rasterization" xml:space="preserve">
+    <value>E6059: Could not perform rasterization</value>
+  </data>
+  <data name="_GEN_I_Collection" xml:space="preserve">
+    <value>I0001: The file begins with a TTC header (file contains a collection of fonts)</value>
+  </data>
+  <data name="_GEN_I_OpeningFile" xml:space="preserve">
+    <value>I0002: Opening File</value>
+  </data>
+  <data name="_GEN_I_Single" xml:space="preserve">
+    <value>I0004: The file begins with an Offset Table (file contains a single font)</value>
+  </data>
+  <data name="_GEN_I_TotalValTime" xml:space="preserve">
+    <value>I0005: Total time validating file</value>
+  </data>
+  <data name="_Table_I_Non_OT_Table" xml:space="preserve">
+    <value>I0040: Not an OpenType table, contents not validated</value>
+  </data>
+  <data name="_Table_I_NotSelected" xml:space="preserve">
+    <value>I0041: Table not selected for validation</value>
+  </data>
+  <data name="_TEST_I_NotForCFF" xml:space="preserve">
+    <value>I0050: Cannot perform test since this is a CFF font</value>
+  </data>
+  <data name="_TEST_I_TableVersion" xml:space="preserve">
+    <value>I0051: Cannot perform test, table is wrong version!</value>
+  </data>
+  <data name="_TEST_I_RastTestNotSelected" xml:space="preserve">
+    <value>I0052: Rasterization not selected for validation</value>
+  </data>
+  <data name="CFF_I_NotValidated" xml:space="preserve">
+    <value>I0200: Validation for the CFF table is not implemented</value>
+  </data>
+  <data name="CFF_I_Version" xml:space="preserve">
+    <value>I0201: The CFF major.minor version for this table</value>
+  </data>
+  <data name="fpgm_I_NotValidated" xml:space="preserve">
+    <value>I0900: Validation for the fpgm table is not directly implemented, but rasterization testing will validate any executed hinting instructions</value>
+  </data>
+  <data name="loca_I_GlyfEntryEmpty" xml:space="preserve">
+    <value>I1700: Loca references a zero-length entry in the glyf table</value>
+  </data>
+  <data name="name_I_Preferred_family_present" xml:space="preserve">
+    <value>I2001: Preferred family</value>
+  </data>
+  <data name="name_I_Preferred_family_not_present" xml:space="preserve">
+    <value>I2002: No string for Preferred Family</value>
+  </data>
+  <data name="name_I_Preferred_subfamily_present" xml:space="preserve">
+    <value>I2003: Preferred subfamily</value>
+  </data>
+  <data name="name_I_Preferred_subfamily_not_present" xml:space="preserve">
+    <value>I2004: No string for Preferred Subfamily</value>
+  </data>
+  <data name="OS_2_I_RangeBitNotSet" xml:space="preserve">
+    <value>I2100: Characters in a unicode range are present in the font, but not indicated in ulUnicodeRange fields</value>
+  </data>
+  <data name="post_I_names_noAdobe" xml:space="preserve">
+    <value>I2300: The post name isn&#39;t in uniXXXX or uXXXXX format and there is no Adobe Glyph List entry</value>
+  </data>
+  <data name="post_I_names_nomatch" xml:space="preserve">
+    <value>I2301: The post name does not match the name in the Adobe Glyph List</value>
+  </data>
+  <data name="post_I_v2_glyphNameIndex_notv2" xml:space="preserve">
+    <value>I2302: The glyphNameIndex array was not tested since version != 2</value>
+  </data>
+  <data name="post_I_v2_names_notv2" xml:space="preserve">
+    <value>I2303: The post name was not tested since version != 2</value>
+  </data>
+  <data name="post_I_v2_numberOfGlyphs_notv2" xml:space="preserve">
+    <value>I2304: The numberOfGlyphs field was not tested since version != 2</value>
+  </data>
+  <data name="post_I_names_uni_unexpected" xml:space="preserve">
+    <value>I2305: The post name has an unexpected value</value>
+  </data>
+  <data name="prep_I_NotValidated" xml:space="preserve">
+    <value>I2400: Validation for the prep table is not directly implemented, but rasterization testing will validate any executed hinting instructions</value>
+  </data>
+  <data name="_OFFSET_P_BinarySearchTables" xml:space="preserve">
+    <value>P0010: The searchRange, entrySelector, and rangeShift fields are all valid</value>
+  </data>
+  <data name="_OFFSET_P_numTables" xml:space="preserve">
+    <value>P0011: The numTables field is non-zero</value>
+  </data>
+  <data name="_FONT_P_MissingRequiredTable" xml:space="preserve">
+    <value>P0020: All required tables are present</value>
+  </data>
+  <data name="_FONT_P_OptimalOrder" xml:space="preserve">
+    <value>P0021: Tables are in optimal order</value>
+  </data>
+  <data name="_FONT_P_UnnecessaryTable" xml:space="preserve">
+    <value>P0022: No unnecessary tables are present</value>
+  </data>
+  <data name="_FONT_P_MissingRecommendedTable" xml:space="preserve">
+    <value>P0023: All recommended tables are present</value>
+  </data>
+  <data name="_DE_P_TableAlignment" xml:space="preserve">
+    <value>P0030: The directory entry table offsets are all multiples of 4</value>
+  </data>
+  <data name="_DE_P_TagName" xml:space="preserve">
+    <value>P0031: The directory entry tag names are valid</value>
+  </data>
+  <data name="_DE_P_TagsAscending" xml:space="preserve">
+    <value>P0032: The directory entry tags are in ascending order</value>
+  </data>
+  <data name="cmap_P_AppleLogo" xml:space="preserve">
+    <value>P0300: Character code 240, the Apple logo, is mapped to missing glyph in cmap 1,0 (legal requirement for Microsoft fonts)</value>
+  </data>
+  <data name="cmap_P_AppleMSSupport" xml:space="preserve">
+    <value>P0301: The table contains both Apple and Microsoft subtables</value>
+  </data>
+  <data name="cmap_P_DuplicateSubtables" xml:space="preserve">
+    <value>P0302: There are no duplicate subtables</value>
+  </data>
+  <data name="cmap_P_EuroGlyph_Mac" xml:space="preserve">
+    <value>P0303: Character code 219, the euro character, is mapped for cmap 1,0</value>
+  </data>
+  <data name="cmap_P_EuroGlyph_Uni" xml:space="preserve">
+    <value>P0304: Character code U+20AC, the euro character, is mapped for cmap 3,1</value>
+  </data>
+  <data name="cmap_P_InternalFormat" xml:space="preserve">
+    <value>P0305: The subtable internal format appears valid</value>
+  </data>
+  <data name="cmap_P_SubtableLength" xml:space="preserve">
+    <value>P0306: Each subtable length is within the table</value>
+  </data>
+  <data name="cmap_P_SubtableOffset" xml:space="preserve">
+    <value>P0307: Each subtable offset is within the table</value>
+  </data>
+  <data name="cmap_P_SubtableOverlap" xml:space="preserve">
+    <value>P0308: No overlapping subtables were found</value>
+  </data>
+  <data name="cmap_P_SubtableSortOrder" xml:space="preserve">
+    <value>P0309: The subtables are in the correct order</value>
+  </data>
+  <data name="cmap_P_SubtableValidFormat" xml:space="preserve">
+    <value>P0310: Each subtable&#39;s format number is valid</value>
+  </data>
+  <data name="cmap_P_UnicodePrivateUse" xml:space="preserve">
+    <value>P0311: No characters are mapped in the Unicode Private Use area</value>
+  </data>
+  <data name="cmap_P_version" xml:space="preserve">
+    <value>P0312: The table version number is 0</value>
+  </data>
+  <data name="cmap_P_UnicodePrivateUse_lig" xml:space="preserve">
+    <value>P0313: No characters are mapped in the Unicode Private Use area except the &#39;fl&#39; and/or &#39;fi&#39; ligatures</value>
+  </data>
+  <data name="cmap_P_NonMacSubtableLanguage" xml:space="preserve">
+    <value>P0314: All non mac subtables have a language field of zero</value>
+  </data>
+  <data name="cvt_P_length_even" xml:space="preserve">
+    <value>P0400: The length of the cvt table is an even number of bytes</value>
+  </data>
+  <data name="DSIG_P_Formats" xml:space="preserve">
+    <value>P0500: All signature blocks were in format 1</value>
+  </data>
+  <data name="DSIG_P_Reserved" xml:space="preserve">
+    <value>P0501: All signature blocks&#39; reserved values were 0</value>
+  </data>
+  <data name="DSIG_P_VerifySignature" xml:space="preserve">
+    <value>P0502: The digital signature of the file verified correctly</value>
+  </data>
+  <data name="EBDT_P_version" xml:space="preserve">
+    <value>P0600: The version is 0x00020000</value>
+  </data>
+  <data name="EBDT_P_TableDependency" xml:space="preserve">
+    <value>P0601: The EBLC table is present</value>
+  </data>
+  <data name="EBDT_P_GlyphImageData" xml:space="preserve">
+    <value>P0602: The glyph image data is valid</value>
+  </data>
+  <data name="EBLC_P_bitDepth" xml:space="preserve">
+    <value>P0700: Each bitmapSizeTable&#39;s bitDepth field was valid</value>
+  </data>
+  <data name="EBLC_P_indexSubTableArrayOffset" xml:space="preserve">
+    <value>P0701: Each bitmapSizeTable&#39;s indexSubTableArrayOffset field is in a valid range</value>
+  </data>
+  <data name="EBLC_P_version" xml:space="preserve">
+    <value>P0702: The version is 0x00020000</value>
+  </data>
+  <data name="EBLC_P_TableDependency" xml:space="preserve">
+    <value>P0703: The EBDT table is also present</value>
+  </data>
+  <data name="EBLC_P_BitmapSizeTableIndexOrder" xml:space="preserve">
+    <value>P0704: Each bitmapSizeTable&#39;s  indices are ordered okay</value>
+  </data>
+  <data name="EBLC_P_indexSubTables" xml:space="preserve">
+    <value>P0705: The index subtable is valid</value>
+  </data>
+  <data name="EBLC_P_numSizes" xml:space="preserve">
+    <value>P0706: The number of sizes in the EBLC table fits table size.</value>
+  </data>
+  <data name="EBSC_P_TableLength" xml:space="preserve">
+    <value>P0800: The table length equals the calculated value</value>
+  </data>
+  <data name="EBSC_P_version" xml:space="preserve">
+    <value>P0801: The version is 0x00020000</value>
+  </data>
+  <data name="EBSC_P_TableDependency" xml:space="preserve">
+    <value>P0802: Required bitmap tables present (EBLC and EBDT)</value>
+  </data>
+  <data name="EBSC_P_StrikeSize" xml:space="preserve">
+    <value>P0803: All substitue bitmap stikes are present</value>
+  </data>
+  <data name="gasp_P_rangeGaspBehavior" xml:space="preserve">
+    <value>P1000: All of the rangeGaspBehavior fields contain valid flags</value>
+  </data>
+  <data name="gasp_P_Sentinel" xml:space="preserve">
+    <value>P1001: The gaspRange array has a 0xFFFF sentinel</value>
+  </data>
+  <data name="gasp_P_SortOrder" xml:space="preserve">
+    <value>P1002: The gaspRange array is in sorted order</value>
+  </data>
+  <data name="gasp_P_Version" xml:space="preserve">
+    <value>P1003: The version number is valid</value>
+  </data>
+  <data name="gasp_P_AdjRangeIdenticalFlags" xml:space="preserve">
+    <value>P1004: No adjacent ranges have identical flags</value>
+  </data>
+  <data name="hdmx_P_DeviceRecordPadBytes_none" xml:space="preserve">
+    <value>P1200: There are no DeviceRecord padding bytes</value>
+  </data>
+  <data name="hdmx_P_DeviceRecordPadBytes_zero" xml:space="preserve">
+    <value>P1201: The DeviceRecord padding bytes are 0</value>
+  </data>
+  <data name="hdmx_P_DuplicateDeviceRecords" xml:space="preserve">
+    <value>P1202: There are no duplicate DeviceRecords</value>
+  </data>
+  <data name="hdmx_P_SizeofDeviceRecord" xml:space="preserve">
+    <value>P1203: The SizeofDeviceRecord matches the calculated value</value>
+  </data>
+  <data name="hdmx_P_SortedOrder" xml:space="preserve">
+    <value>P1204: The DeviceRecords are sorted in ascending order</value>
+  </data>
+  <data name="hdmx_P_Version" xml:space="preserve">
+    <value>P1205: The version number is 0</value>
+  </data>
+  <data name="hdmx_P_Widths" xml:space="preserve">
+    <value>P1206: The hdmx widths match the calculated widths</value>
+  </data>
+  <data name="hdmx_P_TableLength" xml:space="preserve">
+    <value>P1207: The table length is correct</value>
+  </data>
+  <data name="hdmx_P_NumDeviceRecords" xml:space="preserve">
+    <value>P1208: The number of device records is non-negative</value>
+  </data>
+  <data name="head_P_created_0" xml:space="preserve">
+    <value>P1300: The created time is not zero</value>
+  </data>
+  <data name="head_P_flags_bit14" xml:space="preserve">
+    <value>P1301: Reserved bit 14 of the flags field is clear</value>
+  </data>
+  <data name="head_P_flags_bit15" xml:space="preserve">
+    <value>P1302: Reserved bit 15 of the flags field is clear</value>
+  </data>
+  <data name="head_P_flags_bit4_0_hdmx" xml:space="preserve">
+    <value>P1303: Non-linear scaling flag (bit 4) is clear, and hdmx table is not present</value>
+  </data>
+  <data name="head_P_flags_bit4_0_LTSH" xml:space="preserve">
+    <value>P1304: Non-linear scaling flag (bit 4) is clear, and LTSH table is not present</value>
+  </data>
+  <data name="head_P_flags_bit4_1_hdmx" xml:space="preserve">
+    <value>P1305: Non-linear scaling flag (bit 4) is set, and hdmx table is present</value>
+  </data>
+  <data name="head_P_flags_bit4_1_LTSH" xml:space="preserve">
+    <value>P1306: Non-linear scaling flag (bit 4) is set, and LTSH table is present</value>
+  </data>
+  <data name="head_P_FontChecksum" xml:space="preserve">
+    <value>P1307: Font checksum is correct</value>
+  </data>
+  <data name="head_P_fontDirectionHint" xml:space="preserve">
+    <value>P1308: The fontDirectionHint is in the range -2..2</value>
+  </data>
+  <data name="head_P_glyphDataFormat" xml:space="preserve">
+    <value>P1309: The glyphDataFormat value is 0</value>
+  </data>
+  <data name="head_P_indexToLocFormat_ignore" xml:space="preserve">
+    <value>P1310: The indexToLocFormat value is ignored in a CFF font</value>
+  </data>
+  <data name="head_P_indexToLocFormat_match" xml:space="preserve">
+    <value>P1311: The indexToLocFormat value matches the loca table</value>
+  </data>
+  <data name="head_P_indexToLocFormat_range" xml:space="preserve">
+    <value>P1312: The indexToLocFormat value is 0 or 1</value>
+  </data>
+  <data name="head_P_lowestRecPPEM" xml:space="preserve">
+    <value>P1313: The lowestRecPPEM value is in a reasonable range</value>
+  </data>
+  <data name="head_P_macStyleBold_OS2" xml:space="preserve">
+    <value>P1314: The macStyle bold bit matches the OS/2 fsSelection bit</value>
+  </data>
+  <data name="head_P_macStyleBold_subfamily" xml:space="preserve">
+    <value>P1316: The macStyle bold bit matches the name table&#39;s font subfamily string</value>
+  </data>
+  <data name="head_P_macStyleItal_OS2" xml:space="preserve">
+    <value>P1318: The macStyle italic bit matches the OS/2 fsSelection bit</value>
+  </data>
+  <data name="head_P_macStyleItal_post" xml:space="preserve">
+    <value>P1319: The macStyle italic bit matches the post table italic angle</value>
+  </data>
+  <data name="head_P_macStyleItal_subfamily" xml:space="preserve">
+    <value>P1320: The macStyle italic bit matches the name table&#39;s font subfamily string</value>
+  </data>
+  <data name="head_P_MagicNumber" xml:space="preserve">
+    <value>P1321: The magic number is 0x5f0f3cf5</value>
+  </data>
+  <data name="head_P_modified_0" xml:space="preserve">
+    <value>P1322: The modified time is not zero</value>
+  </data>
+  <data name="head_P_TableLength" xml:space="preserve">
+    <value>P1323: Table length is 54 bytes</value>
+  </data>
+  <data name="head_P_TableVersion" xml:space="preserve">
+    <value>P1324: The table version number is 0x00010000</value>
+  </data>
+  <data name="head_P_unitsPerEm" xml:space="preserve">
+    <value>P1325: The unitsPerEm value is a power of two in the range 64..16384</value>
+  </data>
+  <data name="head_P_xMax_glyf" xml:space="preserve">
+    <value>P1326: The xMax value matches the maximum glyph xMax</value>
+  </data>
+  <data name="head_P_xMin_glyf" xml:space="preserve">
+    <value>P1327: The xMin value matches the minimum glyph xMin</value>
+  </data>
+  <data name="head_P_yMax_glyf" xml:space="preserve">
+    <value>P1328: The yMax value matches the maximum glyph yMax</value>
+  </data>
+  <data name="head_P_yMin_glyf" xml:space="preserve">
+    <value>P1329: The yMin value matches the minimum glyph yMin</value>
+  </data>
+  <data name="head_P_fontRevision" xml:space="preserve">
+    <value>P1330: fontRevision is consistent with the font&#39;s version string</value>
+  </data>
+  <data name="hhea_P_advanceWidthMax" xml:space="preserve">
+    <value>P1400: The advanceWidthMax field equals the calculated value</value>
+  </data>
+  <data name="hhea_P_metricDataFormat" xml:space="preserve">
+    <value>P1401: The metricDataFormat field is set to zero</value>
+  </data>
+  <data name="hhea_P_minLeftSideBearing" xml:space="preserve">
+    <value>P1402: The minLeftSideBearing field equals the calculated value</value>
+  </data>
+  <data name="hhea_P_minRightSideBearing" xml:space="preserve">
+    <value>P1403: The minRightSideBearing field equals the calculated value</value>
+  </data>
+  <data name="hhea_P_numberOfHMetrics" xml:space="preserve">
+    <value>P1404: The numberOfHMetrics value is consistent with the length of the hmtx table</value>
+  </data>
+  <data name="hhea_P_reserved" xml:space="preserve">
+    <value>P1405: The reserved fields are all set to zero</value>
+  </data>
+  <data name="hhea_P_version" xml:space="preserve">
+    <value>P1406: The table version number is 0x00010000</value>
+  </data>
+  <data name="hhea_P_xMaxExtent" xml:space="preserve">
+    <value>P1407: The xMaxExtent field equals the calculated value</value>
+  </data>
+  <data name="hhea_P_caretSlopeAngle_italicAngle" xml:space="preserve">
+    <value>P1408: The caretSlope angle matches the post.italicAngle</value>
+  </data>
+  <data name="hhea_P_AscenderPositive" xml:space="preserve">
+    <value>P1409: The Ascender value is greater than zero</value>
+  </data>
+  <data name="hhea_P_Ascender_yMax" xml:space="preserve">
+    <value>P1410: Ascender is less than or equal to head.yMax</value>
+  </data>
+  <data name="hhea_P_DescenderNegative" xml:space="preserve">
+    <value>P1411: The Descender is less than zero</value>
+  </data>
+  <data name="hhea_P_Descender_yMin" xml:space="preserve">
+    <value>P1412: Descender is greater than or equal to head.yMin</value>
+  </data>
+  <data name="hhea_P_LineGapPositive" xml:space="preserve">
+    <value>P1413: LineGap is greater than or equal to 0</value>
+  </data>
+  <data name="hhea_P_LineGap_minGap" xml:space="preserve">
+    <value>P1414: The LineGap is greater to or equal the minimum recommended value</value>
+  </data>
+  <data name="hhea_P_Ascender_usWinAscent" xml:space="preserve">
+    <value>P1415: Ascender is same value as OS/2.usWinAscent</value>
+  </data>
+  <data name="hhea_P_Descender_usWinDescent" xml:space="preserve">
+    <value>P1416: Descender value is the same as OS/2.usWinDescent</value>
+  </data>
+  <data name="hmtx_P_CheckMetrics" xml:space="preserve">
+    <value>P1500: The horizontal metrics are all within an allowable range of values</value>
+  </data>
+  <data name="hmtx_P_TableSize" xml:space="preserve">
+    <value>P1501: The size of the table matches the calculated size</value>
+  </data>
+  <data name="kern_P_Format0_SearchFields" xml:space="preserve">
+    <value>P1600: All subtables&#39; searchRange, entrySelector, and rangeShift fields are valid</value>
+  </data>
+  <data name="kern_P_NumSubTables" xml:space="preserve">
+    <value>P1601: The number of subtables is not 0</value>
+  </data>
+  <data name="kern_P_ReservedCoverageBits" xml:space="preserve">
+    <value>P1602: All subtables had their reserved coverage bits set to 0</value>
+  </data>
+  <data name="kern_P_SubtableFormats" xml:space="preserve">
+    <value>P1603: The subtable formats were all 0 or 2</value>
+  </data>
+  <data name="kern_P_SubtableLengths" xml:space="preserve">
+    <value>P1604: All subtable&#39;s lengths match the calculated lengths</value>
+  </data>
+  <data name="kern_P_TableVersion" xml:space="preserve">
+    <value>P1605: The table version was 0</value>
+  </data>
+  <data name="kern_P_Format0_GlyphIDs" xml:space="preserve">
+    <value>P1606: All the glyph IDs in the format 0 subtable are in a valid range</value>
+  </data>
+  <data name="kern_P_Format0_Values" xml:space="preserve">
+    <value>P1607: All the kerning values in the format 0 subtable are in a valid range</value>
+  </data>
+  <data name="kern_P_Format0_GlyphIdInCmap" xml:space="preserve">
+    <value>P1608: Every kern pair in the format 0 subtable has its glyph IDs mapped in the cmap table</value>
+  </data>
+  <data name="loca_P_Format" xml:space="preserve">
+    <value>P1700: Correct format of loca (0 or 1)</value>
+  </data>
+  <data name="loca_P_GlyfEntryEmpty" xml:space="preserve">
+    <value>P1701: Loca does not contain references to zero-length entries in glyf table</value>
+  </data>
+  <data name="loca_P_GlyfEntryLengthAlignment" xml:space="preserve">
+    <value>P1702: Loca references a glyf entry which length is not a multiple of 4</value>
+  </data>
+  <data name="loca_P_GlyfPartiallyUnreferenced" xml:space="preserve">
+    <value>P1703: All glyphs in the glyf table are referenced by the loca table</value>
+  </data>
+  <data name="loca_P_NumEntries" xml:space="preserve">
+    <value>P1704: The number of entries is equal to (maxp.numGlyphs + 1)</value>
+  </data>
+  <data name="loca_P_OffsetsIncreasing" xml:space="preserve">
+    <value>P1705: The entries are sorted in ascending order</value>
+  </data>
+  <data name="loca_P_OffsetWithinGlyfRange" xml:space="preserve">
+    <value>P1706: All entries point within range of the glyf table</value>
+  </data>
+  <data name="LTSH_P_numGlyphs" xml:space="preserve">
+    <value>P1800: The numGlyphs field equals maxp.numGlyphs</value>
+  </data>
+  <data name="LTSH_P_TableLength" xml:space="preserve">
+    <value>P1801: The calculated table length matches the actual table length</value>
+  </data>
+  <data name="LTSH_P_version" xml:space="preserve">
+    <value>P1802: The version number is 0</value>
+  </data>
+  <data name="LTSH_P_yPels" xml:space="preserve">
+    <value>P1803: All LTSH yPel values match the calculated values</value>
+  </data>
+  <data name="maxp_P_Calculation" xml:space="preserve">
+    <value>P1900: The points, contours, and component values match the calculated values</value>
+  </data>
+  <data name="maxp_P_LENGTH_0_5" xml:space="preserve">
+    <value>P1901: Table version is 0x00005000 and the table is 6 bytes long</value>
+  </data>
+  <data name="maxp_P_LENGTH_1_0" xml:space="preserve">
+    <value>P1902: Table version is 1.0 and the table is 32 bytes long</value>
+  </data>
+  <data name="maxp_P_NumGlyphsMatchLoca" xml:space="preserve">
+    <value>P1903: The numGlyphs value equals the number of entries in the loca array plus one</value>
+  </data>
+  <data name="maxp_P_VERSION_0_5" xml:space="preserve">
+    <value>P1904: Table version is 0x00005000, CFF table is present, no glyf table is present</value>
+  </data>
+  <data name="maxp_P_VERSION_1_0" xml:space="preserve">
+    <value>P1905: Table version is 1.0 and a glyf table is present and no CFF table is present</value>
+  </data>
+  <data name="name_P_BothPlatforms" xml:space="preserve">
+    <value>P2000: The table contains strings for both Mac and Microsoft platforms</value>
+  </data>
+  <data name="name_P_FormatSelector" xml:space="preserve">
+    <value>P2001: The format selector field is 0</value>
+  </data>
+  <data name="name_P_MSLanguageID" xml:space="preserve">
+    <value>P2002: All Microsoft unicode strings had valid Language IDs</value>
+  </data>
+  <data name="name_P_NameRecordsSorted" xml:space="preserve">
+    <value>P2003: The NameRecords array is in sorted order</value>
+  </data>
+  <data name="name_P_PlatformSpecificEncoding" xml:space="preserve">
+    <value>P2004: All strings had valid Platform Specific Encoding IDs</value>
+  </data>
+  <data name="name_P_Postscript" xml:space="preserve">
+    <value>P2005: The PostScript strings are correctly formatted</value>
+  </data>
+  <data name="name_P_ReservedNameID" xml:space="preserve">
+    <value>P2006: No name records are using reserved Name IDs</value>
+  </data>
+  <data name="name_P_StringsWithinTable" xml:space="preserve">
+    <value>P2007: No strings extended past the end of the table</value>
+  </data>
+  <data name="name_P_UnicodeLength" xml:space="preserve">
+    <value>P2008: The length of every unicode string is an even # of bytes</value>
+  </data>
+  <data name="name_P_VersionStringFormat" xml:space="preserve">
+    <value>P2009: The version string is in the correct format</value>
+  </data>
+  <data name="name_P_subfamily" xml:space="preserve">
+    <value>P2010: The subfamily string is consistent with the style of the font</value>
+  </data>
+  <data name="name_P_sample" xml:space="preserve">
+    <value>P2011: The sample string is composed of characters that are mapped in the font</value>
+  </data>
+  <data name="name_P_CopyrightConsistent" xml:space="preserve">
+    <value>P2012: No inconsistencies were found for Copyright strings</value>
+  </data>
+  <data name="name_P_DescriptionConsistent" xml:space="preserve">
+    <value>P2013: No inconsistencies were found for Description strings</value>
+  </data>
+  <data name="name_P_TrademarkConsistent" xml:space="preserve">
+    <value>P2014: No inconsistencies were found for Trademark strings</value>
+  </data>
+  <data name="name_P_NoFormat14" xml:space="preserve">
+    <value>P2015: No name record specified Unicode Variation Sequences cmap subtable</value>
+  </data>
+  <data name="OS_2_P_CharIndexes" xml:space="preserve">
+    <value>P2100: The usFirstCharIndex and usLastCharIndex fields are valid</value>
+  </data>
+  <data name="OS_2_P_CodePageRanges" xml:space="preserve">
+    <value>P2101: The CodePage Range fields&#39; bits are all allowable values</value>
+  </data>
+  <data name="OS_2_P_fsSelection" xml:space="preserve">
+    <value>P2102: The fsSelection field appears to be valid</value>
+  </data>
+  <data name="OS_2_P_fsType" xml:space="preserve">
+    <value>P2103: The fsType field is valid</value>
+  </data>
+  <data name="OS_2_P_Panose" xml:space="preserve">
+    <value>P2104: All panose values are in a valid range</value>
+  </data>
+  <data name="OS_2_P_sCapHeight_nonzero" xml:space="preserve">
+    <value>P2105: The sCapHeight field is nonzero</value>
+  </data>
+  <data name="OS_2_P_sCapHeight_zero" xml:space="preserve">
+    <value>P2106: The sCapHeight field is zero, and U+0048 is not mapped to a glyf</value>
+  </data>
+  <data name="OS_2_P_sFamilyClass" xml:space="preserve">
+    <value>P2107: The sFamilyClass Class ID and Subclass ID values are in a valid range</value>
+  </data>
+  <data name="OS_2_P_Strikeout" xml:space="preserve">
+    <value>P2108: The yStrikeoutSize and yStrikeoutPosition appear valid</value>
+  </data>
+  <data name="OS_2_P_SuperscriptSubscript" xml:space="preserve">
+    <value>P2109: All subscript and superscript values appear valid</value>
+  </data>
+  <data name="OS_2_P_sxHeight_nonzero" xml:space="preserve">
+    <value>P2110: The sxHeight field is nonzero</value>
+  </data>
+  <data name="OS_2_P_sxHeight_zero" xml:space="preserve">
+    <value>P2111: The sxHeight field is zero, and U+0078 is not mapped to a glyf</value>
+  </data>
+  <data name="OS_2_P_TableLength" xml:space="preserve">
+    <value>P2112: The table length matches the expected length for this version</value>
+  </data>
+  <data name="OS_2_P_UnicodeRanges" xml:space="preserve">
+    <value>P2113: The Unicode Range fields&#39; bits are all allowable values</value>
+  </data>
+  <data name="OS_2_P_usBreakChar_mapped" xml:space="preserve">
+    <value>P2114: The usBreakChar is mapped to a glyf</value>
+  </data>
+  <data name="OS_2_P_usDefaultChar_nonzero" xml:space="preserve">
+    <value>P2115: The usDefaultChar field is nonzero, and the character is mapped to a glyf</value>
+  </data>
+  <data name="OS_2_P_usDefaultChar_zero" xml:space="preserve">
+    <value>P2116: The usDefaultChar field is zero</value>
+  </data>
+  <data name="OS_2_P_Version" xml:space="preserve">
+    <value>P2117: The version number is valid and is the current version number</value>
+  </data>
+  <data name="OS_2_P_WeightClass" xml:space="preserve">
+    <value>P2118: The usWeightClass is a valid value</value>
+  </data>
+  <data name="OS_2_P_WidthClass" xml:space="preserve">
+    <value>P2119: The width class is a valid value</value>
+  </data>
+  <data name="OS_2_P_xAvgCharWidth" xml:space="preserve">
+    <value>P2120: The xAvgCharWidth field equals the calculated value</value>
+  </data>
+  <data name="OS_2_P_WeightClass_PANOSE" xml:space="preserve">
+    <value>P2122: The usWeightClass is consistent with the PANOSE weight value</value>
+  </data>
+  <data name="OS_2_P_sTypoAscenderDescender" xml:space="preserve">
+    <value>P2123: The sTypoAscender and sTypoDescender fields are reasonable values</value>
+  </data>
+  <data name="OS_2_P_usMaxContext" xml:space="preserve">
+    <value>P2124: The usMaxContext field matches the calculated value</value>
+  </data>
+  <data name="PCLT_P_Pitch" xml:space="preserve">
+    <value>P2200: The Pitch field equals the width of the space character</value>
+  </data>
+  <data name="PCLT_P_Reserved" xml:space="preserve">
+    <value>P2201: The Reserved field is zero</value>
+  </data>
+  <data name="PCLT_P_SerifStyle" xml:space="preserve">
+    <value>P2202: The SerifStyle values are in a valid range</value>
+  </data>
+  <data name="PCLT_P_StrokeWeight" xml:space="preserve">
+    <value>P2203: The StrokeWeight value was in the range of -7 to 7</value>
+  </data>
+  <data name="PCLT_P_Style" xml:space="preserve">
+    <value>P2204: All reserved bits in the Style field were set to zero</value>
+  </data>
+  <data name="PCLT_P_TableLength" xml:space="preserve">
+    <value>P2205: The table length is 54 bytes</value>
+  </data>
+  <data name="PCLT_P_Version" xml:space="preserve">
+    <value>P2206: The version is 0x00010000</value>
+  </data>
+  <data name="PCLT_P_WidthType" xml:space="preserve">
+    <value>P2207: The WidthType value was in the range of -5 to 5</value>
+  </data>
+  <data name="post_P_glyphNameIndex" xml:space="preserve">
+    <value>P2300: The glyphNameIndex array contains valid indexes</value>
+  </data>
+  <data name="post_P_isFixedPitch" xml:space="preserve">
+    <value>P2301: The isFixedPitch field is consistent with other table(s)</value>
+  </data>
+  <data name="post_P_italicAngle" xml:space="preserve">
+    <value>P2302: The italicAngle value is reasonable and consistent with other tables</value>
+  </data>
+  <data name="post_P_names" xml:space="preserve">
+    <value>P2303: The names in the post table are consistent with the Adobe Glyph List names</value>
+  </data>
+  <data name="post_P_TableLength" xml:space="preserve">
+    <value>P2304: The table length is valid</value>
+  </data>
+  <data name="post_P_underlinePosition" xml:space="preserve">
+    <value>P2305: The underlinePosition value is not less than hhea.Descender</value>
+  </data>
+  <data name="post_P_underlineThickness" xml:space="preserve">
+    <value>P2306: The underlineThickness value is reasonable</value>
+  </data>
+  <data name="post_P_v2_numberOfGlyphs" xml:space="preserve">
+    <value>P2307: The numberOfGlyphs field equals maxp.numGlyphs</value>
+  </data>
+  <data name="post_P_Version" xml:space="preserve">
+    <value>P2308: The version number is valid</value>
+  </data>
+  <data name="VDMX_P_CalcData" xml:space="preserve">
+    <value>P2500: The VDMX data matches the data calculated by the rasterizer</value>
+  </data>
+  <data name="VDMX_P_GroupsInTable" xml:space="preserve">
+    <value>P2501: All of the VDMX groups are within the table</value>
+  </data>
+  <data name="VDMX_P_Offsets" xml:space="preserve">
+    <value>P2502: All of the offsets to VDMX groups were in a valid range</value>
+  </data>
+  <data name="VDMX_P_Version" xml:space="preserve">
+    <value>P2503: The version number is valid</value>
+  </data>
+  <data name="vhea_P_metricDataFormat" xml:space="preserve">
+    <value>P2600: The metricDataFormat field is set to zero</value>
+  </data>
+  <data name="vhea_P_ReservedFields" xml:space="preserve">
+    <value>P2601: The reserved fields are all set to zero</value>
+  </data>
+  <data name="vhea_P_version" xml:space="preserve">
+    <value>P2602: The version is number is valid</value>
+  </data>
+  <data name="vmtx_P_TableLength" xml:space="preserve">
+    <value>P2700: The table length is correct</value>
+  </data>
+  <data name="VORG_P_CFF_Font" xml:space="preserve">
+    <value>P2800: The font is a CFF font</value>
+  </data>
+  <data name="VORG_P_Version" xml:space="preserve">
+    <value>P2801: The major.minor version is 1.0</value>
+  </data>
+  <data name="GDEF_P_AttachListTable_AttachPointArray" xml:space="preserve">
+    <value>P4000: The offsets in the AttachPoint array are valid</value>
+  </data>
+  <data name="GDEF_P_AttachListTable_CoverageOffset" xml:space="preserve">
+    <value>P4001: The Coverage offset is nonzero and points within the GDEF table</value>
+  </data>
+  <data name="GDEF_P_HeaderOffsets" xml:space="preserve">
+    <value>P4002: All header offsets point within the table</value>
+  </data>
+  <data name="GDEF_P_LigCaretListTable_CoverageOffset" xml:space="preserve">
+    <value>P4003: The Coverage offset is nonzero and points within the GDEF table</value>
+  </data>
+  <data name="GDEF_P_LigCaretListTable_LigGlyphArray" xml:space="preserve">
+    <value>P4004: The offsets in the LigGlyph array are valid</value>
+  </data>
+  <data name="GDEF_P_LigGlyphTable_CaretValueArray" xml:space="preserve">
+    <value>P4005: The offsets in the CaretValue array are valid</value>
+  </data>
+  <data name="GDEF_P_Version" xml:space="preserve">
+    <value>P4006: The version number is 0x00010000</value>
+  </data>
+  <data name="GPOS_P_AnchorTable" xml:space="preserve">
+    <value>P4100: The Anchor table is valid</value>
+  </data>
+  <data name="GPOS_P_BaseArrayTable" xml:space="preserve">
+    <value>P4101: The BaseArray table is valid</value>
+  </data>
+  <data name="GPOS_P_BaseRecord" xml:space="preserve">
+    <value>P4102: The BaseRecord is valid</value>
+  </data>
+  <data name="GPOS_P_ChainContextPos" xml:space="preserve">
+    <value>P4103: The ChainContextPos subtable is valid</value>
+  </data>
+  <data name="GPOS_P_ChainPosClassRule" xml:space="preserve">
+    <value>P4104: The ChainPosClassRule table is valid</value>
+  </data>
+  <data name="GPOS_P_ChainPosClassSet" xml:space="preserve">
+    <value>P4105: The ChainPosClassSet table is valid</value>
+  </data>
+  <data name="GPOS_P_ChainPosRule" xml:space="preserve">
+    <value>P4106: The ChainPosRule table is valid</value>
+  </data>
+  <data name="GPOS_P_ChainPosRuleSet" xml:space="preserve">
+    <value>P4107: The ChainPosRuleSet table is valid</value>
+  </data>
+  <data name="GPOS_P_Class1Record" xml:space="preserve">
+    <value>P4108: The Class1Record is valid</value>
+  </data>
+  <data name="GPOS_P_Class2Record" xml:space="preserve">
+    <value>P4109: The Class2Record is valid</value>
+  </data>
+  <data name="GPOS_P_ComponentRecord" xml:space="preserve">
+    <value>P4110: The ComponentRecord is valid</value>
+  </data>
+  <data name="GPOS_P_ContextPos" xml:space="preserve">
+    <value>P4111: The ContextPos subtable is valid</value>
+  </data>
+  <data name="GPOS_P_CursivePos" xml:space="preserve">
+    <value>P4112: The CursivePos subtable is valid</value>
+  </data>
+  <data name="GPOS_P_EntryExit" xml:space="preserve">
+    <value>P4113: The EntryExit record is valid</value>
+  </data>
+  <data name="GPOS_P_ExtensionPos" xml:space="preserve">
+    <value>P4114: The ExtensiontPos subtable is valid</value>
+  </data>
+  <data name="GPOS_P_HeaderOffsets" xml:space="preserve">
+    <value>P4115: All header offsets point within the table</value>
+  </data>
+  <data name="GPOS_P_LigatureArrayTable" xml:space="preserve">
+    <value>P4116: The LigatureArray table is valid</value>
+  </data>
+  <data name="GPOS_P_LigatureAttachTable" xml:space="preserve">
+    <value>P4117: The LigatureAttach table is valid</value>
+  </data>
+  <data name="GPOS_P_Mark2ArrayTable" xml:space="preserve">
+    <value>P4118: The Mark2Array table is valid</value>
+  </data>
+  <data name="GPOS_P_Mark2Record" xml:space="preserve">
+    <value>P4119: The Mark2Record is valid</value>
+  </data>
+  <data name="GPOS_P_MarkArrayTable" xml:space="preserve">
+    <value>P4120: The MarkArray table is valid</value>
+  </data>
+  <data name="GPOS_P_MarkBasePos" xml:space="preserve">
+    <value>P4121: The MarkBasePos subtable is valid</value>
+  </data>
+  <data name="GPOS_P_MarkLigPos" xml:space="preserve">
+    <value>P4122: The MarkLigPos subtable is valid</value>
+  </data>
+  <data name="GPOS_P_MarkMarkPos" xml:space="preserve">
+    <value>P4123: The MarkMarkPos subtable is valid</value>
+  </data>
+  <data name="GPOS_P_PairPos" xml:space="preserve">
+    <value>P4124: The PairPos subtable is valid</value>
+  </data>
+  <data name="GPOS_P_PairSet" xml:space="preserve">
+    <value>P4125: The PairSet table is valid</value>
+  </data>
+  <data name="GPOS_P_PosClassSet" xml:space="preserve">
+    <value>P4127: The PosClassSet table is valid</value>
+  </data>
+  <data name="GPOS_P_PosRule" xml:space="preserve">
+    <value>P4128: The PosRule table is valid</value>
+  </data>
+  <data name="GPOS_P_PosRuleSet" xml:space="preserve">
+    <value>P4129: The PosRuleSet table is valid</value>
+  </data>
+  <data name="GPOS_P_SinglePos" xml:space="preserve">
+    <value>P4130: The SinglePos subtable is valid</value>
+  </data>
+  <data name="GPOS_P_ValueRecord" xml:space="preserve">
+    <value>P4131: The ValueRecord subtable is valid</value>
+  </data>
+  <data name="GPOS_P_Version" xml:space="preserve">
+    <value>P4132: The version number is 0x00010000</value>
+  </data>
+  <data name="GSUB_P_AlternateSubst" xml:space="preserve">
+    <value>P4200: The AlternateSubst subtable is valid</value>
+  </data>
+  <data name="GSUB_P_ChainContextSubst" xml:space="preserve">
+    <value>P4201: The ChainContextSubst subtable is valid</value>
+  </data>
+  <data name="GSUB_P_ContextSubst" xml:space="preserve">
+    <value>P4202: The ContextSubst subtable is valid</value>
+  </data>
+  <data name="GSUB_P_ExtensionSubst" xml:space="preserve">
+    <value>P4203: The ExtensionSubst subtable is valid</value>
+  </data>
+  <data name="GSUB_P_HeaderOffsets" xml:space="preserve">
+    <value>P4204: All header offsets point within the table</value>
+  </data>
+  <data name="GSUB_P_LigatureSubst" xml:space="preserve">
+    <value>P4205: The LigatureSubst subtable is valid</value>
+  </data>
+  <data name="GSUB_P_MultipleSubst" xml:space="preserve">
+    <value>P4206: The MultipleSubst subtable is valid</value>
+  </data>
+  <data name="GSUB_P_SingleSubst" xml:space="preserve">
+    <value>P4207: The SingleSubst subtable is valid</value>
+  </data>
+  <data name="GSUB_P_Version" xml:space="preserve">
+    <value>P4208: The version number is 0x00010000</value>
+  </data>
+  <data name="GSUB_P_ReverseChainContextSubst" xml:space="preserve">
+    <value>P4209: The ReverseChainSingleSubst subtable is valid</value>
+  </data>
+  <data name="BASE_P_AxisTable_BaseScriptListOffset_valid" xml:space="preserve">
+    <value>P4300: The Axis Table&#39;s BaseScriptListOffset is within a valid range</value>
+  </data>
+  <data name="BASE_P_AxisTable_BaseTagListOffset_null" xml:space="preserve">
+    <value>P4301: The Axis Table&#39;s BaseTagListOffset is null</value>
+  </data>
+  <data name="BASE_P_AxisTable_BaseTagListOffset_valid" xml:space="preserve">
+    <value>P4302: The Axis Table&#39;s BaseTagListOffset is within a valid range</value>
+  </data>
+  <data name="BASE_P_BaseCoordTable_format" xml:space="preserve">
+    <value>P4303: The format of the BaseCoord table is a valid value</value>
+  </data>
+  <data name="BASE_P_BaseLangSysRecord_offsets" xml:space="preserve">
+    <value>P4304: The BaseLangSysRecord array&#39;s MinMax offsets were all within a valid range</value>
+  </data>
+  <data name="BASE_P_BaseLangSysRecord_order" xml:space="preserve">
+    <value>P4305: The BaseScript Table&#39;s BaseLangSysRecord array is in alphabetical order</value>
+  </data>
+  <data name="BASE_P_BaseScriptList_Offset" xml:space="preserve">
+    <value>P4306: All BaseScript offsets are in a valid range</value>
+  </data>
+  <data name="BASE_P_BaseScriptList_Order" xml:space="preserve">
+    <value>P4307: The BaseScriptList table&#39;s BaseScriptRecords are in alphabetical order</value>
+  </data>
+  <data name="BASE_P_BaseTagList_TagOrder" xml:space="preserve">
+    <value>P4308: The tags in the BaseTagList table are in alphabetical order</value>
+  </data>
+  <data name="BASE_P_BaseTagList_TagValid" xml:space="preserve">
+    <value>P4309: All the tags in the BaseTagList table were valid tags</value>
+  </data>
+  <data name="BASE_P_BaseValuesOffset_null" xml:space="preserve">
+    <value>P4311: The BaseValues offset in the BaseScript table is null</value>
+  </data>
+  <data name="BASE_P_BaseValuesTable_BCO" xml:space="preserve">
+    <value>P4312: The BaseCoord offsets in the BaseValues table are all within a valid range</value>
+  </data>
+  <data name="BASE_P_DefaultMinMaxOffset" xml:space="preserve">
+    <value>P4313: The DefaultMinMax offset in the BaseScript table is in a valid range</value>
+  </data>
+  <data name="BASE_P_DefaultMinMaxOffset_null" xml:space="preserve">
+    <value>P4314: The DefaultMinMax offset in the BaseScript table is null</value>
+  </data>
+  <data name="BASE_P_FeatMinMaxRecords_offsets" xml:space="preserve">
+    <value>P4315: The MinMax table&#39;s FeatMinMaxRecord array contains valid offsets</value>
+  </data>
+  <data name="BASE_P_HorizAxisOffset_null" xml:space="preserve">
+    <value>P4316: The HorizAxisOffset value is null</value>
+  </data>
+  <data name="BASE_P_HorizAxisOffset_valid" xml:space="preserve">
+    <value>P4317: The HorizAxisOffset value is within the BASE table</value>
+  </data>
+  <data name="BASE_P_MinMaxTable_MaxCO" xml:space="preserve">
+    <value>P4318: The MaxCoord offset of the MinMax table is within range</value>
+  </data>
+  <data name="BASE_P_MinMaxTable_MaxCO_0" xml:space="preserve">
+    <value>P4319: The MaxCoord offset of the MinMax table is zero</value>
+  </data>
+  <data name="BASE_P_MinMaxTable_MinCO" xml:space="preserve">
+    <value>P4320: The MinCoord offset of the MinMax table is within range</value>
+  </data>
+  <data name="BASE_P_MinMaxTable_MinCO_0" xml:space="preserve">
+    <value>P4321: The MinCoord offset of the MinMax table is zero</value>
+  </data>
+  <data name="BASE_P_Version" xml:space="preserve">
+    <value>P4322: The version number is 0x00010000</value>
+  </data>
+  <data name="BASE_P_VertAxisOffset_null" xml:space="preserve">
+    <value>P4323: The VertAxisOffset value is null</value>
+  </data>
+  <data name="BASE_P_VertAxisOffset_valid" xml:space="preserve">
+    <value>P4324: The VertAxisOffset value is within the BASE table</value>
+  </data>
+  <data name="JSTF_P_Version" xml:space="preserve">
+    <value>P4400: The version number is 0x00010000</value>
+  </data>
+  <data name="_OTL_ClassDefinitionTable_P_valid" xml:space="preserve">
+    <value>P5000: The Class Definition Table is valid</value>
+  </data>
+  <data name="_OTL_CoverageTable_P_valid" xml:space="preserve">
+    <value>P5100: The Coverage Table is valid</value>
+  </data>
+  <data name="_OTL_DeviceTable_P_valid" xml:space="preserve">
+    <value>P5200: The device table is valid</value>
+  </data>
+  <data name="_OTL_FeatureListTable_P_valid" xml:space="preserve">
+    <value>P5300: The FeatureList table is valid</value>
+  </data>
+  <data name="_OTL_FeatureTable_P_valid" xml:space="preserve">
+    <value>P5400: The Feature table is valid</value>
+  </data>
+  <data name="_OTL_LangSysTable_P_valid" xml:space="preserve">
+    <value>P5500: The LangSysTable is valid</value>
+  </data>
+  <data name="_OTL_LookupListTable_P_valid" xml:space="preserve">
+    <value>P5600: The LookupList table is valid</value>
+  </data>
+  <data name="_OTL_LookupTable_P_valid" xml:space="preserve">
+    <value>P5700: The Lookup table is valid</value>
+  </data>
+  <data name="_OTL_ScriptListTable_P_valid" xml:space="preserve">
+    <value>P5800: The ScriptList Table is valid</value>
+  </data>
+  <data name="_OTL_ScriptTable_P_valid" xml:space="preserve">
+    <value>P5900: The Script Table is valid</value>
+  </data>
+  <data name="_rast_P_rasterization" xml:space="preserve">
+    <value>P6000: No problems were found during rasterization testing</value>
+  </data>
+  <data name="_FONT_W_OptimalOrder" xml:space="preserve">
+    <value>W0020: Tables are not in optimal order</value>
+  </data>
+  <data name="_FONT_W_UnnecessaryTable" xml:space="preserve">
+    <value>W0021: Table is unnecessary</value>
+  </data>
+  <data name="_FONT_W_MissingRecommendedTable" xml:space="preserve">
+    <value>W0022: Recommended table is missing</value>
+  </data>
+  <data name="_DE_W_TableAlignment" xml:space="preserve">
+    <value>W0030: The directory entry table offset is not a multiple of 4</value>
+  </data>
+  <data name="_DE_W_PadBytesNotZero" xml:space="preserve">
+    <value>W0031: Non-zero pad bytes were found for the table</value>
+  </data>
+  <data name="_TEST_W_ErrorInAnotherTable" xml:space="preserve">
+    <value>W0050: Cannot perform test due to an error in another table</value>
+  </data>
+  <data name="_TEST_W_OtherErrorsInTable" xml:space="preserve">
+    <value>W0051: Cannot perform test due to other errors in this table</value>
+  </data>
+  <data name="cmap_W_AppleLogo" xml:space="preserve">
+    <value>W0300: Character code 240, the Apple logo, isn&#39;t mapped to missing glyph in cmap 1,0 (legal requirement for Microsoft fonts)</value>
+  </data>
+  <data name="cmap_W_AppleLogo_NoMap" xml:space="preserve">
+    <value>W0301: Apple logo mapping test not performed, cmap 1,0 not present</value>
+  </data>
+  <data name="cmap_W_AppleMSSupport_A" xml:space="preserve">
+    <value>W0302: The table does not contain any Apple subtables</value>
+  </data>
+  <data name="cmap_W_AppleMSSupport_M" xml:space="preserve">
+    <value>W0303: The table does not contain any Microsoft subtables</value>
+  </data>
+  <data name="cmap_W_EuroGlyph_Mac" xml:space="preserve">
+    <value>W0304: Character code 219, the euro character, is not mapped in cmap 1,0</value>
+  </data>
+  <data name="cmap_W_EuroGlyph_Uni" xml:space="preserve">
+    <value>W0305: Character code U+20AC, the euro character, is not mapped in cmap 3,1</value>
+  </data>
+  <data name="cmap_W_f12_EncID" xml:space="preserve">
+    <value>W0306: The format is 12, but the encoding id is not 10</value>
+  </data>
+  <data name="cmap_W_UnicodePrivateUse" xml:space="preserve">
+    <value>W0307: Characters are mapped in the Unicode Private Use area</value>
+  </data>
+  <data name="cmap_W_f14_NonPacked" xml:space="preserve">
+    <value>W0344: Format 14 tables not packed</value>
+  </data>
+  <data name="gasp_W_AdjRangeIdenticalFlags" xml:space="preserve">
+    <value>W1000: Two adjacent ranges have identical flags</value>
+  </data>
+  <data name="glyf_W_CompositeReservedBit" xml:space="preserve">
+    <value>W1100: Reserved bit is set to 1</value>
+  </data>
+  <data name="head_W_created_0" xml:space="preserve">
+    <value>W1300: The created time is zero</value>
+  </data>
+  <data name="head_W_created_unlikely" xml:space="preserve">
+    <value>W1301: The created time is an unlikely value</value>
+  </data>
+  <data name="head_W_flags_bit4_1_hdmx" xml:space="preserve">
+    <value>W1302: Non-linear scaling flag (bit 4) is set, but hdmx table is not present</value>
+  </data>
+  <data name="head_W_flags_bit4_1_LTSH" xml:space="preserve">
+    <value>W1303: Non-linear scaling flag (bit 4) is set, but LTSH table is not present</value>
+  </data>
+  <data name="head_W_lowestRecPPEM_large" xml:space="preserve">
+    <value>W1304: The lowestRecPPEM value may be unreasonably large</value>
+  </data>
+  <data name="head_W_lowestRecPPEM_small" xml:space="preserve">
+    <value>W1305: The lowestRecPPEM value may be unreasonably small</value>
+  </data>
+  <data name="head_W_modified_0" xml:space="preserve">
+    <value>W1310: The modified time is zero</value>
+  </data>
+  <data name="head_W_modified_unlikely" xml:space="preserve">
+    <value>W1311: The modified time is an unlikely value</value>
+  </data>
+  <data name="head_W_unitsPerEM_LT64" xml:space="preserve">
+    <value>W1312: The unitsPerEm is less than 64 which is in violation of the Apple spec</value>
+  </data>
+  <data name="head_W_unitsPerEm_Pow2" xml:space="preserve">
+    <value>W1313: The unitsPerEm value is not a power of two</value>
+  </data>
+  <data name="head_W_fontRevision" xml:space="preserve">
+    <value>W1314: fontRevision is not consistent with the font&#39;s version string</value>
+  </data>
+  <data name="hhea_W_hmtx_invalid" xml:space="preserve">
+    <value>W1400: The advanceWidthMax, minLeftSideBearing, minRightSideBearing, and xMaxExtent fields can not be validated</value>
+  </data>
+  <data name="hhea_I_Ascender_yMax" xml:space="preserve">
+    <value>I1401: Ascender should be less than or equal to head.yMax</value>
+  </data>
+  <data name="hhea_I_Descender_yMin" xml:space="preserve">
+    <value>I1402: Descender should be greater than or equal to head.yMin</value>
+  </data>
+  <data name="hhea_W_LineGapPositive" xml:space="preserve">
+    <value>W1403: LineGap value is less than 0 (unlikely value)</value>
+  </data>
+  <data name="hhea_W_LineGap_minGap" xml:space="preserve">
+    <value>W1404: The LineGap value is less than the recommended value</value>
+  </data>
+  <data name="hhea_W_Ascender_usWinAscent" xml:space="preserve">
+    <value>W1405: Ascender is different than OS/2.usWinAscent. Different line heights on Windows and Apple</value>
+  </data>
+  <data name="hhea_W_Descender_usWinDescent" xml:space="preserve">
+    <value>W1406: Descender is different than OS/2.usWinDescent. Different line heights on Windows and Apple</value>
+  </data>
+  <data name="hmtx_W_CheckMetrics_lsb_gt_adv" xml:space="preserve">
+    <value>W1500: The leftSideBearing is greater than the advance width (unlikely value)</value>
+  </data>
+  <data name="kern_W_Format0_SearchFields" xml:space="preserve">
+    <value>W1600: The subtable&#39;s searchRange, entrySelector, and rangeShift fields cannot be validated</value>
+  </data>
+  <data name="loca_W_GlyfEntryLengthAlignment" xml:space="preserve">
+    <value>W1701: Loca references a glyf entry which length is not a multiple of 4</value>
+  </data>
+  <data name="loca_W_GlyfPartiallyUnreferenced" xml:space="preserve">
+    <value>W1702: Glyf table is partially unreferenced by loca table</value>
+  </data>
+  <data name="LTSH_W_yPels_zero" xml:space="preserve">
+    <value>W1800: The LTSH yPel value is zero</value>
+  </data>
+  <data name="name_W_subfamily_style" xml:space="preserve">
+    <value>W2000: The subfamily string is inconsistent with the style of the font</value>
+  </data>
+  <data name="name_W_VersionMismatch_MS_MAC" xml:space="preserve">
+    <value>W2001: The MS version string doesn&#39;t match the Mac version string</value>
+  </data>
+  <data name="name_W_VersionMismatch_3_1_3_10" xml:space="preserve">
+    <value>W2002: The 3,1 version string doesn&#39;t match the 3,10 version string</value>
+  </data>
+  <data name="name_W_CopyrightInconsistent" xml:space="preserve">
+    <value>W2003: The copyright strings are inconsistent</value>
+  </data>
+  <data name="name_W_DescriptionInconsistent" xml:space="preserve">
+    <value>W2004: The description strings are inconsistent</value>
+  </data>
+  <data name="name_W_TrademarkInconsistent" xml:space="preserve">
+    <value>W2005: The trademark strings are inconsistent</value>
+  </data>
+  <data name="OS_2_W_CodePageRangeBitClear" xml:space="preserve">
+    <value>W2100: A CodePage bit is clear in ulCodePageRange, but the font contains all of the printable characters from that codepage</value>
+  </data>
+  <data name="OS_2_W_CodePageRangeBitSet" xml:space="preserve">
+    <value>W2101: A CodePage bit is set in ulCodePageRange, but the font is missing some of the printable characters from that codepage</value>
+  </data>
+  <data name="OS_2_W_fsSelection_weight" xml:space="preserve">
+    <value>W2103: The fsSelection bold bit is set, but is inconsistent with the usWeightClass value</value>
+  </data>
+  <data name="OS_2_W_hmtx_invalid" xml:space="preserve">
+    <value>W2104: The xAvgCharWidth field can not be validated</value>
+  </data>
+  <data name="OS_2_W_Panose_undefined" xml:space="preserve">
+    <value>W2105: PANOSE(tm) is undefined. Font mapping may not work properly</value>
+  </data>
+  <data name="OS_2_W_Version_old" xml:space="preserve">
+    <value>W2106: The version number is valid, but less than 3</value>
+  </data>
+  <data name="OS_2_W_yStrikeoutPosition_unlikely" xml:space="preserve">
+    <value>W2107: yStrikeoutPosition has unlikely value</value>
+  </data>
+  <data name="OS_2_W_yStrikeoutSize_unlikely" xml:space="preserve">
+    <value>W2108: yStrikeoutSize has unlikely value</value>
+  </data>
+  <data name="OS_2_W_ySubscriptXSize_unlikely" xml:space="preserve">
+    <value>W2109: ySubscriptXSize has unlikely value</value>
+  </data>
+  <data name="OS_2_W_ySubscriptYOffset_LTZero" xml:space="preserve">
+    <value>W2110: ySubscriptYOffset is less than zero which is an unlikely value</value>
+  </data>
+  <data name="OS_2_W_ySubscriptYSize_unlikely" xml:space="preserve">
+    <value>W2111: ySubscriptYSize has unlikely value</value>
+  </data>
+  <data name="OS_2_W_ySuperscriptXSize_unlikely" xml:space="preserve">
+    <value>W2112: ySuperscriptXSize has unlikely value</value>
+  </data>
+  <data name="OS_2_W_ySuperscriptYOffset_unlikely" xml:space="preserve">
+    <value>W2113: ySuperscriptYOffset is less than zero which is an unlikely value</value>
+  </data>
+  <data name="OS_2_W_ySuperscriptYSize_unlikely" xml:space="preserve">
+    <value>W2114: ySuperscriptYSize has unlikely value</value>
+  </data>
+  <data name="OS_2_W_WeightClass_PANOSE" xml:space="preserve">
+    <value>W2116: The usWeightClass is inconsistent with the PANOSE weight value</value>
+  </data>
+  <data name="OS_2_W_sTypoAscenderDescender_difference" xml:space="preserve">
+    <value>W2117: The value of sTypoAscender minus sTypoDescender is greater than unitsPerEm</value>
+  </data>
+  <data name="post_W_italicAngle_unlikely" xml:space="preserve">
+    <value>W2300: The italicAngle value is unlikely</value>
+  </data>
+  <data name="post_W_underlinePos_LT_descender" xml:space="preserve">
+    <value>W2301: The underlinePosition value is less than hhea.Descender</value>
+  </data>
+  <data name="post_W_underlineThickness" xml:space="preserve">
+    <value>W2302: The underlineThickness value is unlikely</value>
+  </data>
+  <data name="post_W_Version_2_5" xml:space="preserve">
+    <value>W2303: The version number is 0x00025000, which is valid but deprecated</value>
+  </data>
+  <data name="_OTL_DeviceTable_W_StartSize" xml:space="preserve">
+    <value>W5021: The device table StartSize is unusually large</value>
+  </data>
+  <data name="_OTL_DeviceTable_W_EndSize" xml:space="preserve">
+    <value>W5200: The device table EndSize is unusually large</value>
+  </data>
+  <data name="_OTL_FeatureListTable_W_FeatureRecord_tag" xml:space="preserve">
+    <value>W5300: The FeatureRecord tag is valid, but unregistered</value>
+  </data>
+  <data name="_rast_W_APPLE_ONLY_INSTR" xml:space="preserve">
+    <value>W6000: Instruction is only valid on the Apple platform</value>
+  </data>
+  <data name="_rast_W_CALL_ZERO_LEN_FUNC" xml:space="preserve">
+    <value>W6001: CALL to zero length function</value>
+  </data>
+  <data name="_rast_W_CALL_ZERO_LEN_UD_INSTR" xml:space="preserve">
+    <value>W6002: Call to zero length user defined instruction</value>
+  </data>
+  <data name="_rast_W_DEBUG_FOUND" xml:space="preserve">
+    <value>W6003: DEBUG found which should not be found in production code</value>
+  </data>
+  <data name="_rast_W_DELTAC_IN_GLYPH_PGM" xml:space="preserve">
+    <value>W6004: Repeated executions in glyph programs can have unexpected results</value>
+  </data>
+  <data name="_rast_W_HI_PT_LESS_THAN_LOW_PT" xml:space="preserve">
+    <value>W6005: High point is less than low point</value>
+  </data>
+  <data name="_rast_W_JMP_OFFSET_ZERO" xml:space="preserve">
+    <value>W6006: Jump offset zero</value>
+  </data>
+  <data name="_rast_W_LOOP_NOT_1_AT_END_OF_PGM" xml:space="preserve">
+    <value>W6007: Loop variable not 1 at end of program. This means it was set but not used</value>
+  </data>
+  <data name="_rast_W_LOOPCALL_COUNT_LESS_THAN_ONE" xml:space="preserve">
+    <value>W6008: Value for count is less than 1. Function will not be called</value>
+  </data>
+  <data name="_rast_W_MPS_ALWAYS_12_ON_WINDOWS" xml:space="preserve">
+    <value>W6009: Window 95 and Windows 3.1 always return 12</value>
+  </data>
+  <data name="_rast_W_PF_VECTORS_AT_OR_NEAR_PERP" xml:space="preserve">
+    <value>W6010: Projection and freedom vectors at or near perpendicular</value>
+  </data>
+  <data name="_rast_W_PT_NOT_TOUCHED" xml:space="preserve">
+    <value>W6011: Point not touched</value>
+  </data>
+  <data name="_rast_W_SANGW_OBSELETE" xml:space="preserve">
+    <value>W6012: Function no longer needed because of dropped support of AA</value>
+  </data>
+  <data name="loca_W_GlyfEntryEmpty" xml:space="preserve">
+    <value>W7001: Loca references a zero-length entry in the glyf table</value>
+  </data>
+  <data name="maxp_I_Calculation_Method1" xml:space="preserve">
+    <value>I9001: maxSizeOfInstructions via method #1</value>
+  </data>
+  <data name="maxp_I_Calculation_Method2" xml:space="preserve">
+    <value>I9002: maxSizeOfInstructions via method #2</value>
+  </data>
+  <data name="maxp_W_Calculation_Unclear" xml:space="preserve">
+    <value>W7002: maxSizeOfInstructions computation not via either approved method</value>
+  </data>
+  <data name="_rast_I_rasterization" xml:space="preserve">
+    <value>I6059: Could not perform rasterization</value>
+  </data>
+  <data name="VDMX_W_CalcData" xml:space="preserve">
+    <value>W2500: The VDMX data doesn&#39;t match the data calculated by the rasterizer</value>
+  </data>
+</root>

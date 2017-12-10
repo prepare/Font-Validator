@@ -161,6 +161,7 @@ namespace FontVal
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ClearAllTestsBtn = new System.Windows.Forms.Button();
             this.SetAllTestsBtn = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -335,7 +336,7 @@ namespace FontVal
             this.tabPage2.Controls.Add(this.ClearAllTestsBtn);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(200, 466);
+            this.tabPage2.Size = new System.Drawing.Size(200, 470);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Table Tests";
             // 
@@ -363,7 +364,7 @@ namespace FontVal
             this.tabPage3.Controls.Add(this.btnTransform);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(200, 466);
+            this.tabPage3.Size = new System.Drawing.Size(200, 470);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Rasterization";
             // 
@@ -906,9 +907,15 @@ namespace FontVal
             // 
             // imageList1
             // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Btn1.ico");
+            this.imageList1.Images.SetKeyName(1, "Btn2.ico");
+            this.imageList1.Images.SetKeyName(2, "Btn3.ico");
+            this.imageList1.Images.SetKeyName(3, "Btn4.ico");
+            this.imageList1.Images.SetKeyName(4, "Btn5.ico");
+            this.imageList1.Images.SetKeyName(5, "Btn6.ico");
+            this.imageList1.Images.SetKeyName(6, "App.ico");
             // 
             // panel1
             // 
