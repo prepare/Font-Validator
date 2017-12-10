@@ -194,6 +194,20 @@ namespace OTFontFileVal
                     // Will it really happen?
                     if (GetFile().GetTableManager().GetUnaliasedTableName(de.tag) == "DSIG" && GetFile().IsCollection()) continue;
 
+                    if (GetFile().GetTableManager().GetUnaliasedTableName(de.tag) == "glyf"
+                        && Is_TTC_LaterIdenticalTable("glyf"))
+                    {
+                        v.Info(T.T_NULL, I.glyf_I_IDENTICAL_GLYF_TABLES_IN_TTC, de.tag, "glyf");
+                        continue;
+                    }
+
+                    if (GetFile().GetTableManager().GetUnaliasedTableName(de.tag) == "EBDT"
+                        && Is_TTC_LaterIdenticalTable("EBDT"))
+                    {
+                        v.Info(T.T_NULL, I.glyf_I_IDENTICAL_GLYF_TABLES_IN_TTC, de.tag, "EBDT");
+                        continue;
+                    }
+
                     // Call the function that validates a single table
                     bRet &= this.GetFile().ValidateTable(table, v, de, this);
 
@@ -206,6 +220,11 @@ namespace OTFontFileVal
             // rasterization test - BW
 
             v.OnRastTestValidationEvent_BW(true);
+            if ( v.PeformRastTest_BW() && Is_TTC_LaterIdenticalTable("glyf") )
+            {
+                v.Info(T.T_NULL, I.glyf_I_IDENTICAL_GLYF_TABLES_IN_TTC, null, "B/W Rasterization");
+            }
+            else
             if (v.PeformRastTest_BW())
             {
                 if (canrast > 0)
@@ -236,7 +255,7 @@ namespace OTFontFileVal
                     }
                     catch (Exception e)
                     {
-                        v.ApplicationError(T.T_NULL, E._rast_A_ExceptionUnhandled, null, e.StackTrace);
+                        v.ApplicationError(T.T_NULL, E._rast_A_ExceptionUnhandled, null, e.Message + e.StackTrace);
                     }
                 }
                 else if (canrast == 0)
@@ -259,6 +278,11 @@ namespace OTFontFileVal
             // rasterization test - Grayscale
 
             v.OnRastTestValidationEvent_Grayscale(true);
+            if ( v.PeformRastTest_Grayscale() && Is_TTC_LaterIdenticalTable("glyf") )
+            {
+                v.Info(T.T_NULL, I.glyf_I_IDENTICAL_GLYF_TABLES_IN_TTC, null, "Grayscale Rasterization");
+            }
+            else
             if (v.PeformRastTest_Grayscale())
             {
                 if (canrast > 0)
@@ -289,7 +313,7 @@ namespace OTFontFileVal
                     }
                     catch (Exception e)
                     {
-                        v.ApplicationError(T.T_NULL, E._rast_A_ExceptionUnhandled, null, e.StackTrace);
+                        v.ApplicationError(T.T_NULL, E._rast_A_ExceptionUnhandled, null, e.Message + e.StackTrace);
                     }
                 }
                 else if (canrast == 0)
@@ -313,6 +337,11 @@ namespace OTFontFileVal
             // rasterization test - Cleartype
 
             v.OnRastTestValidationEvent_Cleartype(true);
+            if ( v.PeformRastTest_Cleartype() && Is_TTC_LaterIdenticalTable("glyf") )
+            {
+                v.Info(T.T_NULL, I.glyf_I_IDENTICAL_GLYF_TABLES_IN_TTC, null, "Cleartype Rasterization");
+            }
+            else
             if (v.PeformRastTest_Cleartype())
             {
                 if (canrast > 0)
@@ -345,7 +374,7 @@ namespace OTFontFileVal
                     }
                     catch (Exception e)
                     {
-                        v.ApplicationError(T.T_NULL, E._rast_A_ExceptionUnhandled, null, e.StackTrace);
+                        v.ApplicationError(T.T_NULL, E._rast_A_ExceptionUnhandled, null, e.Message + e.StackTrace);
                     }
                 }
                 else if (canrast == 0)
@@ -823,9 +852,9 @@ namespace OTFontFileVal
                 }
             }
 
-            if (GetDirectoryEntry("glyf") == null && GetDirectoryEntry("CFF ") == null && GetDirectoryEntry("EBDT") == null)
+            if (GetDirectoryEntry("glyf") == null && GetDirectoryEntry("CFF ") == null && GetDirectoryEntry("EBDT") == null && GetDirectoryEntry("CBDT") == null)
             {
-                v.Error(T.T_NULL, E._FONT_E_MissingRequiredTable, null, "Font must contain either a 'glyf', 'CFF ', or 'EBDT' table");
+                v.Error(T.T_NULL, E._FONT_E_MissingRequiredTable, null, "Font must contain either a 'glyf', 'CFF ', 'EBDT' or 'CBDT' table");
                 bRet = false;
             }
 
@@ -926,7 +955,7 @@ namespace OTFontFileVal
 
             }
             
-            if (GetDirectoryEntry("DSIG") == null)
+            if (GetDirectoryEntry("DSIG") == null && !GetFile().IsCollection())
             {
                 v.Warning(T.T_NULL, W._FONT_W_MissingRecommendedTable, null, "DSIG");
                 bMissing = true;
@@ -1120,7 +1149,11 @@ namespace OTFontFileVal
         {
             //Any font with postscript outlines instead of truetype outlines has a CFF, table
             //So, if the file has a CFF table, we return 0 promptly
-            if (IsPostScript())
+            //
+            // FreeType is CFF capable.
+            Type freeType = Type.GetType("Compat.OTFontFile.Rasterizer.FreeType.Library");
+            if (freeType == null) freeType = Type.GetType("SharpFont.Library");
+            if (IsPostScript() && freeType == null)
             {
                 m_sDevMetricsDataError = "Font has PostScript outlines, rasterization not yet implemented";
                 return 0;
@@ -1189,6 +1222,32 @@ namespace OTFontFileVal
             }
 
             return 1;
+        }
+
+        protected bool Is_TTC_LaterIdenticalTable(string s)
+        {
+            if ( GetFile().IsCollection() )
+            {
+                if ( GetFontIndexInFile() > 0 )
+                {
+                    // checksum not matching data is covered by check elsewhere. Assume they match.
+                    DirectoryEntry de_current = GetDirectoryEntry(s);
+                    if ( de_current == null )
+                        return false;
+                    for ( uint i = 0 ; i < GetFontIndexInFile() ; i++ )
+                    {
+                        if ( GetFile().GetFont(i).GetDirectoryEntry(s) == null )
+                            return false;
+
+                        if ( GetFile().GetFont(i).GetDirectoryEntry(s).checkSum
+                             == de_current.checkSum )
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
         }
 
         /**************

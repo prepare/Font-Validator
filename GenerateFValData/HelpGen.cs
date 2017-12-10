@@ -135,7 +135,7 @@ namespace helpgen {
             G.CO( "-tmpdir            <tmpDir>" );
             G.CO( "-inputdir          <inputDir>" );
             G.CO( "-gendir            <genDir>" );
-            G.CO( "-verbose" );
+            G.CO( "-v/-verbose" );
             G.CO( "-u/-usage/-h/-help/--help" );
             G.CO( "" );
             G.CO( "All the options are optional." );
@@ -232,9 +232,17 @@ namespace helpgen {
             TextWriter s = new StreamWriter( helpprojTemp );
             AppendTextFileToStream( s, inputDir+"help-proj-preamble.txt" );
             foreach ( HelpItem hi in items ) {
-                if ( 'P' != hi.helpID[0] && 
-                     "ERROR" != hi.problem.Substring(0,5) ) {
-                    s.WriteLine( HelpFileName( "", hi.helpID ) );
+                try
+                {
+                    if ( 'P' != hi.helpID[0] &&
+                         "ERROR" != hi.problem.Substring(0,5) ) {
+                        s.WriteLine( HelpFileName( "", hi.helpID ) );
+                    }
+                }
+                catch (ArgumentOutOfRangeException)
+                {
+                    Console.WriteLine("<problem/> description must not be empty.");
+                    throw;
                 }
             }
             AppendTextFileToStream( s, inputDir+"help-proj-postamble.txt" );
@@ -448,6 +456,10 @@ namespace helpgen {
         {
             List<HelpItem> items = GetHelpItemsFromXMLFile( ps.xmlPath,
                                                             ps.xsdPath );
+            items.Sort(delegate(HelpItem x, HelpItem y)
+                       {
+                           return x.helpID.CompareTo(y.helpID);
+                       });
             if ( null == items ) {
                 return 1;
             }
@@ -529,7 +541,8 @@ namespace helpgen {
                     iarg++;
                     ps.genDir = args[iarg];
                 }
-                else if ( G.StrMatch( "-verbose", args[iarg] ) ) {
+                else if ( G.StrMatch( "-verbose", args[iarg] ) ||
+                          G.StrMatch( "-v", args[iarg] ) ) {
                     verbose = true;
                 }
                 else if ( G.StrMatch( "-u", args[iarg] ) ||
