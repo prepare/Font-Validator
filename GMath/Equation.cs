@@ -117,7 +117,7 @@ namespace NS_GMath
              *    from the control points specification
              */
             
-            double rootToAdd=-1.0;                  // asign an invalid parametric value
+            double rootToAdd=-1.0;                  // assign an invalid parametric value
             int numRootRed=-1, numRootRealRed=-1; // roots after reduction
             CNum[] rootRed=null;
             if (Equation.Evaluate(0.0,a,b,c,d)==0.0)
@@ -246,7 +246,11 @@ namespace NS_GMath
                         CNum z=new CNum(-0.5*qq, 0.5*Math.Sqrt(-D)); // root of the quartatic equation
                         if (z.IsZero)
                         {
-                            throw new ExceptionGMath("Equation","RootsAll","Degree 3");
+                            // Both D and qq are small, treat as D=qq=0
+                            root[0]=new CNum(-bb/3.0,0,3);
+                            root[1]=new CNum(root[0]);
+                            root[2]=new CNum(root[0]);
+                            return;
                         }
                         double zRadius=z.Radius;
                         double zAngle=z.Angle;
@@ -356,7 +360,7 @@ namespace NS_GMath
              *    from the control points specification
              */ 
             
-            double rootToAdd=-1.0; // asign an invalid parametric value
+            double rootToAdd=-1.0; // assign an invalid parametric value
             int numRootRealRed=-1; // roots after reduction
             double[] rootRed=null;
             if (Equation.Evaluate(0.0,a,b,c,d,e)==0.0)
