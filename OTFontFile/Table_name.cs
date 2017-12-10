@@ -219,7 +219,7 @@ namespace OTFontFile
 
             if (PlatID == 0) // unicode
             {
-                System.Text.UnicodeEncoding ue = new System.Text.UnicodeEncoding(true, false);
+                UnicodeEncoding ue = new UnicodeEncoding(true, false);
                 s = ue.GetString(EncodedStringBuf);
             }
             else if (PlatID == 1) // Mac
@@ -227,6 +227,50 @@ namespace OTFontFile
                 int nMacCodePage = MacEncIdToCodePage(EncID);
                 if (nMacCodePage != -1)
                 {
+                    if ( Type.GetType("Mono.Runtime") != null )
+                    {
+                        // Mono.Runtime don't currently support
+                        // 10001 to 10008.
+                        switch ( nMacCodePage )
+                        {
+                            // Close-enough substitutes for names:
+
+                            case 10001:             // Japanese
+                                nMacCodePage = 932; // ShiftJIS
+                                break;
+
+                            case 10002:             // Chinese (Traditional)
+                                nMacCodePage = 950; // Big5
+                                break;
+
+                            case 10003:             // Korean
+                                nMacCodePage = 949; //
+                                break;
+
+                            case 10004:             // mac-arabic
+                                nMacCodePage = 1256;
+                                break;
+
+                            case 10005:             // mac-hebrew
+                                nMacCodePage = 1255;
+                                break;
+
+                            case 10006:             // mac-greek
+                                nMacCodePage = 1253;
+                                break;
+
+                            case 10007:             // mac-cyrillic
+                                nMacCodePage = 1251;
+                                break;
+
+                            case 10008:             // Chinese (Simplified)
+                                nMacCodePage = 936; // PRC
+                                break;
+
+                            default:
+                                break;
+                        }
+                    }
                     s = GetUnicodeStrFromCodePageBuf(EncodedStringBuf, nMacCodePage);
                 }
             }
@@ -237,7 +281,7 @@ namespace OTFontFile
                     EncID == 1 || // unicode
                     EncID == 10 ) // unicode with surrogate support for UCS-4
                 {
-                    System.Text.UnicodeEncoding ue = new System.Text.UnicodeEncoding(true, false);
+                    UnicodeEncoding ue = new UnicodeEncoding(true, false);
                     s = ue.GetString(EncodedStringBuf);
                 }
                 else if (EncID >= 2 && EncID <= 6)
@@ -260,7 +304,7 @@ namespace OTFontFile
 
             if(PlatID == 0) // unicode
             {
-                System.Text.UnicodeEncoding ue = new System.Text.UnicodeEncoding( true, false );
+                UnicodeEncoding ue = new UnicodeEncoding( true, false );
                 buf = ue.GetBytes( s );
             }
             else if (PlatID == 1 ) // Mac
@@ -278,7 +322,7 @@ namespace OTFontFile
                     EncID == 1 || // unicode
                     EncID == 10 ) // unicode with surrogate support for UCS-4
                 {
-                    System.Text.UnicodeEncoding ue = new System.Text.UnicodeEncoding( true, false );
+                    UnicodeEncoding ue = new UnicodeEncoding( true, false );
                     buf = ue.GetBytes(s);
                 }
                 else if (EncID >= 2 || EncID <= 6)
@@ -334,14 +378,14 @@ namespace OTFontFile
             string sName = null;
             try
             {
-                sName = GetString(3, 0xffff, 0x0409, 4);  // MS, any encoding, english, name
+                sName = GetString(3, 0xffff, 0x0409, 4);  // MS, any encoding, English, name
                 if (sName == null)
                 {
                     sName = GetString(3, 0xffff, 0xffff, 4); // MS, any encoding, any language, name
                 }
                 if (sName == null)
                 {
-                    sName = GetString(1, 0, 0, 4); // mac, roman, english, name
+                    sName = GetString(1, 0, 0, 4); // mac, roman, English, name
                 }
 
                 // validate surrogate content
@@ -370,14 +414,14 @@ namespace OTFontFile
 
             try
             {
-                sVersion = GetString(3, 0xffff, 0x0409, 5);  // MS, any encoding, english, version
+                sVersion = GetString(3, 0xffff, 0x0409, 5);  // MS, any encoding, English, version
                 if (sVersion == null)
                 {
                     sVersion = GetString(3, 0xffff, 0xffff, 5); // MS, any encoding, any language, version
                 }
                 if (sVersion == null)
                 {
-                    sVersion = GetString(1, 0, 0, 5); // mac, roman, english, version
+                    sVersion = GetString(1, 0, 0, 5); // mac, roman, English, version
                 }
 
                 // validate surrogate content
@@ -406,14 +450,14 @@ namespace OTFontFile
 
             try
             {
-                sStyle = GetString(3, 0xffff, 0x0409, 2);  // MS, any encoding, english, subfamily (style)
+                sStyle = GetString(3, 0xffff, 0x0409, 2);  // MS, any encoding, English, subfamily (style)
                 if (sStyle == null)
                 {
                     sStyle = GetString(3, 0xffff, 0xffff, 2); // MS, any encoding, any language, subfamily (style)
                 }
                 if (sStyle == null)
                 {
-                    sStyle = GetString(1, 0, 0, 2); // mac, roman, english, subfamily (style)
+                    sStyle = GetString(1, 0, 0, 2); // mac, roman, English, subfamily (style)
                 }
             }
             catch
