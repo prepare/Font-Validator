@@ -29,6 +29,7 @@ local.properties
 .buildpath
 
 
+
 #################
 ## Visual Studio
 #################
@@ -41,6 +42,17 @@ local.properties
 *.user
 *.sln.docstates
 
+
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+ 
+
+
+
 # Build results
 
 [Dd]ebug/
@@ -49,6 +61,24 @@ x64/
 build/
 [Bb]in/
 [Oo]bj/
+
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.log
+*.vspscc
+*.vssscc
+.builds
 .vs/
 
 # MSTest test Results

@@ -1,3 +1,4 @@
+#define __MonoCS__
 using System;
 using System.IO;
 using System.Windows.Forms;

@@ -16,44 +16,44 @@ namespace OTFontFileVal
         /*
          *        CONSTRUCTORS
          */
-    /*
-        public ValidationInfo(ValInfoType VIType, string StringName, OTTag tag, string stringTestName):
-            base(VIType, StringName, null, "OTFontFile.ValStrings", "OTFontFile", tag, stringTestName)
-        {
-        }
-    */
+        /*
+            public ValidationInfo(ValInfoType VIType, string StringName, OTTag tag, string stringTestName):
+                base(VIType, StringName, null, "OTFontFile.ValStrings", "OTFontFile", tag, stringTestName)
+            {
+            }
+        */
 
         /// <summary>Hardwires <c>OTFontFileVal.ValStrings</c> as
         /// the <c>nameFileErrs</c> and <c>OTFontFileVal</c> as
         /// the <c>nameAsmFileErrs</c> in the underlying
         /// <c>ValInfoBasic</c>.
         /// </summary>
-        public ValidationInfo( ValInfoType VIType, 
-                               string StringName, 
-                               OTTag tag, 
-                               string StringDetails, 
-                               string stringTestName):
-            base(VIType, StringName, StringDetails, 
-                 "OTFontFileVal.ValStrings", "OTFontFileVal", 
+        public ValidationInfo(ValInfoType VIType,
+                               string StringName,
+                               OTTag tag,
+                               string StringDetails,
+                               string stringTestName) :
+            base(VIType, StringName, StringDetails,
+                 "OTFontFileVal.ValStrings", "OTFontFileVal",
                  tag, stringTestName)
         {
         }
-        
+
         /// <summary>Does not appear to be called.</summary>
-        public ValidationInfo(ValInfoType type, 
+        public ValidationInfo(ValInfoType type,
                               string stringName,
                               string stringValueUser,
                               string nameFileErrs,
                               string nameAsmFileErrs,
                               OTTag tagPrincipal,
-                              string stringTestName):
-            base(type,stringName,stringValueUser,nameFileErrs,
-                 nameAsmFileErrs,tagPrincipal, stringTestName)
+                              string stringTestName) :
+            base(type, stringName, stringValueUser, nameFileErrs,
+                 nameAsmFileErrs, tagPrincipal, stringTestName)
         {
         }
 
         /// <summary>Copy constructor</summary>
-        public ValidationInfo(ValInfoBasic viBasic):
+        public ValidationInfo(ValInfoBasic viBasic) :
             base(viBasic)
         {
         }
@@ -62,12 +62,12 @@ namespace OTFontFileVal
          *        METHODS  -    wrappers for methods of ValInfoBasic (can be 
          *                    removed...)    
          */
-        public ValInfoType GetValInfoType() {return this.m_Type;}
-        public void SetValInfoType(ValInfoType mt) {this.m_Type=mt;}
+        public ValInfoType GetValInfoType() { return this.m_Type; }
+        public void SetValInfoType(ValInfoType mt) { this.m_Type = mt; }
 
-        public OTTag GetOTTag() {return this.m_OTTagPrincipal;}
-        public void SetOTTag(OTTag tt) { this.m_OTTagPrincipal = tt;}
-        public void SetOTTag(uint tag) { this.m_OTTagPrincipal = tag;}
+        public OTTag GetOTTag() { return this.m_OTTagPrincipal; }
+        public void SetOTTag(OTTag tt) { this.m_OTTagPrincipal = tt; }
+        public void SetOTTag(uint tag) { this.m_OTTagPrincipal = tag; }
 
         /// <summary>In the special case that <c>m_NameAsmFileErrs</c> is
         /// <c>OTFontFileVal</c>, which I believe it always is, then
@@ -98,10 +98,24 @@ namespace OTFontFileVal
                 }
                 else // else look it up in the resources
                 {
-                    if (this.m_NameAsmFileErrs=="OTFontFileVal")
+                    if (this.m_NameAsmFileErrs == "OTFontFileVal")
                     {
-                        System.Reflection.Assembly a = System.Reflection.Assembly.GetAssembly(this.GetType());
-                        System.Resources.ResourceManager rm = new System.Resources.ResourceManager("OTFontFileVal.ValStrings", a);
+                        //System.Reflection.Assembly a = System.Reflection.Assembly.GetAssembly(this.GetType());
+                        //System.Resources.ResourceManager rm = new System.Resources.ResourceManager("OTFontFileVal.ValStrings", a);
+                        var rm = DevMain2.OTFontFileVal_ValStrings.ResourceManager;// OTFontFileVal.OTFontFileVal_ValStrings.ResourceManager;
+                        string sErrorAndMessage = rm.GetString(m_StringName);
+                        if (sErrorAndMessage.Length > 6 && sErrorAndMessage[5] == ':' && sErrorAndMessage[6] == ' ')
+                        {
+                            s = sErrorAndMessage.Substring(7);
+                        }
+                        else
+                        {
+                            s = null;
+                        }
+                    }
+                    else if(this.m_NameAsmFileErrs == "Glyph")
+                    {
+                        var rm = OTFontFileVal.GlyphX.NS_Glyph_GErrStrings.ResourceManager;
                         string sErrorAndMessage = rm.GetString(m_StringName);
                         if (sErrorAndMessage.Length > 6 && sErrorAndMessage[5] == ':' && sErrorAndMessage[6] == ' ')
                         {
@@ -146,14 +160,15 @@ namespace OTFontFileVal
 
             if ((object)this.m_StringName != null)
             {
-                if (this.m_NameAsmFileErrs=="OTFontFileVal")
+                if (this.m_NameAsmFileErrs == "OTFontFileVal")
                 {
-                    System.Reflection.Assembly a = System.Reflection.Assembly.GetAssembly(this.GetType());
-                    System.Resources.ResourceManager rm = new System.Resources.ResourceManager("OTFontFileVal.ValStrings", a);
+                    var rm = DevMain2.OTFontFileVal_ValStrings.ResourceManager; 
+                    //System.Reflection.Assembly a = System.Reflection.Assembly.GetAssembly(this.GetType());
+                    //System.Resources.ResourceManager rm = new System.Resources.ResourceManager("OTFontFileVal.ValStrings", a);
                     string sErrorAndMessage = rm.GetString(m_StringName);
                     if (sErrorAndMessage.Length > 6 && sErrorAndMessage[5] == ':' && sErrorAndMessage[6] == ' ')
                     {
-                        s = sErrorAndMessage.Substring(0,5);
+                        s = sErrorAndMessage.Substring(0, 5);
                     }
                     else
                     {
@@ -169,10 +184,10 @@ namespace OTFontFileVal
             return s;
         }
 
-        public string GetDetails() {return this.m_StringValueUser;}
-        public void SetDetails(string s) {this.m_StringValueUser = s;}
+        public string GetDetails() { return this.m_StringValueUser; }
+        public void SetDetails(string s) { this.m_StringValueUser = s; }
 
-        string GetStringName() {return this.m_StringName;}
-        void SetStringName(string StringName) {this.m_StringName = StringName;}
+        string GetStringName() { return this.m_StringName; }
+        void SetStringName(string StringName) { this.m_StringName = StringName; }
     }
 }
