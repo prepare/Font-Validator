@@ -33,12 +33,12 @@ namespace FontVal
         /// </summary>
         private System.ComponentModel.Container components = null;
 
-        public Progress( Form1 formParent, 
-                         Validator v, 
-                         string [] sFilenames, 
-                         ReportFileDestination rfd, 
-                         bool bOpenReportFiles, 
-                         string sReportFixedDir )
+        public Progress(Form1 formParent,
+                         Validator v,
+                         string[] sFilenames,
+                         ReportFileDestination rfd,
+                         bool bOpenReportFiles,
+                         string sReportFixedDir)
         {
             //
             // Required for Windows Form Designer support
@@ -62,40 +62,40 @@ namespace FontVal
         //
         // Update label text in same thread in which widget was created.
         //
-        private delegate void 
-            UpdateLabelTextDelegate( System.Windows.Forms.Label label,
-                                     string text );
+        private delegate void
+            UpdateLabelTextDelegate(System.Windows.Forms.Label label,
+                                     string text);
 
-        private void UpdateLabelTextWorker( System.Windows.Forms.Label label,
-                                            string text )
+        private void UpdateLabelTextWorker(System.Windows.Forms.Label label,
+                                            string text)
         {
             label.Text = text;
         }
-        private void UpdateLabelText( System.Windows.Forms.Label label,
-                                      string text )
+        private void UpdateLabelText(System.Windows.Forms.Label label,
+                                      string text)
         {
-            label.Invoke( new UpdateLabelTextDelegate(UpdateLabelTextWorker), 
-                          new object[]{label,text} );
+            label.Invoke(new UpdateLabelTextDelegate(UpdateLabelTextWorker),
+                          new object[] { label, text });
         }
 
         //
         // Update label visibility in same thread in which widget was created.
         //
 
-        private delegate void 
-            UpdateLabelBoolDelegate( System.Windows.Forms.Label label, 
-                                     bool val );
+        private delegate void
+            UpdateLabelBoolDelegate(System.Windows.Forms.Label label,
+                                     bool val);
 
-        private void UpdateLabelVisibleWorker( System.Windows.Forms.Label label,
-                                               bool bValue )
+        private void UpdateLabelVisibleWorker(System.Windows.Forms.Label label,
+                                               bool bValue)
         {
             label.Visible = bValue;
         }
-        private void UpdateLabelVisible( System.Windows.Forms.Label label,
-                                         bool bValue )
+        private void UpdateLabelVisible(System.Windows.Forms.Label label,
+                                         bool bValue)
         {
-            label.Invoke( new UpdateLabelBoolDelegate(UpdateLabelVisibleWorker), 
-                          new object[]{label,bValue} );
+            label.Invoke(new UpdateLabelBoolDelegate(UpdateLabelVisibleWorker),
+                          new object[] { label, bValue });
         }
 
         //
@@ -103,13 +103,14 @@ namespace FontVal
         //
         private delegate void UpdateVoidDelegate();
 
-        private void CloseOurFormWorker() {
+        private void CloseOurFormWorker()
+        {
             Close();
         }
         private void CloseOurForm()
         {
-            m_formParent.Invoke( new UpdateVoidDelegate( CloseOurFormWorker ), 
-                                 new object[]{} );
+            m_formParent.Invoke(new UpdateVoidDelegate(CloseOurFormWorker),
+                                 new object[] { });
         }
 
 
@@ -129,22 +130,24 @@ namespace FontVal
             m_threadWorker.Start();
         }
 
-        private void OpenReportFiles( List<string> arrCaptions,
-                                      List<string> arrReportFiles )
+        private void OpenReportFiles(List<string> arrCaptions,
+                                      List<string> arrReportFiles)
         {
-            if ( m_bOpenReportFiles ) {
-                for ( int i = 0; i < arrReportFiles.Count; i++ ) {
+            if (m_bOpenReportFiles)
+            {
+                for (int i = 0; i < arrReportFiles.Count; i++)
+                {
                     string sFile = arrReportFiles[i];
                     string sCaption = arrCaptions[i];
-                    bool bDeleteOnClose = 
-                        (m_ReportFileDestination == 
+                    bool bDeleteOnClose =
+                        (m_ReportFileDestination ==
                          ReportFileDestination.TempFiles);
-                    Form1.OpenReportDelegate ord = 
+                    Form1.OpenReportDelegate ord =
                         new Form1.OpenReportDelegate(m_formParent.OpenReport);
-                    m_formParent.Invoke( ord,
-                                         new Object[] {sFile, 
-                                                       sCaption, 
-                                                       bDeleteOnClose} );
+                    m_formParent.Invoke(ord,
+                                         new Object[] {sFile,
+                                                       sCaption,
+                                                       bDeleteOnClose});
                 }
             }
         }
@@ -154,8 +157,8 @@ namespace FontVal
         {
             m_bValidationInProgress = true;
 
-            OTFontFileVal.Driver driver = new OTFontFileVal.Driver( this );
-            driver.RunValidation( m_Validator, m_sFiles );
+            OTFontFileVal.Driver driver = new OTFontFileVal.Driver(this);
+            driver.RunValidation(m_Validator, m_sFiles);
             m_bValidationInProgress = false;
 
             // after all work is done, enable the UI and close this dialog
@@ -167,18 +170,18 @@ namespace FontVal
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        protected override void Dispose( bool disposing )
+        protected override void Dispose(bool disposing)
         {
-            if( disposing )
+            if (disposing)
             {
                 ValidationDieDieDie();
 
-                if(components != null)
+                if (components != null)
                 {
                     components.Dispose();
                 }
             }
-            base.Dispose( disposing );
+            base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
@@ -255,7 +258,7 @@ namespace FontVal
             // 
             // Progress
             // 
-            if ( Type.GetType("Mono.Runtime") == null ) this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+            this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.ClientSize = new System.Drawing.Size(384, 214);
             this.ControlBox = false;
             this.Controls.Add(this.labelTestProgress);
@@ -300,7 +303,7 @@ namespace FontVal
             if (m_bValidationInProgress)
             {
                 btnCancel_Click(null, null);
-                Thread.Sleep(1000); 
+                Thread.Sleep(1000);
                 // wait for a second to see if the validator can cancel in that 
                 // time
 
@@ -331,39 +334,66 @@ namespace FontVal
             }
         }
 
-        public void DeleteTemporaryFiles( List<string> arrReportFiles )
+        public void DeleteTemporaryFiles(List<string> arrReportFiles)
         {
-            if ( m_ReportFileDestination == ReportFileDestination.TempFiles )
+            if (m_ReportFileDestination == ReportFileDestination.TempFiles)
             {
-                for ( int i = 0; i < arrReportFiles.Count; i++ ) {
-                    File.Delete( arrReportFiles[i] );
+                for (int i = 0; i < arrReportFiles.Count; i++)
+                {
+                    File.Delete(arrReportFiles[i]);
                 }
+            }
+        }
+
+
+        static public void CopyXslFile(string sReportFile)
+        {
+            // Note that this will not work in development because it depends 
+            // upon the xsl file existing in the same location as the 
+            // executing assembly, which is only true of the deployment package.
+            //
+            // During development, though, the file FontVal/fval.xsl can be 
+            // copied as needed to 
+            //     FontVal/bin/Debug or
+            //     FontVal/bin/Release
+            // and then the source file is found.
+            // build the src filename
+            string sAssemblyLocation =
+                System.Reflection.Assembly.GetExecutingAssembly().Location;
+            FileInfo fi = new FileInfo(sAssemblyLocation);
+            string sSrcDir = fi.DirectoryName;
+            string sSrcFile = sSrcDir + Path.DirectorySeparatorChar + "fval.xsl";
+
+            // build the dest filename
+            fi = new FileInfo(sReportFile);
+            string sDestDir = fi.DirectoryName;
+            string sDestFile = sDestDir + Path.DirectorySeparatorChar + "fval.xsl";
+
+            // copy the file
+            try
+            {
+                File.Copy(sSrcFile, sDestFile, true);
+                fi = new FileInfo(sDestFile);
+                fi.Attributes = fi.Attributes & ~FileAttributes.ReadOnly;
+            }
+            catch (Exception)
+            {
             }
         }
 
         // ================================================================
         // Callbacks for Driver.DriverCallbacks interface
         // ================================================================
-        
 
-        public string GetReportFileName( string sFontFile )
+
+        public string GetReportFileName(string sFontFile)
         {
             string sReportFile = null;
-            switch ( m_ReportFileDestination )
+            switch (m_ReportFileDestination)
             {
-                case ReportFileDestination.UserDesktop:
-                    sReportFile = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
-                        Path.DirectorySeparatorChar +
-                        Path.GetFileName(sFontFile) + ".report.xml";
-                    break;
                 case ReportFileDestination.TempFiles:
                     string sTemp = Path.GetTempFileName();
                     sReportFile = sTemp + ".report.xml";
-                    while ( File.Exists( sReportFile ) )
-                    {
-                        sTemp = Path.GetTempFileName();
-                        sReportFile = sTemp + ".report.xml";
-                    }
                     File.Move(sTemp, sReportFile);
                     break;
                 case ReportFileDestination.FixedDir:
@@ -377,86 +407,90 @@ namespace FontVal
             return sReportFile;
         }
 
-        public void OnTestProgress( object oParam )
+        public void OnTestProgress(object oParam)
         {
-            UpdateTestProgressDelegate utpd = new 
+            UpdateTestProgressDelegate utpd = new
                 UpdateTestProgressDelegate(UpdateTestProgressWorker);
-            object [] obj = new object[1];
+            object[] obj = new object[1];
             obj[0] = oParam;
             BeginInvoke(utpd, obj);
         }
 
-        public void OnException( Exception e )
+        public void OnException(Exception e)
         {
-            MessageBox.Show( this, e.Message, "Error", 
-                             System.Windows.Forms.MessageBoxButtons.OK, 
+            this.Invoke(new Action(() =>
+            {
+                MessageBox.Show(this, e.Message, "Error",
+                             System.Windows.Forms.MessageBoxButtons.OK,
                              System.Windows.Forms.MessageBoxIcon.Error);
-            DeleteTemporaryFiles( m_reportFiles );
+                DeleteTemporaryFiles(m_reportFiles);
+
+            }));
         }
 
-        public void OnCloseReportFile( string sReportFile )
+        public void OnCloseReportFile(string sReportFile)
         {
             // copy the xsl file to the same directory as the report
             // 
             // This has to be done for each file because the if we are
             // putting the report on the font's directory, there may
             // be a different directory for each font.
-            Driver.CopyXslFile( sReportFile );
+            CopyXslFile(sReportFile);
         }
 
 
-        public void OnOpenReportFile( string sReportFile, string fpath )
+        public void OnOpenReportFile(string sReportFile, string fpath)
         {
-            m_reportFiles.Add( sReportFile );
+            m_reportFiles.Add(sReportFile);
             FileInfo fi = new FileInfo(fpath);
-            m_captions.Add( fi.Name );
-         }
+            m_captions.Add(fi.Name);
+        }
 
         public void OnReportsReady()
         {
-            OpenReportFiles( m_captions, m_reportFiles );
+            OpenReportFiles(m_captions, m_reportFiles);
         }
 
-        public void OnBeginRasterTest( string label )
+        public void OnBeginRasterTest(string label)
         {
-            UpdateLabelText( labelTestname, "Rasterization: " + label );
-            UpdateLabelText( labelTestProgress, "" );
-            UpdateLabelVisible( labelTestProgress, false );
+            UpdateLabelText(labelTestname, "Rasterization: " + label);
+            UpdateLabelText(labelTestProgress, "");
+            UpdateLabelVisible(labelTestProgress, false);
         }
 
-        public void OnBeginTableTest( DirectoryEntry de )
+        public void OnBeginTableTest(DirectoryEntry de)
         {
-            UpdateLabelText( labelTestname, "" + de.tag );
-            UpdateLabelText( labelTestProgress, "" );
-            UpdateLabelVisible( labelTestProgress, false );
+            UpdateLabelText(labelTestname, "" + de.tag);
+            UpdateLabelText(labelTestProgress, "");
+            UpdateLabelVisible(labelTestProgress, false);
         }
 
-        public void OnBeginFontTest( string fname, int nth, int nFonts )
+        public void OnBeginFontTest(string fname, int nth, int nFonts)
         {
-            string label = fname + " (file " + (nth+1) + " of " + nFonts + ")";
-            UpdateLabelText( labelFontname, label );
+            string label = fname + " (file " + (nth + 1) + " of " + nFonts + ")";
+            UpdateLabelText(labelFontname, label);
         }
 
         public void OnCancel()
         {
-            DeleteTemporaryFiles( m_reportFiles );
+            DeleteTemporaryFiles(m_reportFiles);
         }
 
-        public void OnOTFileValChange( OTFileVal fontFile )
+        public void OnOTFileValChange(OTFileVal fontFile)
         {
             m_curOTFileVal = fontFile;
         }
 
-        List<string>          m_captions = new List<string>();
-        List<string>          m_reportFiles = new List<string>();
-        Validator             m_Validator;
-        string []             m_sFiles;
-        OTFileVal             m_curOTFileVal;
-        Form1                 m_formParent;
-        bool                  m_bValidationInProgress;
-        Thread                m_threadWorker;
+        List<string> m_captions = new List<string>();
+        List<string> m_reportFiles = new List<string>();
+        Validator m_Validator;
+        string[] m_sFiles;
+        OTFileVal m_curOTFileVal;
+        Form1 m_formParent;
+        bool m_bValidationInProgress;
+        Thread m_threadWorker;
         ReportFileDestination m_ReportFileDestination;
-        bool                  m_bOpenReportFiles;
-        string                m_sReportFixedDir;
+        bool m_bOpenReportFiles;
+        string m_sReportFixedDir;
     }
 }

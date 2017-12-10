@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
@@ -168,7 +167,7 @@ namespace FontVal
 			// FormReportOptions
 			// 
 			this.AcceptButton = this.btnOK;
-			if ( Type.GetType("Mono.Runtime") == null ) this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
+			this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
 			this.CancelButton = this.btnCancel;
 			this.ClientSize = new System.Drawing.Size(440, 318);
 			this.Controls.AddRange(new System.Windows.Forms.Control[] {
@@ -194,8 +193,6 @@ namespace FontVal
             if (radioButtonTempFiles.Checked)
             {
                 m_ReportFileDestination = ReportFileDestination.TempFiles;
-                if ( Type.GetType("Mono.Runtime") != null )
-                    m_ReportFileDestination = ReportFileDestination.UserDesktop;
                 checkBoxOpenReport.CheckState = CheckState.Checked;
                 m_bOpenReportFile = checkBoxOpenReport.Checked;
                 checkBoxOpenReport.Enabled = false;
@@ -232,11 +229,11 @@ namespace FontVal
                     m_sFixedDir = sDir;
                     textFixedDir.Text = sDir;
                 }
-            } catch (MissingMethodException) {
+            } catch (Exception what) {
                 // Does not happen if SH.BrowseForFolder works.
-                // GetTempPath() (="/tmp" on unix) is friendlier than do nothing.
-                m_sFixedDir = Path.GetTempPath();
-                textFixedDir.Text = Path.GetTempPath();
+                // "/tmp" is friendlier than do nothing.
+                m_sFixedDir = "/tmp";
+                textFixedDir.Text = "/tmp";
             }
         }
 
@@ -256,13 +253,8 @@ namespace FontVal
             set
             {
                 m_ReportFileDestination = value;
-                if ( Type.GetType("Mono.Runtime") != null && value == ReportFileDestination.TempFiles)
-                    m_ReportFileDestination = ReportFileDestination.UserDesktop;
                 switch(m_ReportFileDestination)
                 {
-                    case ReportFileDestination.UserDesktop:
-                        radioButtonTempFiles.Checked = true; //revisit
-                        break;
                     case ReportFileDestination.TempFiles:
                         radioButtonTempFiles.Checked = true;
                         break;

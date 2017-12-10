@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A69D2EC5-E268-4EDC-A66A-D5C5CA0E5346}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DevMain2</RootNamespace>
+    <AssemblyName>DevMain2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Compat\Compat.cs">
+      <Link>Compat\Compat.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\Win32APIs.cs">
+      <Link>Compat\Win32APIs.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat\WinVerifyTrustAPI.cs">
+      <Link>Compat\WinVerifyTrustAPI.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\DefsGC.cs">
+      <Link>Glyph\DefsGC.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\DefsGM.cs">
+      <Link>Glyph\DefsGM.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\DefsGV.cs">
+      <Link>Glyph\DefsGV.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\DIWrapper.cs">
+      <Link>Glyph\DIWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\ExceptionGlyph.cs">
+      <Link>Glyph\ExceptionGlyph.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\Flags.cs">
+      <Link>Glyph\Flags.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\FlagsGV.cs">
+      <Link>Glyph\FlagsGV.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\FManager.cs">
+      <Link>Glyph\FManager.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\GDrawParam.cs">
+      <Link>Glyph\GDrawParam.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\GErr.cs">
+      <Link>Glyph\GErr.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\GErrConsts.cs">
+      <Link>Glyph\GErrConsts.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\GErrFile.cs">
+      <Link>Glyph\GErrFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\GErrList.cs">
+      <Link>Glyph\GErrList.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\GErrPool.cs">
+      <Link>Glyph\GErrPool.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\GErrSign.cs">
+      <Link>Glyph\GErrSign.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\Glyph.cs">
+      <Link>Glyph\Glyph.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\GRelations.cs">
+      <Link>Glyph\GRelations.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\GScope.cs">
+      <Link>Glyph\GScope.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\GStore.cs">
+      <Link>Glyph\GStore.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\I_IOGlyphs.cs">
+      <Link>Glyph\I_IOGlyphs.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\I_ProgressUpdator.cs">
+      <Link>Glyph\I_ProgressUpdator.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\NS_Glyph.GErrStrings.Designer.cs">
+      <Link>Glyph\NS_Glyph.GErrStrings.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Glyph\NS_Glyph.GErrStrings1.Designer.cs">
+      <Link>Glyph\NS_Glyph.GErrStrings1.Designer.cs</Link>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NS_Glyph.GErrStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="..\Glyph\StatusGV.cs">
+      <Link>Glyph\StatusGV.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\Bez2D.cs">
+      <Link>GMath\Bez2D.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\BoxD.cs">
+      <Link>GMath\BoxD.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\CNum.cs">
+      <Link>GMath\CNum.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\Component.cs">
+      <Link>GMath\Component.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\Composite.cs">
+      <Link>GMath\Composite.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\Contour.cs">
+      <Link>GMath\Contour.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\DegenD.cs">
+      <Link>GMath\DegenD.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\Equation.cs">
+      <Link>GMath\Equation.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\ExceptionGMath.cs">
+      <Link>GMath\ExceptionGMath.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\GConsts.cs">
+      <Link>GMath\GConsts.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\InfoConnect.cs">
+      <Link>GMath\InfoConnect.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\InfoDrawable.cs">
+      <Link>GMath\InfoDrawable.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\InfoInters.cs">
+      <Link>GMath\InfoInters.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\Intersect.cs">
+      <Link>GMath\Intersect.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\I_CurveD.cs">
+      <Link>GMath\I_CurveD.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\I_Draw.cs">
+      <Link>GMath\I_Draw.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\I_Drawable.cs">
+      <Link>GMath\I_Drawable.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\Knot.cs">
+      <Link>GMath\Knot.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\LineD.cs">
+      <Link>GMath\LineD.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\ListInfoInters.cs">
+      <Link>GMath\ListInfoInters.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\MatrixD.cs">
+      <Link>GMath\MatrixD.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\MConsts.cs">
+      <Link>GMath\MConsts.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\MDrawParam.cs">
+      <Link>GMath\MDrawParam.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\Outline.cs">
+      <Link>GMath\Outline.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\PairInt.cs">
+      <Link>GMath\PairInt.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\Param.cs">
+      <Link>GMath\Param.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\RayD.cs">
+      <Link>GMath\RayD.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\SegD.cs">
+      <Link>GMath\SegD.cs</Link>
+    </Compile>
+    <Compile Include="..\GMath\VecD.cs">
+      <Link>GMath\VecD.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\atoms.cs">
+      <Link>OTFontFileVal\atoms.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\CallbVal.cs">
+      <Link>OTFontFileVal\CallbVal.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\ITableValidate.cs">
+      <Link>OTFontFileVal\ITableValidate.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\I_IOGlyphsFile.cs">
+      <Link>OTFontFileVal\I_IOGlyphsFile.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\OTFileVal.cs">
+      <Link>OTFontFileVal\OTFileVal.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\OTFontVal.cs">
+      <Link>OTFontFileVal\OTFontVal.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\OTLVal.cs">
+      <Link>OTFontFileVal\OTLVal.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\Overlap.cs">
+      <Link>OTFontFileVal\Overlap.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\PostNames.cs">
+      <Link>OTFontFileVal\PostNames.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\RastTest.cs">
+      <Link>OTFontFileVal\RastTest.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\TableManagerVal.cs">
+      <Link>OTFontFileVal\TableManagerVal.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\ValDriver.cs">
+      <Link>OTFontFileVal\ValDriver.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\ValidationInfo.cs">
+      <Link>OTFontFileVal\ValidationInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\Validator.cs">
+      <Link>OTFontFileVal\Validator.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\ValidatorParameters.cs">
+      <Link>OTFontFileVal\ValidatorParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_BASE.cs">
+      <Link>OTFontFileVal\val_BASE.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_CFF.cs">
+      <Link>OTFontFileVal\val_CFF.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_cmap.cs">
+      <Link>OTFontFileVal\val_cmap.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_cvt.cs">
+      <Link>OTFontFileVal\val_cvt.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_DSIG.cs">
+      <Link>OTFontFileVal\val_DSIG.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_EBDT.cs">
+      <Link>OTFontFileVal\val_EBDT.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_EBLC.cs">
+      <Link>OTFontFileVal\val_EBLC.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_EBSC.cs">
+      <Link>OTFontFileVal\val_EBSC.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_fpgm.cs">
+      <Link>OTFontFileVal\val_fpgm.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_gasp.cs">
+      <Link>OTFontFileVal\val_gasp.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_GDEF.cs">
+      <Link>OTFontFileVal\val_GDEF.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_glyf.cs">
+      <Link>OTFontFileVal\val_glyf.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_GPOS.cs">
+      <Link>OTFontFileVal\val_GPOS.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_GSUB.cs">
+      <Link>OTFontFileVal\val_GSUB.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_hdmx.cs">
+      <Link>OTFontFileVal\val_hdmx.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_head.cs">
+      <Link>OTFontFileVal\val_head.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_hhea.cs">
+      <Link>OTFontFileVal\val_hhea.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_hmtx.cs">
+      <Link>OTFontFileVal\val_hmtx.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_JSTF.cs">
+      <Link>OTFontFileVal\val_JSTF.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_kern.cs">
+      <Link>OTFontFileVal\val_kern.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_loca.cs">
+      <Link>OTFontFileVal\val_loca.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_LTSH.cs">
+      <Link>OTFontFileVal\val_LTSH.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_maxp.cs">
+      <Link>OTFontFileVal\val_maxp.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_name.cs">
+      <Link>OTFontFileVal\val_name.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_OS2.cs">
+      <Link>OTFontFileVal\val_OS2.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_PCLT.cs">
+      <Link>OTFontFileVal\val_PCLT.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_post.cs">
+      <Link>OTFontFileVal\val_post.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_prep.cs">
+      <Link>OTFontFileVal\val_prep.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_VDMX.cs">
+      <Link>OTFontFileVal\val_VDMX.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_vhea.cs">
+      <Link>OTFontFileVal\val_vhea.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_vmtx.cs">
+      <Link>OTFontFileVal\val_vmtx.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val_VORG.cs">
+      <Link>OTFontFileVal\val_VORG.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFileVal\val__Unknown.cs">
+      <Link>OTFontFileVal\val__Unknown.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\MBOBuffer.cs">
+      <Link>OTFontFile\MBOBuffer.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\OTFile.cs">
+      <Link>OTFontFile\OTFile.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\OTFont.cs">
+      <Link>OTFontFile\OTFont.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\OTL.cs">
+      <Link>OTFontFile\OTL.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\OTTable.cs">
+      <Link>OTFontFile\OTTable.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\ottypes.cs">
+      <Link>OTFontFile\ottypes.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\TableManager.cs">
+      <Link>OTFontFile\TableManager.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_BASE.cs">
+      <Link>OTFontFile\Table_BASE.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_CFF.cs">
+      <Link>OTFontFile\Table_CFF.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_cmap.cs">
+      <Link>OTFontFile\Table_cmap.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_cvt.cs">
+      <Link>OTFontFile\Table_cvt.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_DSIG.cs">
+      <Link>OTFontFile\Table_DSIG.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_EBDT.cs">
+      <Link>OTFontFile\Table_EBDT.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_EBLC.cs">
+      <Link>OTFontFile\Table_EBLC.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_EBSC.cs">
+      <Link>OTFontFile\Table_EBSC.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_fpgm.cs">
+      <Link>OTFontFile\Table_fpgm.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_gasp.cs">
+      <Link>OTFontFile\Table_gasp.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_GDEF.cs">
+      <Link>OTFontFile\Table_GDEF.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_glyf.cs">
+      <Link>OTFontFile\Table_glyf.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_GPOS.cs">
+      <Link>OTFontFile\Table_GPOS.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_GSUB.cs">
+      <Link>OTFontFile\Table_GSUB.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_hdmx.cs">
+      <Link>OTFontFile\Table_hdmx.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_head.cs">
+      <Link>OTFontFile\Table_head.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_hhea.cs">
+      <Link>OTFontFile\Table_hhea.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_hmtx.cs">
+      <Link>OTFontFile\Table_hmtx.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_JSTF.cs">
+      <Link>OTFontFile\Table_JSTF.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_kern.cs">
+      <Link>OTFontFile\Table_kern.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_loca.cs">
+      <Link>OTFontFile\Table_loca.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_LTSH.cs">
+      <Link>OTFontFile\Table_LTSH.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_maxp.cs">
+      <Link>OTFontFile\Table_maxp.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_name.cs">
+      <Link>OTFontFile\Table_name.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_OS2.cs">
+      <Link>OTFontFile\Table_OS2.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_PCLT.cs">
+      <Link>OTFontFile\Table_PCLT.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_post.cs">
+      <Link>OTFontFile\Table_post.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_prep.cs">
+      <Link>OTFontFile\Table_prep.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_VDMX.cs">
+      <Link>OTFontFile\Table_VDMX.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_vhea.cs">
+      <Link>OTFontFile\Table_vhea.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_vmtx.cs">
+      <Link>OTFontFile\Table_vmtx.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table_VORG.cs">
+      <Link>OTFontFile\Table_VORG.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\TAble_Zapf.cs">
+      <Link>OTFontFile\TAble_Zapf.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\Table__Unknown.cs">
+      <Link>OTFontFile\Table__Unknown.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\TTCHeader.cs">
+      <Link>OTFontFile\TTCHeader.cs</Link>
+    </Compile>
+    <Compile Include="..\OTFontFile\util.cs">
+      <Link>OTFontFile\util.cs</Link>
+    </Compile>
+    <Compile Include="..\ValCommon\DIAction.cs">
+      <Link>ValCommon\DIAction.cs</Link>
+    </Compile>
+    <Compile Include="..\ValCommon\DIActionBuilder.cs">
+      <Link>ValCommon\DIActionBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\ValCommon\DIActionContainer.cs">
+      <Link>ValCommon\DIActionContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\ValCommon\DIActionOnCondBuilder.cs">
+      <Link>ValCommon\DIActionOnCondBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\ValCommon\DICond.cs">
+      <Link>ValCommon\DICond.cs</Link>
+    </Compile>
+    <Compile Include="..\ValCommon\DICondBuilder.cs">
+      <Link>ValCommon\DICondBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\ValCommon\I_TestReader.cs">
+      <Link>ValCommon\I_TestReader.cs</Link>
+    </Compile>
+    <Compile Include="..\ValCommon\ValInfoBasic.cs">
+      <Link>ValCommon\ValInfoBasic.cs</Link>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="FontVal.Form1.Designer.cs">
+      <DependentUpon>FontVal.Form1.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FontVal.FormAbout.Designer.cs">
+      <DependentUpon>FontVal.FormAbout.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FontVal.FormReportOptions.Designer.cs">
+      <DependentUpon>FontVal.FormReportOptions.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FontVal.FormTransform.Designer.cs">
+      <DependentUpon>FontVal.FormTransform.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FontVal.ResultsForm.Designer.cs">
+      <DependentUpon>FontVal.ResultsForm.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FontValRes.Designer.cs">
+      <DependentUpon>FontValRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OTFontFileVal.ValStrings.Designer.cs">
+      <DependentUpon>OTFontFileVal.ValStrings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Progress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="project.cs" />
+    <Compile Include="ResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="WebBrowse.cs" />
+    <EmbeddedResource Include="..\Glyph\NS_Glyph.GErrStrings.resx">
+      <Link>Glyph\NS_Glyph.GErrStrings.resx</Link>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NS_Glyph.GErrStrings1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FontVal.Form1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FontVal.Form1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FontVal.FormAbout.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FontVal.FormAbout.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FontVal.FormReportOptions.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FontVal.FormReportOptions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FontVal.FormTransform.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FontVal.FormTransform.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FontVal.ResultsForm.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FontVal.ResultsForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FontValRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FontValRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OTFontFileVal.ValStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OTFontFileVal.ValStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="fval.xsl" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

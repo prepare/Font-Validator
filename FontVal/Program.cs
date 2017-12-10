@@ -90,19 +90,9 @@ namespace FontVal
             string sReportFile = null;
             switch (m_ReportFileDestination)
             {
-                case ReportFileDestination.UserDesktop:
-                    sReportFile = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) +
-                        Path.DirectorySeparatorChar +
-                        Path.GetFileName(sFontFile) + ".report.xml";
-                    break;
                 case ReportFileDestination.TempFiles:
                     string sTemp = Path.GetTempFileName();
                     sReportFile = sTemp + ".report.xml";
-                    while ( File.Exists( sReportFile ) )
-                    {
-                        sTemp = Path.GetTempFileName();
-                        sReportFile = sTemp + ".report.xml";
-                    }
                     File.Move(sTemp, sReportFile);
                     break;
                 case ReportFileDestination.FixedDir:
@@ -154,7 +144,7 @@ namespace FontVal
             {
                 try {
                 FreeConsole();
-                } catch (Exception e) when ( e is EntryPointNotFoundException || e is DllNotFoundException ) {
+                } catch (Exception e ) {
                     // FreeConsole() is neither available nor relevant
                     // on non-windows.
                 }
@@ -164,7 +154,7 @@ namespace FontVal
 
             bool err = false;
             string reportDir = null;
-            ReportFileDestination rfd = ReportFileDestination.UserDesktop;
+            ReportFileDestination rfd = ReportFileDestination.TempFiles;
             List<string> sFileList = new List<string>();
             ValidatorParameters vp = new ValidatorParameters();
 
@@ -288,9 +278,6 @@ namespace FontVal
                 else if ("-report-in-font-dir" == args[i])
                 {
                     rfd = ReportFileDestination.SameDirAsFont;
-                }
-                else if ( "-temporary-reports" == args[i] ) {
-                    rfd = ReportFileDestination.TempFiles;
                 }
                 else
                 {
