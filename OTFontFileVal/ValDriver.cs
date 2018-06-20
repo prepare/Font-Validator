@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using System.Xml;
-using System.ComponentModel;
-using System.Windows.Forms;
-using System.Threading;
+//using System.ComponentModel;
+//using System.Windows.Forms;
+//using System.Threading;
 
 using Microsoft.Win32.SafeHandles;
 
@@ -317,8 +317,8 @@ namespace OTFontFileVal {
             m_xmlWriter.WriteStartElement("FontValidatorReport");
             string dateAndTime = System.DateTime.Now.ToString("f", null);
             m_xmlWriter.WriteAttributeString("RunDateTime", dateAndTime );
-            m_xmlWriter.WriteAttributeString("MachineName", 
-                                             SystemInformation.ComputerName);
+            //m_xmlWriter.WriteAttributeString("MachineName", 
+            //                                 SystemInformation.ComputerName);
             m_xmlWriter.WriteWhitespace("\r\n");
 
             FileInfo fi = new FileInfo(sFontFile);

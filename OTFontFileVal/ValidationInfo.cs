@@ -1,6 +1,6 @@
 using System;
 using System.Diagnostics;
-using System.Xml;
+//using System.Xml;
 
 using OTFontFile;
 using NS_ValCommon;
@@ -102,8 +102,9 @@ namespace OTFontFileVal
                     {
                         //System.Reflection.Assembly a = System.Reflection.Assembly.GetAssembly(this.GetType());
                         //System.Resources.ResourceManager rm = new System.Resources.ResourceManager("OTFontFileVal.ValStrings", a);
-                        var rm = DevMain2.OTFontFileVal_ValStrings.ResourceManager;// OTFontFileVal.OTFontFileVal_ValStrings.ResourceManager;
-                        string sErrorAndMessage = rm.GetString(m_StringName);
+                        //var rm = DevMain2.OTFontFileVal_ValStrings.ResourceManager;// OTFontFileVal.OTFontFileVal_ValStrings.ResourceManager;
+
+                        string sErrorAndMessage = ResMan.GetString(m_StringName);
                         if (sErrorAndMessage.Length > 6 && sErrorAndMessage[5] == ':' && sErrorAndMessage[6] == ' ')
                         {
                             s = sErrorAndMessage.Substring(7);
@@ -162,10 +163,10 @@ namespace OTFontFileVal
             {
                 if (this.m_NameAsmFileErrs == "OTFontFileVal")
                 {
-                    var rm = DevMain2.OTFontFileVal_ValStrings.ResourceManager; 
+                    //var rm = DevMain2.OTFontFileVal_ValStrings.ResourceManager; 
                     //System.Reflection.Assembly a = System.Reflection.Assembly.GetAssembly(this.GetType());
                     //System.Resources.ResourceManager rm = new System.Resources.ResourceManager("OTFontFileVal.ValStrings", a);
-                    string sErrorAndMessage = rm.GetString(m_StringName);
+                    string sErrorAndMessage = ResMan.GetString(m_StringName);
                     if (sErrorAndMessage.Length > 6 && sErrorAndMessage[5] == ':' && sErrorAndMessage[6] == ' ')
                     {
                         s = sErrorAndMessage.Substring(0, 5);

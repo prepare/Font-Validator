@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DevMain2.Glyph {
+namespace FontValidatorService.Glyph {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace DevMain2.Glyph {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DevMain2.Glyph.NS_Glyph.GErrStrings", typeof(NS_Glyph_GErrStrings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FontValidatorService.Glyph.NS_Glyph.GErrStrings", typeof(NS_Glyph_GErrStrings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
