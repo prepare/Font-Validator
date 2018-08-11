@@ -134,22 +134,38 @@ namespace FontVal
         [DllImport("Kernel32.dll")]
         private static extern Boolean FreeConsole();
 
+
+        class MyResProvider : IResProvider
+        {
+            public string GetString(string s)
+            {
+                return DevMain2.OTFontFileVal_ValStrings.ResourceManager.GetString(s);
+            }
+        }
+
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         static void Main(string[] args)
         {
+
+            ResMan.SetResProvider(new MyResProvider());
+
             if (args.Length == 0)
             {
-                try {
-                FreeConsole();
-                } catch (Exception e ) {
+                try
+                {
+                    FreeConsole();
+                }
+                catch (Exception e)
+                {
                     // FreeConsole() is neither available nor relevant
                     // on non-windows.
                 }
                 Application.Run(new Form1());
-                return ;
+                return;
             }
 
             bool err = false;
@@ -158,7 +174,7 @@ namespace FontVal
             List<string> sFileList = new List<string>();
             ValidatorParameters vp = new ValidatorParameters();
 
-            int i,j;
+            int i, j;
 
             for (i = 0; i < args.Length; i++)
             {
@@ -167,12 +183,12 @@ namespace FontVal
                     j = i + 1;
                     if (j == args.Length)
                     {
-                        ErrOut("Argument required for \"" + args[j-1] + "\"");
+                        ErrOut("Argument required for \"" + args[j - 1] + "\"");
                         err = true;
                         break;
                     }
 
-                    for (;j < args.Length; j++)
+                    for (; j < args.Length; j++)
                     {
                         if (args[j][0] == '-' || args[j][0] == '+')
                         {
@@ -197,7 +213,7 @@ namespace FontVal
                     j = i + 1;
                     if (j == args.Length)
                     {
-                        ErrOut("Argument required for \"" + args[j-1] + "\"");
+                        ErrOut("Argument required for \"" + args[j - 1] + "\"");
                         err = true;
                         break;
                     }
@@ -288,7 +304,7 @@ namespace FontVal
             if (err)
             {
                 Usage();
-                return ;
+                return;
             }
 
             //Ready to run
