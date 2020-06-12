@@ -5,6 +5,10 @@ It was initially developed by Microsoft, to ensure that fonts meet Microsoft's h
 
 In 2015 the source code was published under the MIT license ([see release discussion](http://typedrawers.com/discussion/1222/microsoft-font-validator-lives))
 
+Portions of this software are copyright © 2015-2018 The FreeType Project (www.freetype.org).  All rights reserved.
+
+Portions of this software are copyright © 2015-2018 The SharpFont Project (https://github.com/Robmaister/SharpFont).  All rights reserved.
+
 ## Usage
 
 `FontVal.exe` is the GUI, and `FontValidator.exe` shows usage and example if run without arguments; both should be self-explanatory. 
@@ -24,7 +28,15 @@ Binary downloads at the [Releases link above this page](https://github.com/HinTa
 
 Please consider [donating to the effort](https://sourceforge.net/p/hp-pxl-jetready/donate/), if you use the binaries.
 
+## Building from source
+
+Loading `FValidator.sln` at the top level into Microsoft Visual Studio 2008+ (Express) by double-clicking it, followed by
+selecting the the relevant menu entries in the GUI, or running `MSbuild` on the command line with MS VS2008+,
+should do. For Mono-based instructions, see
 [Build Instructions](https://github.com/HinTak/Font-Validator/wiki/Build-Instructions)
+
+A few dependent parts, either difficult to build or external, or have different build requirements,
+such as the FreeType backends, SharpFont, the CHM doc, are pre-built and deposited in the bin directory.
 
 ### Status
 

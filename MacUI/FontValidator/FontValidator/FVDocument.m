@@ -16,14 +16,6 @@
 
 @implementation FVDocument
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-		// Add your subclass-specific initialization here.
-    }
-    return self;
-}
-
 - (void)awakeFromNib {
 	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"OptionsVisible"]) {
 		[_optionHeightConstraint setConstant:OptionViewHeight];
@@ -92,11 +84,11 @@
 			[Arguments addObject:ignoreTable];
 		}
 	}
-	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"raster_tests"]) {
-		[Arguments addObject:@"+raster-tests"];
+	if (![[NSUserDefaults standardUserDefaults] boolForKey:@"raster_tests"]) {
+		[Arguments addObject:@"-no-raster-tests"];
 	}
 
-	NSString *Result = [self callCommand:fontValBinPath withAruments:Arguments currentDirectory:nil];
+	NSString *Result = [self callCommand:fontValBinPath withArguments:Arguments currentDirectory:nil];
 	
 
 	Result = [Result stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -125,7 +117,7 @@
 	}
 }
 
-- (NSString *)callCommand:(NSString *)Command withAruments:(NSArray *)Arguments currentDirectory:(NSString *)CurrentDirectory {
+- (NSString *)callCommand:(NSString *)Command withArguments:(NSArray *)Arguments currentDirectory:(NSString *)CurrentDirectory {
 	if (Command) {
 		NSTask *task;
 		task = [[NSTask alloc] init];

@@ -581,11 +581,20 @@ namespace OTFontFile.OTL
         {
             bool bRet = true;
 
-            // check that FeatureParams is null
-            if (FeatureParams != 0)
+            if (sIdentity.EndsWith("(size), FeatureTable"))
             {
-                v.Error(T.T_NULL, E._OTL_FeatureTable_E_FeatureParams_nonnull, table.m_tag, sIdentity);
-                bRet = false;
+                // The "size" feature is special in having non-null FeatureParams
+
+                // TODO
+            }
+            else
+            {
+                // check that FeatureParams is null
+                if (FeatureParams != 0)
+                {
+                    v.Error(T.T_NULL, E._OTL_FeatureTable_E_FeatureParams_nonnull, table.m_tag, sIdentity);
+                    bRet = false;
+                }
             }
 
             // check LookupListIndex array length
@@ -693,7 +702,7 @@ namespace OTFontFile.OTL
             }
 
             // check LookupFlag reserved bits are clear
-            if ((LookupFlag & 0x00f0) != 0)
+            if ((LookupFlag & 0x00E0) != 0)
             {
                 v.Error(T.T_NULL, E._OTL_LookupTable_E_LookupFlag_reserved, table.m_tag, sIdentity);
                 bRet = false;
@@ -998,8 +1007,8 @@ namespace OTFontFile.OTL
                 bRet = false;
             }
 
-            // check DeltaFormat is 1, 2, or 3
-            if (DeltaFormat < 1 || DeltaFormat > 3)
+            // check DeltaFormat is 1, 2, 3, or VARIATION_INDEX
+            if ( (DeltaFormat < 1 || DeltaFormat > 3) && (DeltaFormat != 0x8000) )
             {
                 v.Error(T.T_NULL, E._OTL_DeviceTable_E_DeltaFormat, table.m_tag, sIdentity + ", DeltaFormat = " + DeltaFormat);
                 bRet = false;
@@ -1007,6 +1016,7 @@ namespace OTFontFile.OTL
             else
             {
 
+                if (DeltaFormat >= 1 || DeltaFormat <= 3) {
                 // check that DeltaValue array doesn't extend past the end of the table
                 int nSizes = EndSize - StartSize + 1;
                 int nValuesPerUint = 16 >> DeltaFormat;
@@ -1017,6 +1027,8 @@ namespace OTFontFile.OTL
                     v.Error(T.T_NULL, E._OTL_DeviceTable_E_DeltaValueArray_pastEOT, table.m_tag, sIdentity);
                     bRet = false;
                 }
+                }
+                // TODO: VARIATION_INDEX check
             }
 
             // way too many device tables to justify this pass message

@@ -51,9 +51,9 @@ namespace OTFontFileVal
                 uint len = GetLength();
                 if ((version == 0 && len == 78)      // TrueType rev 1.5
                     || (version == 1 && len == 86)   // TrueType rev 1.66, + ulCodePageRange1, ulCodePageRange2
-                    || (version == 2 && len == 96)   // OpenType rev 1.2
-                    || (version == 3 && len == 96)   // OpenType rev 1.4
-                    || (version == 4 && len == 96)   // OpenType rev 1.6
+                    || (version == 2 && len == 96)   // OpenType rev 1.2, + five additional fields
+                    || (version == 3 && len == 96)   // OpenType rev 1.4, specification of certain fields revised to reflect changes in Uniode 3.2
+                    || (version == 4 && len == 96)   // OpenType rev 1.6, specification of certain fields revised
                     || (version == 5 && len == 100)) // OpenType rev 1.7, + usLowerOpticalPointSize, usUpperOpticalPointSize
                 {
                     v.Pass(T.OS_2_TableLength, P.OS_2_P_TableLength, m_tag);
@@ -1341,6 +1341,12 @@ namespace OTFontFileVal
             }
 
 
+            public Range [] GetRanges()
+            {
+                return m_arrRanges;
+            }
+
+
             public Range GetRange(uint charcode)
             {
                 Range urReturn = null;
@@ -1452,6 +1458,25 @@ namespace OTFontFileVal
                     if (r != null)
                     {
                         r.count++;
+                    }
+                }
+            }
+            if (fontOwner.HaveNonBMPChars())
+            {
+                foreach (UnicodeRanges.Range currRange in ur.GetRanges())
+                {
+                    if (currRange.m_nLow < 0xffff)
+                    {
+                        continue;
+                    }
+                    for (uint c = currRange.m_nLow; c <= currRange.m_nHigh; c++)
+                    {
+                        // check if c is mapped to a glyph
+                        uint iGlyph = fontOwner.FastMapUnicode32ToGlyphID(c);
+                        if (iGlyph != 0)
+                        {
+                            currRange.count++;
+                        }
                     }
                 }
             }
@@ -2126,7 +2151,8 @@ namespace OTFontFileVal
                     nCharsInRange = ur.GetRange(TAGS_LOW).count;
                     bOk &= VerifyUnicodeRange(v, ulUnicodeRange3, 0x10000000, nCharsInRange, "Tags");
 
-                    // v3: 93-127 Reserved for Unicode SubRanges
+                    // v3: 84 to 92, + already-assigned bits extended to cover additional Unicode ranges
+                    // v4: 58 and bits 93 to 122, + bits 8, 12, 14, 27 and 53 re-assigned
                     if (version < 4)
                     {
                         for (int bitpos = 29; bitpos < 32; bitpos++)
@@ -2184,6 +2210,15 @@ namespace OTFontFileVal
                      */
 
                         // TODO: v4 addition
+
+                        // v4, v5: 123-127 Reserved for process-internal usage
+                        if (version < 6)
+                        {
+                            for (int bitpos = 27; bitpos < 32; bitpos++)
+                            {
+                                if ((ulUnicodeRange4 & (1<<bitpos)) != 0) { bOk = false; v.Error(T.T_NULL, E.OS_2_E_ReservedBitSet_Unicode, m_tag, "bit #" + (96+bitpos)); }
+                            }
+                        }
                     }
                 }
             }

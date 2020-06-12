@@ -50,7 +50,7 @@ namespace OTFontFile.Rasterizer
         private static extern bool SetDllDirectory(string path);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate int diagnostics_Function(int messcode, string message, string opcode,
+        public delegate int diagnostics_Function(IntPtr face_handle, int messcode, string message, string opcode,
                                                  int range_base, int is_composite,
                                                  int IP, int callTop, int opc, int start);
 
@@ -63,7 +63,11 @@ namespace OTFontFile.Rasterizer
         private RasterInterf ()
         {
             PlatformID pid = Environment.OSVersion.Platform;
+#if __MonoCS__
             if ( pid != PlatformID.Unix && pid != PlatformID.MacOSX )
+#else
+            if ( pid != PlatformID.Unix )
+#endif
             {
                 string path = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
                 path = Path.Combine(path, IntPtr.Size == 8 ? "Win64" : "Win32");
@@ -139,7 +143,7 @@ namespace OTFontFile.Rasterizer
             {
                 TT_Diagnostics_Unset(_face_handle);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 throw new NotImplementedException("UnImplemented in this version of Freetype: " + FTVersion);
             };
@@ -184,7 +188,7 @@ namespace OTFontFile.Rasterizer
                 _face.SetTransform(fmatrix, fdelta);
                 for (uint ig = 0; ig < numGlyphs; ig++) {
                     diagnostics_Function diagnostics =
-                        (messcode, message, opcode, range_base, is_composite, IP, callTop, opc, start) =>
+                        (face_handle, messcode, message, opcode, range_base, is_composite, IP, callTop, opc, start) =>
                         {
                             string sDetails = "Size " + arrPointSizes[i] + ", " + opcode;
                             switch ( range_base )
@@ -372,7 +376,7 @@ namespace OTFontFile.Rasterizer
         public ushort RasterNewSfnt (FileStream fontFileStream, uint faceIndex)
         {
             _face = _lib.NewFace(fontFileStream.Name, (int)faceIndex);
-            _face_handle = (IntPtr) _face.GetType().GetProperty("pReference", BindingFlags.NonPublic |BindingFlags.Instance).GetValue(_face);
+            _face_handle = (IntPtr) _face.GetType().GetProperty("pReference", BindingFlags.NonPublic |BindingFlags.Instance).GetValue(_face, null);
             m_UserCancelledTest = false;
             m_RastErrorCount = 0;
 

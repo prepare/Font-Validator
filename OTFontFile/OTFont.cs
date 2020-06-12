@@ -431,6 +431,14 @@ namespace OTFontFile
                 return false;
         }
 
+        public bool IsVariableFont()
+        {
+            if ( (GetDirectoryEntry("fvar") == null) || (GetDirectoryEntry("STAT") == null) )
+                return false;
+            else
+                return true;
+        }
+
         public ushort GetMaxpNumGlyphs()
         {
             // this routine caches the maxp.numGlyphs value for better performance
@@ -505,6 +513,17 @@ namespace OTFontFile
             return glyphID;
         }
 
+        public bool HaveNonBMPChars()
+        {
+            Table_cmap cmapTable = (Table_cmap)GetTable("cmap");
+            if (cmapTable != null)
+            {
+                Table_cmap.Format12 subtable = (Table_cmap.Format12)cmapTable.GetSubtable(3,10);
+                if (subtable != null)
+                    return true;
+            }
+            return false;
+        }
 
         public uint FastMapUnicode32ToGlyphID(uint c)
         {
@@ -549,6 +568,10 @@ namespace OTFontFile
             Debug.Assert(m_arrUnicodeToGlyph_3_10 != null);
             if (m_arrUnicodeToGlyph_3_10 != null)
             {
+                if (c >= m_arrUnicodeToGlyph_3_10.Length)
+                {
+                    return 0;
+                }
                 glyphID = m_arrUnicodeToGlyph_3_10[c];
             }
 

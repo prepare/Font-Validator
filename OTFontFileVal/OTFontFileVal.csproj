@@ -1,4 +1,4 @@
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
     <ProductVersion>9.0.21022</ProductVersion>
@@ -27,10 +27,9 @@
     <OldToolsVersion>0.0</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\bin\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -51,7 +50,7 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\bin\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -113,8 +112,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\mcs-class-Mono.Security\ASN1.cs" />
-    <Compile Include="..\mcs-class-Mono.Security\ASN1Convert.cs" />
+    <Compile Include="..\mcs-class-Mono.Security\ASN1.cs">
+      <Link>ASN1.cs</Link>
+    </Compile>
+    <Compile Include="..\mcs-class-Mono.Security\ASN1Convert.cs">
+      <Link>ASN1Convert.cs</Link>
+    </Compile>
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -122,7 +125,9 @@
     <Compile Include="CallbVal.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="..\DSIGInfo\DSIGInfo.cs" />
+    <Compile Include="..\DSIGInfo\DSIGInfo.cs">
+      <Link>DSIGInfo.cs</Link>
+    </Compile>
     <Compile Include="ITableValidate.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -260,7 +265,12 @@
     <Compile Include="val__Unknown.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="..\Compat.2nd\WinVerifyTrustAPI.cs" />
+    <Compile Include="..\Compat\WIN32APIs.cs">
+      <Link>Win32APIs.cs</Link>
+    </Compile>
+    <Compile Include="..\Compat.2nd\WinVerifyTrustAPI.cs">
+      <Link>WinVerifyTrustAPI.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
@@ -268,6 +278,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="OTFontFileVal.ValStrings.resx">
+      <Link>ValStrings.resx</Link>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
