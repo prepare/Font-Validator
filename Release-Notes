@@ -10,6 +10,11 @@ r-lives))
 Most (only?) active development happens at
 http://github.com/HinTak/Font-Validator .
 
+FontVal 2.1.6 , Jun 16 2020
+=============
+
+- small update on non-NULL FeatureParams.
+
 FontVal 2.1.5 , Jun  9 2020
 =============
 
@@ -22,6 +27,8 @@ FontVal 2.1.5 , Jun  9 2020
 - Thanks Miguel Sousa for patches, Stevan White for many of the issues
   with SMP / large font sets, and Georg Seifert and Rich Fitzgerald on
   Mac OS X related issues.
+
+- fixes crashes under non-English (French/Russian/Portugese) locales.
 
 - Mac binary now based on patched mono
   ( https://github.com/HinTak/mono-modification/ )
